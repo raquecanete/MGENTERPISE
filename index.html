@@ -1,0 +1,1803 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>Responsive navigation bar - Bedimcode</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+    <!-- Promotion Banner -->
+     <section class="bg-[#174e4f] text-white blink py-2">
+  <div class="max-w-7xl mx-auto text-center">
+    <a href="">
+      <p class="text-base mb-2">
+      Get up to 50% off on all women's sportswear and accessories 🔥.
+      <a href="#" class="inline-block text-center text-white hover:underline"><span aria-hidden="true">→</span></a>
+    </p>
+    </a>
+  </div>
+</section>
+  <!-- Upper Header -->
+  <div class="bg-cream px-4 py-2">
+    <div class="flex items-center justify-between">
+      <!-- Left Spacer -->
+      <div class="w-200"></div>
+      <!-- Centered Logo -->
+      <div class="flex-1 flex justify-center">
+        <a href="index.html" class="flex items-center gap-0">
+          <img src="./img/logoimg-removebg-preview.png" alt="Logo" class="h-10">
+          <span class="logo-text text-1xl bold italic text-sm ">
+            MG ENTERPRISES
+          </span>
+        </a>
+      </div>
+      <!-- Chat Us Button -->
+      <div class="w-32 flex justify-end">
+        <button id="chatButton"
+           class="text-white shadow-lg border border-black-400 p-4  px-4 py-2 rounded hover:bg-gray-500 flex items-center gap-1 text-sm whitespace-nowrap bg-[#174e4f]">
+          <i class="ri-chat-1-line"></i> MG Support
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation Header -->
+<header class="bg-white shadow-md border-b border-gray-200" id="main-header">
+  <nav class="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center">
+    <!-- Left Side: Logo + Menu -->
+    <div class="flex items-center gap-6">
+      <!-- Mobile Toggle -->
+      <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-blue-600 transition-colors duration-200">
+        <i class="ri-menu-line"></i>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex gap-12 text-sm items-center" id="home">
+        <a href="#" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">HOME</a>
+
+        <!-- Shop Dropdown -->
+        <div class="relative group">
+          <div id="shop-toggle" class="cursor-pointer flex items-center text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">
+            SHOP <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </div>
+
+          <!-- Shop Mega Menu -->
+          <div id="shop-menu" class="absolute top-full left-0 bg-white shadow-xl p-6 hidden group-hover:block w-[1000px] z-50 border border-gray-200 rounded-lg">
+            <div class="grid grid-cols-2 gap-8">
+              <!-- Bags -->
+              <div>
+                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
+                  <span>Bags</span>
+                </div>
+                <ul class="space-y-2.5">
+                  <li><a href="product-list.html" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Nap Sack</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Duffle Bag</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Back Pack</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Tote Bag</a></li>
+                </ul>
+              </div>
+
+              <!-- Sports Wear -->
+              <div>
+                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
+                  <span>Sports Wear</span>
+                </div>
+                <ul class="space-y-2.5">
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Basketball Wear</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Volleyball Wear</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Combat Sports Wear</a></li>
+                </ul>
+              </div>
+
+              <!-- Customization -->
+              <div>
+                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
+                  <span>Customization</span>
+                </div>
+                <ul class="space-y-2.5">
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Sports Jerseys</a></li>
+                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Promotional Shirts</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- View All Products -->
+            <div class="mt-6 pt-4 border-t border-gray-100">
+              <a href="#" class="text-sm font-medium text-gray-900 hover:text-blue-600 flex items-center gap-2 transition duration-150">
+                <i class="ri-arrow-right-line"></i> View all products
+              </a>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="col-span-2 mt-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
+              <div class="grid grid-cols-3 gap-6">
+                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
+                  <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
+                  <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+                </div>
+                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
+                  <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
+                  <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+                </div>
+                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
+                  <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
+                  <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Links -->
+        <a href="about-us.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">ABOUT US</a>
+        <a href="contact.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">CONTACT</a>
+        <a href="#" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">STORE</a>
+      </div>
+    </div>
+
+    <!-- Right Side Icons -->
+     <div class="flex items-center gap-6">
+  <!-- Contact Number -->
+  <div class="hidden md:flex flex-col text-right">
+    <span class="text-xs text-gray-500">Need Help?</span>
+    <a href="tel:+639123456789" class="text-sm font-semibold text-gray-700 hover:text-[#174e4f] transition-colors">
+      +63 912 345 6789
+    </a>
+  </div>
+    <div class="flex items-center gap-4">
+      <!-- Search -->
+      <label class="flex items-center border rounded-lg px-3 py-2 hover:border-blue-400 transition-colors duration-200 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-200 bg-gray-50">
+        <i class="ri-search-line text-gray-500 mr-2"></i>
+        <input 
+          type="text"
+          placeholder="Search products..."
+          class="w-full text-sm placeholder:text-gray-400 focus:outline-none bg-transparent"
+        />
+      </label>
+
+      <!-- Icons -->
+      <div class="flex gap-4 items-center">
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
+          <i class="ri-shopping-cart-line text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
+          <i class="ri-heart-line text-2xl"></i>
+        </a>
+        <a href="log-in.html" class="text-gray-600 hover:text-blue-600 transition duration-200">
+          <i class="ri-user-line text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Chat sidebar -->
+  <div id="chatSidebar" class="bg-white shadow-lg flex flex-col">
+    <!-- Chat header with fullscreen toggle -->
+    <div class="bg-gray-900 text-white p-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <i class="ri-chat-1-line"></i>
+        <h3 class="font-semibold">MG Support</h3>
+      </div>
+      <div class="flex gap-2">
+        <button id="toggleFullscreen" class="text-white hover:text-gray-300">
+          <i class="ri-fullscreen-line"></i>
+        </button>
+        <button id="closeChat" class="text-white hover:text-gray-300">
+          <i class="ri-close-line text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Chat messages container -->
+    <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-4">
+      <!-- Welcome message -->
+      <div class="flex justify-start">
+        <div class="bg-gray-100 rounded-lg p-3 max-w-[80%]">
+          <p class="text-sm">Hello! Welcome to MG Enterprises. How can we help you today?</p>
+          <p class="text-xs text-gray-500 mt-1">Support Team • Just now</p>
+        </div>
+      </div>
+    </div>
+    <!-- Chat input area -->
+    <div class="border-t border-gray-200 p-4 bg-gray-50">
+      <div class="flex gap-2">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message..."
+          class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+        <button id="sendMessage" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+          <i class="ri-send-plane-line"></i>
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Our team typically replies within a few minutes</p>
+    </div>
+  </div>
+  <!-- Overlay -->
+  <div id="chatOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+    <div class="space-y-1">
+      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Home</a>
+      
+      <div class="relative">
+        <button id="mobile-shop-toggle" class="w-full text-left py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 flex items-center justify-between">
+          <span>Shop</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+        </button>
+        <div id="mobile-shop-menu" class="hidden pl-4 mt-1 space-y-1">
+          
+          <div class="mb-3">
+            <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
+              Bags
+            </div>
+            <ul class="pl-6 space-y-1 mt-1">
+              <li><a href="product-list.html" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Nap Sack</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Duffle Bag</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Back Pack</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Tote Bag</a></li>
+            </ul>
+          </div>
+          <div class="mb-3">
+            <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
+               Sports Wear
+            </div>
+            <ul class="pl-6 space-y-1 mt-1">
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Basketball Wear</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Volleyball Wear</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Combat Sports Wear</a></li>
+            </ul>
+          </div>
+          <div class="mb-3">
+            <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
+              Customization
+            </div>
+            <ul class="pl-6 space-y-1 mt-1">
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Sports Jerseys</a></li>
+              <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Promotional Shirts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="about-us.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">About</a>
+      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
+      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Stores</a>
+    </div>
+    <div class="col-span-2 mt-6">
+  <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
+  <div class="grid grid-cols-3 gap-6">
+    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+      <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
+      <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+    </div>
+    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+      <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
+      <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+    </div>
+    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+      <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
+      <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+    </div>
+  </div>
+</div>
+  </div>
+</header>
+<div class="w-full mx-auto bg-white">
+  <!-- Slider Section -->
+  <div class="relative w-full">
+      <div class="slider-container relative h-[800px] overflow-hidden">
+          <!-- Slides -->
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+              <div class="flex h-full">
+                  <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg" 
+                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
+                  <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg" 
+                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
+              </div>
+              <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+                  <div class="text-center text-white px-4">
+                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Customize Shirts for your Group</h2>
+                      <p class="text-lg md:text-xl mb-6">Design what you like Jerseys, Shirt & Mugs.</p>
+                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-200 transition">Shop Now</button>
+                  </div>
+              </div>
+          </div>
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+            <div class="flex h-full">
+              <img src="./img/Basketball Logo Shorts - White _ XL_36.jfif" 
+                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
+                       <img src="./img/basketballopen.jfif" 
+                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
+            </div>
+              <div class="absolute inset-0 bg-gray-900 bg-opacity-30 flex items-center justify-center">
+                  <div class="text-center text-white px-4">
+                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Sports Wear & Gears</h2>
+                      <p class="text-lg md:text-xl mb-6">Discover the latest Sports wear</p>
+                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-200 transition">Shop Now</button>
+                  </div>
+              </div>
+          </div>
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                   alt="Home Decor" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                  <div class="text-center text-white px-4">
+                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Level Up Whenever or Wherever you Go</h2>
+                      <p class="text-lg md:text-xl mb-6">Level Up-No matter the time or place.</p>
+                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-500 transition">Shop Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Navigation Arrows -->
+      <button class="slider-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-gray-800 p-2 rounded-full shadow-md hover:bg-opacity-100 transition z-10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+      </button>
+      <button class="slider-next absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-gray-800 p-2 rounded-full shadow-md hover:bg-opacity-100 transition z-10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+      </button>
+      <!-- Dots Navigation -->
+      <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="0"></button>
+          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="1"></button>
+          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="2"></button>
+      </div>
+  </div>
+</div>
+  <div class="mx-auto px-4 py-8 sm:px-6 sm:py-24 lg:px-8 w-full text-center ">
+    <h2 class="text-4xl font-bold tracking-tight text-[#0b163b] px-8 tracking-[0.1em]">Discover the Perfect Bag for You</h2>
+    <p class="py-5 px-8 text-xl">Discover the Art of Fine Craftsmanship: Our Curated Bag Collection</p>
+    <hr>
+    <div class="flex justify-end mt-10 py-3">
+      <a href="#" class="inline-block px-6 py-3 text-center font-medium text-black hover:underline hover:text-[#174e4f]">
+        Browse Products <span aria-hidden="true">→</span>
+  </a>
+</div>
+
+<div class="swiper-container relative overflow-hidden">
+  <div class="swiper-wrapper pb-12">
+    <div class="swiper-slide px-1">
+      <a href="">
+        <div class="group relative w-full border border-black-400 bg-[#F4F2EF]  ">
+          <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4 relative overflow-hidden">
+          <img src="./img/shoulderbag-removebg-preview.png" alt="Mini shoulder Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+          <img src="./img/shoulderbag2.jfif" alt="Mini shoulder Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Mini shoulder Bag</h3>
+            <p class="mt-1 text-sm text-gray-500">Black</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">P350</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <div class="swiper-slide px-1">
+      <div class="group relative w-full border border-black-400 bg-[#F4F2EF]">
+        <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4  relative overflow-hidden">
+          <img src="./img/bag2-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+          <img src="./img/totebag.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Tote Bag</h3>
+            <p class="mt-1 text-sm text-gray-500">White</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">P249</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide px-1">
+      <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
+        <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4 relative overflow-hidden">
+          <!-- Main Image -->
+          <img src="./img/The_Zoe___Nakedvice-removebg-preview.png" alt="Leader bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+          <!-- Hover Image -->
+          <img src="./img/minibag.jfif" alt="Leader Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <!-- Hover Description -->
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Leader bag</h3>
+            <p class="mt-1 text-sm text-gray-500">Black</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900 px-6">P499</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide px-1">
+      <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
+        <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4  relative overflow-hidden">
+          <!-- Main Image -->
+          <img src="./img/Mini_Solid_Color_Cloud___Crescent-Shaped_Folded_Women_Handbag-removebg-preview.png" alt="Designer bag" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
+          <!-- Hover Image -->
+          <img src="./img/cresentbag.jfif" alt="Designer Bag Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <!-- Hover Description -->
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Designer bag</h3>
+            <p class="mt-1 text-sm text-gray-500">Black</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">P499</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="swiper-slide px-1">
+      <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
+        <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4 relative overflow-hidden">
+          <!-- Main Image -->
+          <img src="./img/bag1-removebg-preview.png" alt="Evening Clutch" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
+          <!-- Hover Image -->
+          <img src="./img/download (7).jfif" alt="Evening Clutch Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <!-- Hover Description -->
+          
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Evening Clutch</h3>
+            <p class="mt-1 text-sm text-gray-500">Gold</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">P399</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="swiper-slide px-1">
+      <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
+        <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
+        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center relative overflow-hidden">
+          <!-- Main Image -->
+          <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
+          <!-- Hover Image -->
+          <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <!-- Hover Description -->
+          
+        </div>
+        <div class="mt-4 flex justify-between w-full px-4 py-2">
+          <div>
+            <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
+            <p class="mt-1 text-sm text-gray-500">Blue</p>
+          </div>
+          <p class="text-sm font-medium text-gray-900">P299</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="swiper-button-next hidden sm:flex"></div>
+  <div class="swiper-button-prev hidden sm:flex"></div>
+  
+  <!-- Pagination -->
+  <div class="swiper-pagination mt-4 sm:hidden flex justify-center"></div>
+</div>
+
+ <!-- Shop Categories - Enhanced Design -->
+  <div class="container mx-auto px-4 py-16 bg-white">
+    <div class="w-full">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">Discover Our Collections</h2>
+      <p class="typewriter text-lg text-gray-900 mb-12 text-center max-w-2xl mx-auto">
+        Find the perfect wear for your active lifestyle.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-2">
+        <!-- Category 1 -->
+        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-50">
+          <div class="relative h-64 md:h-80 overflow-hidden">
+            <img src="./img/sports.jfif" alt="Sports Wear" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 flex items-end p-6">
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-1">Sports Wear</h3>
+                <p class="text-sm opacity-90 mb-3">Performance apparel for every activity</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Category 2 -->
+        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-900">
+          <div class="relative h-64 md:h-80 overflow-hidden">
+            <img src="./img/travel bags.jfif" alt="Bags" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 flex items-end p-6">
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-1">Bags & Backpacks</h3>
+                <p class="text-sm opacity-90 mb-3">Carry your essentials in style</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Category 3 -->
+        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-900">
+          <div class="relative h-64 md:h-80 overflow-hidden">
+            <img src="./img/arnisgear.jfif" alt="Sports Gears" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 flex items-end p-6">
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-1">Sports Gear</h3>
+                <p class="text-sm opacity-90 mb-3">Equipment for champions</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Mugs Section -->
+  <div class="bg-cream">
+  <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Design Your Mugs to your taste!</h2>
+      <p class="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder-coated steel divider separates active cards from new ones or can be used to archive important task lists.</p>
+      <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Origin</dt>
+          <dd class="mt-2 text-sm text-gray-500">MIGGABAGS Enterprises</dd>
+        </div>
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Material</dt>
+          <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder-coated steel card cover</dd>
+        </div>
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Dimensions</dt>
+          <dd class="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
+        </div>
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Finish</dt>
+          <dd class="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
+        </div>
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Includes</dt>
+          <dd class="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
+        </div>
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900">Considerations</dt>
+          <dd class="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each item.</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 max-h-full">
+      <!-- Apply the image-animation class here -->
+      <img src="./img/PNG bakery.jfif" alt="Walnut card tray with white powder-coated steel divider and 3 punchout holes." class="image-animation">
+      <img src="./img/bakery.jfif" alt="Top down view of walnut card tray with embedded magnets and card groove." class="image-animation">
+      <img src="./img/cups.jfif" alt="Side of walnut card tray with card groove and recessed card area." class="image-animation">
+      <img src="./img/Paper_Hot_Cups-removebg-preview.png" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="image-animation">
+    </div>
+  </div>
+</div>
+
+    <div class=" mx-auto px-4 py-8 max-w-7xl">
+    <div class="flex flex-col md:flex-row gap-8">
+        <!-- Image Gallery -->
+        <div class="md:w-1/2">
+            <div class="relative overflow-hidden rounded-lg  mb-4" style="height: 500px;">
+                <!-- Main Image Container -->
+                <div id="main-image-container" class="h-full w-full flex items-center justify-center relative group">
+                    <img id="main-image" src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                        alt="Main Product Image" class="w-full h-full object-cover rounded-lg transition-all duration-300 transform group-hover:scale-110">
+                </div>
+                <!-- Navigation Arrows -->
+                <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2  rounded-full p-2  hover:bg-white z-10">
+                    <i class="fas fa-chevron-left text-gray-800"></i>
+                </button>
+                <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2  rounded-full p-2  hover:bg-white z-10">
+                    <i class="fas fa-chevron-right text-gray-800"></i>
+                </button>
+            </div>
+
+            <!-- Thumbnail Gallery -->
+            <div class="grid grid-cols-4 gap-2">
+                <!-- Thumbnail 1 -->
+                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
+                         alt="Thumbnail 1" 
+                         class="w-full h-24 object-cover rounded">
+                </div>
+                <!-- Thumbnail 2 -->
+                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" 
+                         alt="Thumbnail 2" 
+                         class="w-full h-24 object-cover rounded">
+                </div>
+                <!-- Thumbnail 3 -->
+                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" 
+                         alt="Thumbnail 3" 
+                         class="w-full h-24 object-cover rounded">
+                </div>
+                <!-- Thumbnail 4 -->
+                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-quick-preview-02-detail.jpg">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-quick-preview-02-detail.jpg" 
+                         alt="Thumbnail 4" 
+                         class="w-full h-24 object-cover rounded">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Info Section -->
+        <div class="py-10 px-10 bg-[#174e4f] rounded-xl shadow-lg ">
+            <h1 class="text-4xl font-sm mb-2 py-4 text-white ">Plain Shirt</h1>
+            <div class="mb-6">
+                <span class="font-semibold text-white">COLOR :</span>
+                <span  class="ml-2 text-white rounded-full bg-black py-2 px-2 text-sm">Black</span>
+            </div>
+            <div class="border-t border-b border-gray-200 py-4 mb-6">
+                <h3 class=" text-lg mb-2 text-white">Cotton Soft</h3>
+                <div class="mb-8">
+                    <h3 class="text-sm mb-4 text-white">Select your size</h3>
+                    <div class="grid grid-cols-3 gap-2 mb-4">
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Small</button>
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Medium</button>
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Large</button>
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Xl</button>
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">XXl</button>
+                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">2Xl</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button id="add-to-cart" class="w-full bg-[#174e4f] text-white py-3 px-4 rounded-lg hover:border border-white transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+                            Add to Cart - Select a Size
+                        </button>
+                        <button class="w-full bg-[#174e4f] text-white py-3 px-4 rounded-lg hover:border border-white transition-colors" disabled>
+                            <i class="ri-heart-line px-2"></i>Add to favorites
+                        </button>
+                    </div>
+                    <div class="py-10">
+                        <p class="text-sm text-gray-600 py-2 text-white">Chat with us if you want to Customize this item.</p>
+                        <button id="add-to-cart" class="w-full border border-white text-white py-3 px-4 rounded-2xl hover:bg-gray-500 transition-colors" disabled>
+                            Chat Now!
+                        </button>
+                    </div>
+                </div>
+                <div class="border-gray-200">
+                    <p class="text-sm text-gray-600 text-white">Note: This item is only a reference. If you want to customize it, you can reach us to cater to your needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Section -->
+<div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+    <div class="relative isolate overflow-hidden bg-[#174e4f] px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+            <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+        </svg>
+        <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Everything You Need to Know: Create Your Perfect Look, One Custom Stitch at a Time.</h2>
+            <p class="mt-6 text-lg/8 text-pretty text-gray-300">With You in Mind, You Can Create, Design, and Wear Your Dream Piece.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                <!-- Get Started Button -->
+                <button id="getStartedBtn" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</button>
+                <!-- Learn More Button -->
+                <button id="learnMoreBtn" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+        </div>
+
+        <!-- Images Section -->
+        <div class="relative mt-16 h-80 lg:mt-8">
+            <img class="absolute top-0 left-0 w-[30rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/poloside-removebg-preview.png" alt="App screenshot">
+            <img class="absolute top-0 left-0 w-[20rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/MAGCOMSEN_Men_s_Polo_Shirts_3_Buttons_Casual_Work_T_Shirts_Quick_Dry_Short_Sleeve_Golf_Shirt_Pique_Jersey_Outdoor_Performance-removebg-preview.png" alt="App screenshot" width="500" height="1080">
+            <img class="absolute top-0 left-0 w-[10rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/polo-removebg-preview.png" alt="App screenshot" width="500" height="1080">
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Get Started (Customization Form) -->
+<div id="getStartedModal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+        <h3 class="text-2xl font-semibold mb-4">Request Product Customization</h3>
+        <form action="#" method="post">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Your Name</label>
+                <input type="text" id="name" name="name" class="w-full p-3 border border-black rounded-md" placeholder="Enter your name">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Your Email</label>
+                <input type="email" id="email" name="email" class="w-full p-3 border border-black rounded-md" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label for="customizationRequest" class="block text-gray-700">Customization Request</label>
+                <textarea id="customizationRequest" name="customizationRequest" rows="4" class="w-full p-3 border border-black rounded-md" placeholder="Describe your customization request"></textarea>
+            </div>
+            <div class="flex justify-end gap-4">
+                <button type="button" id="closeGetStarted" class="px-6 py-2 border border-black rounded-md">Close</button>
+                <button type="submit" class="px-6 py-2 bg-[#174e4f] text-white rounded-md">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal for Learn More (Description) -->
+<div id="learnMoreModal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-[500px]">
+        <h3 class="text-2xl font-semibold mb-4">How to Request Customization</h3>
+        <p class="text-gray-700 mb-4">When requesting a product customization, please provide as much detail as possible. Describe the design, color preferences, material choices, and any other relevant details for us to create the perfect custom product just for you.</p>
+        <div class="flex justify-end gap-4">
+            <button type="button" id="closeLearnMore" class="px-6 py-2 border border-black rounded-md">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to Control Modals -->
+<script>
+    // Get the modal elements
+    const getStartedModal = document.getElementById('getStartedModal');
+    const learnMoreModal = document.getElementById('learnMoreModal');
+
+    // Get the buttons
+    const getStartedBtn = document.getElementById('getStartedBtn');
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+
+    // Get the close buttons
+    const closeGetStarted = document.getElementById('closeGetStarted');
+    const closeLearnMore = document.getElementById('closeLearnMore');
+
+    // Show the "Get Started" modal
+    getStartedBtn.addEventListener('click', () => {
+        getStartedModal.classList.remove('hidden');
+    });
+
+    // Show the "Learn More" modal
+    learnMoreBtn.addEventListener('click', () => {
+        learnMoreModal.classList.remove('hidden');
+    });
+
+    // Close the "Get Started" modal
+    closeGetStarted.addEventListener('click', () => {
+        getStartedModal.classList.add('hidden');
+    });
+
+    // Close the "Learn More" modal
+    closeLearnMore.addEventListener('click', () => {
+        learnMoreModal.classList.add('hidden');
+    });
+</script>
+<div class="bg-white">
+  <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto w-full py-16 sm:py-24 lg:py-32">
+      <h2 class="text-3xl font-bold text-gray-900 text-center py-4">Accessories</h2>
+      <p class="text-center text-lg py-4">"Accessorize with pieces that reflect your personality and elevate your wardrobe. From subtle to bold, our collection has something to match every mood and occasion."</p>
+      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Desk and Office
+            </a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Self-Improvement
+            </a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Travel
+            </a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" p-6 h-[70vh]" id="reviews-container">
+    <!-- Header and Controls -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+        <h2 class="text-2xl font-semibold text-gray-800">Customer Reviews</h2>
+        
+        <div class="flex flex-col sm:flex-row gap-3 sm:w-auto">
+            <!-- Search Input -->
+            <div class="relative flex-grow">
+                <input 
+                    type="text" 
+                    id="search-reviews"
+                    placeholder="Search reviews..." 
+                    class="w-full pl-10 pr-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2"
+                >
+                <div class="absolute left-3 top-2.5 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Sort Dropdown -->
+            <select id="sort-reviews" class="px-2 py-2 rounded-lg focus:outline-none focus:ring-[#174e4f] text-gray-700 border border-black">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="highest">Highest Rating</option>
+                <option value="lowest">Lowest Rating</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- Reviews List -->
+    <div class="space-y-6" id="reviews-list">
+        <!-- Reviews will be dynamically inserted here -->
+    </div>
+    
+    <!-- Pagination -->
+    <div class="mt-8 flex justify-center">
+        <nav class="flex items-center gap-1" id="pagination">
+            <!-- Pagination buttons will be dynamically inserted here -->
+        </nav>
+    </div>
+</div>
+<footer class="bg-white text-gray-300 ">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between">
+      <!-- Left Side -->
+      <div class="mb-10 md:mb-0 max-w-sm">
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="./img/logoimg-removebg-preview.png" alt="" class="h-20 w-30">
+        </div>
+         <p class="text-black text-lg italic gap-1">MG ENTERPRISES</p>
+        <div class="flex mt-6 space-x-4">
+          <a href="#" class="hover:text-black text-[#174e4f] text-xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-black text-[#174e4f] text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-black text-[#174e4f] text-xl"><i class="fab fa-youtube"></i></a>
+           <a href="#" class="hover:text-black text-[#174e4f] text-xl"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <div>
+          <h3 class="text-sm font-semibold text-black tracking-wider uppercase">Company</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-black text-black">Shop</a></li>
+            <li><a href="#" class="hover:text-white text-black">About Us</a></li>
+            <li><a href="#" class="hover:text-white text-black">Vouchers & Discounts</a></li>
+            <li><a href="#" class="hover:text-white text-black">Track Orders</a></li>
+            <li><a href="#" class="hover:text-white text-black">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold tracking-wider uppercase text-black">Support</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white text-black">Customer Support</a></li>
+            <li><a href="#" class="hover:text-white text-black">Contact</a></li>
+            <li><a href="#" class="hover:text-white text-black">Guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold  text-black tracking-wider uppercase">Company</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white text-black">About</a></li>
+            <li><a href="#" class="hover:text-white text-black">Blog</a></li>
+            <li><a href="#" class="hover:text-white text-black">Jobs</a></li>
+            <li><a href="#" class="hover:text-white text-black">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-black tracking-wider uppercase">Legal</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white text-black">Terms of service</a></li>
+            <li><a href="#" class="hover:text-white text-black">Privacy policy</a></li>
+            <li><a href="#" class="hover:text-white text-black">License</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-800 pt-8 text-sm text-gray-500 text-center">
+      © 2025 MG ENTERPRISES, Inc. All rights reserved.
+    </div>
+  </div>
+</footer>
+            </body>
+            </html>
+            <script>
+                    tailwind.config = {
+                        theme: {
+                            extend: {
+                                colors: {
+                                    primary: {
+                                        50: '#f0f9ff',
+                                        100: '#e0f2fe',
+                                        200: '#bae6fd',
+                                        300: '#7dd3fc',
+                                        400: '#38bdf8',
+                                        500: '#0ea5e9',
+                                        600: '#0284c7',
+                                        700: '#0369a1',
+                                        800: '#075985',
+                                        900: '#0c4a6e',
+                                    },
+                                    secondary: {
+                                        500: '#f59e0b',
+                                    }
+                                },
+                                fontFamily: {
+                                    sans: ['Inter', 'sans-serif'],
+                                    display: ['Calibre', 'Inter', 'sans-serif'],
+                                },
+                                boxShadow: {
+                                    'soft': '0 15px 30px -15px rgba(0, 0, 0, 0.1)',
+                                    'glow': '0 0 20px rgba(59, 130, 246, 0.15)',
+                                }
+                            }
+                        }
+                    }
+                </script>
+            <script>
+              // Chat toggle
+              const chatButton = document.getElementById('chatButton');
+              const chatSidebar = document.getElementById('chatSidebar');
+              const closeChat = document.getElementById('closeChat');
+              const chatOverlay = document.getElementById('chatOverlay');
+              const toggleFullscreen = document.getElementById('toggleFullscreen');
+              
+              // Toggle chat visibility
+              chatButton.addEventListener('click', () => {
+                chatSidebar.classList.add('open');
+                chatOverlay.classList.remove('hidden');
+              });
+              
+              closeChat.addEventListener('click', () => {
+                chatSidebar.classList.remove('open', 'fullscreen');
+                chatOverlay.classList.add('hidden');
+              });
+              
+              chatOverlay.addEventListener('click', () => {
+                chatSidebar.classList.remove('open', 'fullscreen');
+                chatOverlay.classList.add('hidden');
+              });
+              
+              // Toggle fullscreen
+              toggleFullscreen.addEventListener('click', () => {
+                chatSidebar.classList.toggle('fullscreen');
+                const icon = toggleFullscreen.querySelector('i');
+                if (chatSidebar.classList.contains('fullscreen')) {
+                  icon.classList.replace('ri-fullscreen-line', 'ri-fullscreen-exit-line');
+                } else {
+                  icon.classList.replace('ri-fullscreen-exit-line', 'ri-fullscreen-line');
+                }
+              });
+              
+             // Simple chat functionality
+             const messageInput = document.getElementById('messageInput');
+              const sendMessage = document.getElementById('sendMessage');
+              const chatMessages = document.getElementById('chatMessages');
+              
+              sendMessage.addEventListener('click', () => {
+                const message = messageInput.value.trim();
+                if (message) {
+                  // Add user message
+                  addMessage(message, 'user');
+                  messageInput.value = '';
+                  
+                  // Simulate reply after 1 second
+                  setTimeout(() => {
+                    const replies = [
+                      "Thanks for your message! Our team will get back to you soon.",
+                      "We've received your inquiry and will respond shortly.",
+                      "For faster service, you can call us at (123) 456-7890.",
+                      "Would you like assistance with any specific product?"
+                    ];
+                    const randomReply = replies[Math.floor(Math.random() * replies.length)];
+                    addMessage(randomReply, 'bot');
+                  }, 1000);
+                }
+              });
+              
+              
+              // Allow sending with Enter key
+              messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                  sendMessage.click();
+                }
+              });
+              
+              function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+                
+                const messageContent = `
+                  <div class="${sender === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-100'} rounded-lg p-3 max-w-[80%]">
+                    <p class="text-sm">${text}</p>
+                    <p class="text-xs ${sender === 'user' ? 'text-blue-100' : 'text-gray-500'} mt-1">
+                      ${sender === 'user' ? 'You' : 'Support Team'} • Just now
+                    </p>
+                  </div>
+                `;
+                
+                messageDiv.innerHTML = messageContent;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+            </script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  // Enhanced reviews data with avatars
+                  let reviews = [
+                      {
+                          name: "Donafae Famulagan",
+                          role: "Ethics Maestra ba",
+                          company: "CPC",
+                          rating: 5,
+                          text: "Nindot si Jarvee oyy, angyan sya daan pag palit:))",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+                      },
+                      {
+                          name: "Jarvee",
+                          role: "Studyante",
+                          company: "CPC",
+                          rating: 4,
+                          text: "Wa koy masulti jud giatay nalay kuwang aning kompanyaha. YAWA!!!",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+                      },
+                      {
+                          name: "Marka W Egg",
+                          role: "Tukmol",
+                          company: "CPC",
+                          rating: 5,
+                          text: "Kung akoy paestoryaon batiag sinina ninyu uy WA GABAE! inyung delivery rider baho!!!!!",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+                      },
+                      {
+                          name: "David Wilson",
+                          role: "CTO",
+                          company: "DataSystems",
+                          rating: 5,
+                          text: "The implementation was seamless and the results have exceeded our expectations. Our productivity has increased by 30%.",
+                          date: "2023-06-05",
+                          avatar: "https://randomuser.me/api/portraits/men/75.jpg"
+                      },
+                      {
+                          name: "Priya Patel",
+                          role: "Operations Lead",
+                          company: "Global Logistics",
+                          rating: 5,
+                          text: "Reliable, responsive, and results-driven. We've formed a long-term partnership based on this excellent experience.",
+                          date: "2023-02-18",
+                          avatar: "https://randomuser.me/api/portraits/women/63.jpg"
+                      }
+                  ];
+      
+                  // DOM elements
+                  const reviewsCarousel = document.getElementById('reviewsCarousel');
+                  const dotsContainer = document.getElementById('dotsContainer');
+                  const prevBtn = document.getElementById('prevBtn');
+                  const nextBtn = document.getElementById('nextBtn');
+                  const reviewForm = document.getElementById('reviewForm');
+                  const ratingStars = document.getElementById('ratingStars').querySelectorAll('i');
+                  const ratingInput = document.getElementById('rating');
+      
+                  // Current review index
+                  let currentReview = 0;
+                  let autoRotateInterval;
+      
+                  // Initialize the reviews
+                  function initReviews() {
+                      reviewsCarousel.innerHTML = '';
+                      dotsContainer.innerHTML = '';
+                      
+                      reviews.forEach((review, index) => {
+                          // Create review card
+                          const reviewCard = document.createElement('div');
+                          reviewCard.className = `flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-start`;
+                          reviewCard.innerHTML = `
+                              <div class="review-card bg-cream p-8 rounded-xl shadow-soft h-full flex flex-col animate-fade-in" style="animation-delay: ${index * 0.1}s">
+                                  <div class="flex items-center mb-6">
+                                      <img src="${review.avatar}" alt="${review.name}" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary-100">
+                                      <div>
+                                          <h4 class="font-semibold text-gray-900">${review.name}</h4>
+                                          <p class="text-sm text-gray-600">${review.role}, ${review.company}</p>
+                                      </div>
+                                  </div>
+                                  <div class="flex mb-4">
+                                      ${renderStars(review.rating)}
+                                  </div>
+                                  <blockquote class="text-gray-700 mb-6 flex-grow italic">"${review.text}"</blockquote>
+                                  <div class="text-sm text-gray-500 mt-auto">${formatDate(review.date)}</div>
+                              </div>
+                          `;
+                          reviewsCarousel.appendChild(reviewCard);
+                          
+                          // Create dot
+                          const dot = document.createElement('button');
+                          dot.className = `w-3 h-3 rounded-full nav-dot ${index === 0 ? 'bg-primary-600 w-6' : 'bg-gray-300'}`;
+                          dot.addEventListener('click', () => {
+                              showReview(index);
+                              resetAutoRotate();
+                          });
+                          dotsContainer.appendChild(dot);
+                      });
+                  }
+      
+                  // Show specific review
+                  function showReview(index) {
+                      const carouselWidth = reviewsCarousel.offsetWidth;
+                      reviewsCarousel.scrollTo({
+                          left: index * carouselWidth,
+                          behavior: 'smooth'
+                      });
+                      
+                      // Update dots
+                      document.querySelectorAll('#dotsContainer > button').forEach((dot, i) => {
+                          dot.classList.toggle('bg-primary-600', i === index);
+                          dot.classList.toggle('w-6', i === index);
+                          dot.classList.toggle('bg-gray-300', i !== index);
+                          dot.classList.toggle('w-3', i !== index);
+                      });
+                      
+                      currentReview = index;
+                  }
+      
+                  // Next review
+                  function nextReview() {
+                      const nextIndex = (currentReview + 1) % reviews.length;
+                      showReview(nextIndex);
+                  }
+      
+                  // Previous review
+                  function prevReview() {
+                      const prevIndex = (currentReview - 1 + reviews.length) % reviews.length;
+                      showReview(prevIndex);
+                  }
+                  // Render star rating
+                  function renderStars(rating) {
+                      let stars = '';
+                      for (let i = 1; i <= 5; i++) {
+                          if (i <= rating) {
+                              stars += '<i class="fas fa-star text-secondary-500 rating-star"></i>';
+                          } else {
+                              stars += '<i class="far fa-star text-secondary-500 rating-star"></i>';
+                          }
+                      }
+                      return stars;
+                  }
+                  // Format date
+                  function formatDate(dateString) {
+                      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                      return new Date(dateString).toLocaleDateString(undefined, options);
+                  }
+                  // Reset auto-rotate timer
+                  function resetAutoRotate() {
+                      clearInterval(autoRotateInterval);
+                      autoRotateInterval = setInterval(nextReview, 6000);
+                  }
+                  // Rating stars interaction
+                  ratingStars.forEach(star => {
+                      star.addEventListener('click', function() {
+                          const rating = parseInt(this.getAttribute('data-rating'));
+                          ratingInput.value = rating;
+                          
+                          // Update star display
+                          ratingStars.forEach((s, i) => {
+                              if (i < rating) {
+                                  s.classList.remove('far');
+                                  s.classList.add('fas');
+                              } else {
+                                  s.classList.remove('fas');
+                                  s.classList.add('far');
+                              }
+                          });
+                      });
+                  });
+                  // Form submission
+                  reviewForm.addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const name = document.getElementById('name').value;
+                      const rating = document.getElementById('rating').value;
+                      const text = document.getElementById('review').value;
+                      if (!name || !rating || !text) {
+                          alert('Please fill in all fields');
+                          return;
+                      }
+                      // Create new review
+                      const newReview = {
+                          name: name,
+                          role: "Customer",
+                          company: "",
+                          rating: parseInt(rating),
+                          text: text,
+                          date: new Date().toISOString().split('T')[0],
+                          avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0ea5e9&color=fff`
+                      };
+                      // Add to reviews array
+                      reviews.unshift(newReview);
+                      // Reset form
+                      reviewForm.reset();
+                      ratingStars.forEach(star => {
+                          star.classList.remove('fas');
+                          star.classList.add('far');
+                      });
+                      
+                      // Reinitialize reviews to include the new one
+                      initReviews();
+                      showReview(0);
+                      resetAutoRotate();
+                      
+                      // Show success message
+                      const successMsg = document.createElement('div');
+                      successMsg.className = 'fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center';
+                      successMsg.innerHTML = `
+                          <i class="fas fa-check-circle mr-2"></i>
+                          <span>Thank you for your review!</span>
+                      `;
+                      document.body.appendChild(successMsg);
+                      setTimeout(() => {
+                          successMsg.remove();
+                      }, 3000);
+                  });
+                  // Event listeners
+                  prevBtn.addEventListener('click', () => {
+                      prevReview();
+                      resetAutoRotate();
+                  });
+                  nextBtn.addEventListener('click', () => {
+                      nextReview();
+                      resetAutoRotate();
+                  });
+                  
+                  // Auto-rotate reviews
+                  autoRotateInterval = setInterval(nextReview, 6000);
+                  
+                  // Pause auto-rotate when hovering over carousel
+                  reviewsCarousel.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
+                  reviewsCarousel.addEventListener('mouseleave', resetAutoRotate);
+      
+                  // Initialize
+                  initReviews();
+      
+                  // Hide scrollbar but keep functionality
+                  document.querySelectorAll('.hide-scrollbar').forEach(el => {
+                      el.style.scrollbarWidth = 'none'; /* Firefox */
+                      el.style.msOverflowStyle = 'none';  /* IE 10+ */
+                      el.addEventListener('wheel', (e) => {
+                          if (e.deltaY === 0) return;
+                          e.preventDefault();
+                          el.scrollLeft += e.deltaY;
+                      });
+                  });
+              });
+          </script>
+          <script>
+            // Slider functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                const prevBtn = document.querySelector('.slider-prev');
+                const nextBtn = document.querySelector('.slider-next');
+                let currentIndex = 0;
+                let intervalId;
+                
+                // Show initial slide
+                showSlide(currentIndex);
+                
+                // Auto-rotate slides
+                function startSlider() {
+                    intervalId = setInterval(() => {
+                        nextSlide();
+                    }, 5000);
+                }
+                
+                startSlider();
+                
+                // Reset timer when user interacts
+                function resetInterval() {
+                    clearInterval(intervalId);
+                    startSlider();
+                }
+                
+                // Show specific slide
+                function showSlide(index) {
+                    slides.forEach(slide => slide.style.opacity = '0');
+                    dots.forEach(dot => dot.classList.remove('bg-opacity-100'));
+                    
+                    slides[index].style.opacity = '1';
+                    dots[index].classList.add('bg-opacity-100');
+                    currentIndex = index;
+                }
+                
+                // Next slide
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Previous slide
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+                
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const slideIndex = parseInt(dot.getAttribute('data-index'));
+                        showSlide(slideIndex);
+                        resetInterval();
+                    });
+                });
+                
+                // Pause on hover
+                const sliderContainer = document.querySelector('.slider-container');
+                sliderContainer.addEventListener('mouseenter', () => {
+                    clearInterval(intervalId);
+                });
+                
+                sliderContainer.addEventListener('mouseleave', () => {
+                    startSlider();
+                });
+            });
+          </script>
+          <!-- JavaScript for Menu Toggle -->
+          <script>
+            const toggleBtn = document.getElementById('nav-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+          
+            toggleBtn.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+              toggleBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+                ? '<i class="ri-menu-line"></i>' 
+                : '<i class="ri-close-line"></i>';
+            });
+          
+            // Shop Dropdown Toggle for Desktop
+            const shopToggle = document.getElementById('shop-toggle');
+            const shopMenu = document.getElementById('shop-menu');
+          
+            shopToggle.addEventListener('click', (e) => {
+              if (window.innerWidth < 768) {
+                e.preventDefault();
+                shopMenu.classList.toggle('hidden');
+              }
+            });
+          
+            // Mobile "Shop" toggle
+            const mobileShopToggle = document.getElementById('mobile-shop-toggle');
+            const mobileShopMenu = document.getElementById('mobile-shop-menu');
+            const mobileShopArrow = mobileShopToggle.querySelector('i');
+          
+            mobileShopToggle.addEventListener('click', (e) => {
+              e.preventDefault();
+              mobileShopMenu.classList.toggle('hidden');
+              mobileShopArrow.classList.toggle('rotate-180');
+            });
+          </script>
+          <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        }
+      }
+    });
+  });
+</script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Image slider functionality
+            const mainImageContainer = document.getElementById('main-image-container');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const currentColorElement = document.getElementById('current-color');
+            
+            let currentImageIndex = 0;
+            const images = Array.from(thumbnails).map(thumb => ({
+                src: thumb.dataset.image,
+                color: thumb.dataset.color
+            }));
+            
+            // Initialize the slider with first image
+            updateMainImage();
+            updateActiveThumbnail();
+            
+            // Thumbnail click handler
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', function() {
+                    currentImageIndex = index;
+                    updateMainImage();
+                    updateActiveThumbnail();
+                    updateCurrentColor();
+                });
+            });
+            
+            // Previous button click handler
+            prevBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateMainImage();
+                updateActiveThumbnail();
+                updateCurrentColor();
+            });
+            
+            // Next button click handler
+            nextBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateMainImage();
+                updateActiveThumbnail();
+                updateCurrentColor();
+            });
+            
+            function updateMainImage() {
+                // Create new image element
+                const newImg = document.createElement('img');
+                newImg.src = images[currentImageIndex].src;
+                newImg.alt = `RS01 Sneaker - View ${currentImageIndex + 1}`;
+                newImg.className = 'object-cover h-full w-full fade-in';
+                
+                // Clear container and add new image
+                mainImageContainer.innerHTML = '';
+                mainImageContainer.appendChild(newImg);
+            }
+            
+            function updateActiveThumbnail() {
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index === currentImageIndex) {
+                        thumbnail.classList.add('border-black');
+                        thumbnail.classList.remove('border-transparent');
+                    } else {
+                        thumbnail.classList.remove('border-black');
+                        thumbnail.classList.add('border-transparent');
+                    }
+                });
+            }
+            
+            function updateCurrentColor() {
+                currentColorElement.textContent = images[currentImageIndex].color;
+            }
+            
+            // Size selection functionality
+            const sizeButtons = document.querySelectorAll('.size-btn');
+            const addToCartBtn = document.getElementById('add-to-cart');
+            let selectedSize = null;
+            
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove selected state from all buttons
+                    sizeButtons.forEach(btn => {
+                        btn.classList.remove('bg-black', 'text-white');
+                        btn.classList.add('border-gray-300');
+                    });
+                    
+                    // Add selected state to clicked button
+                    this.classList.add('bg-[#174e4f]', 'text-white');
+                    this.classList.remove('border-gray-300');
+                    
+                    selectedSize = this.textContent;
+                    addToCartBtn.textContent = `Add to Cart - ${selectedSize}`;
+                    addToCartBtn.disabled = false;
+                });
+            });
+        });
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sample review data
+    const reviews = [
+        {
+            id: 1,
+            name: "Rensii Kayle Elarcosing",
+            date: "2025-05-12",
+            rating: 4,
+            title: "GRABEHA AHAHAHA!",
+            content: "Atayag sinina ninyu sa Baho mag Tao, Murag inyu Rider Baho!"
+        },
+        {
+            id: 2,
+            name: "Riya W Vios Mante",
+            date: "2025-04-28",
+            rating: 3,
+            title: "Good but could be better",
+            content: "Bungas Tao no, Mo palit kog daghan diha kay mala mo."
+        },
+        {
+            id: 3,
+            name: "Donalyn Famulagan",
+            date: "2025-06-15",
+            rating: 5,
+            title: "Absolutely perfect!",
+            content: "I've bought many similar products but this one stands out. The craftsmanship is superb and it looks even better in person."
+        },
+        {
+            id: 4,
+            name: "Jarvee W Egg",
+            date: "2025-03-10",
+            rating: 2,
+            title: "Disappointed",
+            content: "The product didn't match the description. It arrived damaged and the customer service was slow to respond."
+        },
+        {
+            id: 5,
+            name: "Ken Bagyo Dakbkub",
+            date: "2025-05-30",
+            rating: 4,
+            title: "Very satisfied",
+            content: "Great value for money. It's durable and looks stylish. The assembly instructions could be clearer though."
+        },
+        {
+            id: 6,
+            name: "Jarvee Y Our",
+            date: "2025-04-05",
+            rating: 1,
+            title: "Poor quality",
+            content: "Broke after just a week of use. Not worth the money at all. Would not recommend."
+        },
+        {
+            id: 7,
+            name: "Renzie Kyle Dumayao",
+            date: "2023-06-22",
+            rating: 5,
+            title: "Excellent purchase",
+            content: "Perfect in every way. The attention to detail is impressive and it arrived earlier than expected."
+        },
+        {
+            id: 8,
+            name: "Marka W Egg",
+            date: "2025-02-18",
+            rating: 3,
+            title: "Average product",
+            content: "It does the job but nothing special. The color is slightly different than shown in the pictures."
+        }
+    ];
+
+    // DOM elements
+    const reviewsList = document.getElementById('reviews-list');
+    const searchInput = document.getElementById('search-reviews');
+    const sortSelect = document.getElementById('sort-reviews');
+    const pagination = document.getElementById('pagination');
+    
+    // Pagination variables
+    const reviewsPerPage = 2;
+    let currentPage = 1;
+    let filteredReviews = [...reviews];
+    
+    // Initialize
+    renderReviews();
+    renderPagination();
+    
+    // Event listeners
+    searchInput.addEventListener('input', function() {
+        currentPage = 1;
+        filterAndSortReviews();
+        renderReviews();
+        renderPagination();
+    });
+    
+    sortSelect.addEventListener('change', function() {
+        currentPage = 1;
+        filterAndSortReviews();
+        renderReviews();
+        renderPagination();
+    });
+    
+    // Functions
+    function filterAndSortReviews() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        // Filter reviews based on search term
+        filteredReviews = reviews.filter(review =>
+            review.name.toLowerCase().includes(searchTerm) || 
+            review.title.toLowerCase().includes(searchTerm) || 
+            review.content.toLowerCase().includes(searchTerm)
+        );
+        
+        // Sort reviews
+        const sortValue = sortSelect.value;
+        filteredReviews.sort((a, b) => {
+            switch(sortValue) {
+                case 'newest':
+                    return new Date(b.date) - new Date(a.date);
+                case 'oldest':
+                    return new Date(a.date) - new Date(b.date);
+                case 'highest':
+                    return b.rating - a.rating;
+                case 'lowest':
+                    return a.rating - b.rating;
+                default:
+                    return 0;
+            }
+        });
+    }
+    
+    function renderReviews() {
+        reviewsList.innerHTML = '';
+        
+        const startIndex = (currentPage - 1) * reviewsPerPage;
+        const endIndex = startIndex + reviewsPerPage;
+        const paginatedReviews = filteredReviews.slice(startIndex, endIndex);
+        
+        if (paginatedReviews.length === 0) {
+            reviewsList.innerHTML = '<p class="text-gray-600 text-center py-4">No reviews found matching your criteria.</p>';
+            return;
+        }
+        
+        paginatedReviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.className = 'border-b border-gray-200 pb-6 last:border-0 last:pb-0';
+            
+            // Format date
+            const formattedDate = new Date(review.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create stars
+            let starsHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= review.rating) {
+                    starsHTML += `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>`; // Filled star
+                } else {
+                    starsHTML += `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>`; // Empty star
+                }
+            }
+            
+            reviewElement.innerHTML = `
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center">
+                        <div class="font-medium text-gray-900">${review.name}</div>
+                        <div class="mx-2 text-gray-400">•</div>
+                        <div class="text-gray-500 text-sm">${formattedDate}</div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex text-yellow-400">
+                            ${starsHTML}
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-medium text-gray-800 mb-1">${review.title}</h3>
+                <p class="text-gray-600">${review.content}</p>
+            `;
+            
+            reviewsList.appendChild(reviewElement);
+        });
+    }
+    
+    function renderPagination() {
+        pagination.innerHTML = '';
+        const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
+        
+        if (totalPages <= 1) return;
+        
+        // Previous button
+        if (currentPage > 1) {
+            const prevButton = document.createElement('button');
+            prevButton.className = 'px-3 py-1 rounded-md hover:bg-gray-100';
+            prevButton.textContent = '←';
+            prevButton.addEventListener('click', () => {
+                currentPage--;
+                renderReviews();
+                renderPagination();
+            });
+            pagination.appendChild(prevButton);
+        }
+        
+        // Page buttons
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.className = `px-3 py-1 rounded-md ${i === currentPage ? 'bg-[#174e4f] text-white' : 'hover:bg-gray-100'}`;
+            pageButton.textContent = i;
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                renderReviews();
+                renderPagination();
+            });
+            pagination.appendChild(pageButton);
+        }
+        
+        // Next button
+        if (currentPage < totalPages) {
+            const nextButton = document.createElement('button');
+            nextButton.className = 'px-3 py-1 rounded-md hover:bg-gray-100';
+            nextButton.textContent = '→';
+            nextButton.addEventListener('click', () => {
+                currentPage++;
+                renderReviews();
+                renderPagination();
+            });
+            pagination.appendChild(nextButton);
+        }
+    }
+});
+</script>
+<script>
+// Intersection Observer to trigger the animation when images come into view
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.image-animation');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Stop observing once it's visible
+      }
+    });
+  }, {
+    threshold: 0.2 // Trigger animation when 20% of the image is visible
+  });
+
+  // Observe each image
+  images.forEach(image => {
+    observer.observe(image);
+  });
+});
+</script>

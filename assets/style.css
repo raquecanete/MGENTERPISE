@@ -1,0 +1,189 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+:root{
+    --sl-font-sans: var(--dna-font-sans);
+    --sl-font-serif: var(--dna-font-serif);
+    --sl-color-primary-600: var(--dna-color-midnight);
+    --sl-font-size-medium: 16px;
+    --sl-tooltip-background-color: #00163b;
+    --sl-tooltip-padding: 6px 8px;
+    --sl-tooltip-font-size: 12px;
+    --sl-tooltip-line-height: 20px;
+}
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+:root {
+  --dna-color-sandstone: #F4F2EF;
+    --dna-color-midnight: #03143B;
+    --dna-color-reflex-blue: #092DC5;
+    --dna-color-brass: #DFA711;
+    --dna-color-light-grey: #DCDBDD;
+    --dna-brand-primary: var(--dna-color-midnight);
+    --dna-brand-secondary: var(--dna-color-sandstone);
+    --dna-brand-ink: #000000;
+    --dna-brand-light: #f6f6f6;
+    --dna-brand-neutral: #b8b8b8;
+    --dna-brand-reverse: #ffffff;
+    --dna-brand-subdued: #666666;
+    --dna-color-night: var(--dna-color-midnight);
+    --dna-color-day: var(--dna-color-sandstone);
+    --dna-color-focus: var(--dna-color-subdued);
+    --dna-color-text: var(--dna-color-night);
+    --dna-color-foreground: var(--dna-color-night);
+    --dna-color-background: var(--dna-color-day);
+    --dna-color-subdued: #666666;
+    --dna-color-dark-midnight: #0b163b;
+    --dna-checkout-accent: #0000ff;
+    --dna-checkout-buttons: #1878b9;
+    --dna-checkout-form-bg: var(--dna-brand-reverse);
+    --dna-checkout-order-summary-bg: var(--dna-brand-light);
+    --dna-ui-border-primary: var(--dna-brand-secondary);
+    --dna-ui-border-secondary: var(--dna-brand-neutral);
+    --dna-ui-color-swatch-active: var(--dna-brand-ink);
+    --dna-ui-color-swatch-sold-out: var(--dna-brand-ink);
+    --dna-ui-scrollbar-background: var(--dna-brand-light);
+    --dna-ui-scrollbar-foreground: var(--dna-brand-subdued);
+    --dna-ui-error: #9A0000;
+    --dna-utility-error: #ec0000;
+    --dna-utility-focus: #0038ff;
+    --dna-utility-overlay: #00000080;
+    --dna-utility-success: #25b900;
+    --dna-utility-attention: #DA3522;
+    --dna-section-color-primary: #3a3a3a;
+    --dna-section-color-secondary: #ececec;
+    --dna-section-gradient-primary: #c7c3c3;
+    --dna-section-gradient-secondary: #e0e0e0;
+    --dna-font-sans: 'Maison Neue Book', sans-serif;
+    --dna-font-sans-medium: 'Maison Neue Medium', sans-serif;
+    --dna-font-serif: 'Grifo S Light', Georgia, "Times New Roman", serif;
+    --dna-h1-font: 300 56px / 56px var(--dna-font-serif);
+    --dna-h2-font: 300 40px / 40px var(--dna-font-serif);
+    --dna-h3-font: 300 32px / 32px var(--dna-font-serif);
+    --dna-h4-font: 300 24px / 32px var(--dna-font-serif);
+    --dna-h5-font: 400 24px / 32px var(--dna-font-serif);
+    --dna-h6-font: 300 24px / 32px var(--dna-font-serif);
+    --dna-body-font: 300 12px / 16px var(--dna-font-sans);
+    --dna-body-p1-font: 400 16px / 24px var(--dna-font-sans);
+    --dna-body-p2-font: 400 14px / 20px var(--dna-font-sans);
+    --dna-body-p3-font: 400 12px / 18px var(--dna-font-sans);
+    --dna-body-p4-font: 400 10px / 16px var(--dna-font-sans);
+    --dna-link-1-font: 400 16px / 24px var(--dna-font-sans);
+    --dna-link-2-font: 400 14px / 20px var(--dna-font-sans);
+    --dna-link-3-font: 400 12px / 18px var(--dna-font-sans);
+    --dna-label-l-font: 400 16px / 20px var(--dna-font-sans-medium);
+    --dna-label-m-font: 400 14px / 16px var(--dna-font-sans-medium);
+    --dna-label-s-font: 400 12px / 12px var(--dna-font-sans-medium);
+    --dna-badge-font: 400 10px / 10px var(--dna-font-sans-medium);
+}
+.fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+  #chatSidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 375px;
+      height: 100vh;
+      z-index: 1000;
+    }
+    #chatSidebar.open {
+      display: flex;
+      right: 0;
+    }
+    #chatSidebar.fullscreen {
+      width: 100vw;
+      max-width: 100%;
+    }
+     /* Blinking animation */
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .blink {
+    animation: blink 3s infinite;
+  }
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    top: 40%;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .swiper-pagination {
+    position: relative;
+    bottom: 0;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #000;
+    width: 10px;
+    height: 10px;
+  }
+
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation:
+    typing 3s steps(50, end) infinite,
+    blink 0.75s step-end infinite;
+}
+  /* Add CSS for the complex image animation */
+.image-animation {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8) rotate(10deg); /* Initial state with movement, scaling and rotation */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible class with more complex animation */
+.image-animation.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0); /* Reset to normal position */
+}
+
+/* Delays for cascading effect */
+.image-animation:nth-child(1) {
+  transition-delay: 0.2s; /* Delay for first image */
+}
+
+.image-animation:nth-child(2) {
+  transition-delay: 0.4s; /* Delay for second image */
+}
+
+.image-animation:nth-child(3) {
+  transition-delay: 0.6s; /* Delay for third image */
+}
+
+.image-animation:nth-child(4) {
+  transition-delay: 0.8s; /* Delay for fourth image */
+}
