@@ -64,7 +64,7 @@
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex gap-12 text-sm items-center" id="home">
-        <a href="#" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">HOME</a>
+        <a href="index.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">HOME</a>
 
         <!-- Shop Dropdown -->
         <div class="relative group">
@@ -231,7 +231,7 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
     <div class="space-y-1">
-      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Home</a>
+      <a href="index.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Home</a>
       
       <div class="relative">
         <button id="mobile-shop-toggle" class="w-full text-left py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 flex items-center justify-between">
@@ -295,102 +295,94 @@
 </div>
   </div>
 </header>
-<div class="w-full mx-auto bg-white">
-  <!-- Slider Section -->
-  <div class="relative w-full">
-      <div class="slider-container relative h-[800px] overflow-hidden">
-          <!-- Slides -->
-          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
-              <div class="flex h-full">
-                  <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg" 
-                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
-                  <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg" 
-                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
-              </div>
-              <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Customize Shirts for your Group</h2>
-                      <p class="text-lg md:text-xl mb-6">Design what you like Jerseys, Shirt & Mugs.</p>
-                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-200 transition">Shop Now</button>
-                  </div>
-              </div>
-          </div>
-          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
-            <div class="flex h-full">
-              <img src="./img/Basketball Logo Shorts - White _ XL_36.jfif" 
-                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
-                       <img src="./img/basketballopen.jfif" 
-                       alt="Fashion Sale" class="w-1/2 h-full object-cover">
-            </div>
-              <div class="absolute inset-0 bg-gray-900 bg-opacity-30 flex items-center justify-center">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Sports Wear & Gears</h2>
-                      <p class="text-lg md:text-xl mb-6">Discover the latest Sports wear</p>
-                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-200 transition">Shop Now</button>
-                  </div>
-              </div>
-          </div>
-          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
-              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                   alt="Home Decor" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-3xl md:text-5xl font-bold mb-4">Level Up Whenever or Wherever you Go</h2>
-                      <p class="text-lg md:text-xl mb-6">Level Up-No matter the time or place.</p>
-                      <button class="bg-[#174e4f] text-white px-16 py-3 rounded-full font-medium hover:bg-gray-500 transition">Shop Now</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Navigation Arrows -->
-      <button class="slider-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-gray-800 p-2 rounded-full shadow-md hover:bg-opacity-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-      </button>
-      <button class="slider-next absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 text-gray-800 p-2 rounded-full shadow-md hover:bg-opacity-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-      </button>
-      <!-- Dots Navigation -->
-      <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="0"></button>
-          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="1"></button>
-          <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition" data-index="2"></button>
-      </div>
-  </div>
-</div>
-  <div class="mx-auto px-4 py-8 sm:px-6 sm:py-24 lg:px-8 w-full text-center ">
-    <h2 class="text-4xl font-bold tracking-tight text-[#0b163b] px-8 tracking-[0.1em]">Discover the Perfect Bag for You</h2>
-    <p class="py-5 px-8 text-xl">Discover the Art of Fine Craftsmanship: Our Curated Bag Collection</p>
-    <hr>
-    <div class="flex justify-end mt-10 py-3">
-      <a href="#" class="inline-block px-6 py-3 text-center font-medium text-black hover:underline hover:text-[#174e4f]">
-        Browse Products <span aria-hidden="true">→</span>
-  </a>
-</div>
 
-<div class="swiper-container relative overflow-hidden">
-  <div class="swiper-wrapper pb-12">
-    <div class="swiper-slide px-1">
-      <a href="">
-        <div class="group relative w-full border border-black-400 bg-[#F4F2EF]  ">
-          <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
-        <div class="aspect-square w-full bg-[#F4F2EF] flex items-center justify-center p-4 relative overflow-hidden">
-          <img src="./img/shoulderbag-removebg-preview.png" alt="Mini shoulder Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
-          <img src="./img/shoulderbag2.jfif" alt="Mini shoulder Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<div class="mx-auto px-4 py-16 max-w-7xl min-h-[900px]">
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Image Gallery -->
+    <div class="md:w-1/2">
+      <div class="relative overflow-hidden rounded-lg mb-4" style="height: 600px;">
+        <div id="main-image-container" class="h-full w-full flex items-center justify-center relative group">
+          <img id="main-image" src="./img/shoulderbag-removebg-preview.png" 
+               alt="Main Product Image" class="w-full h-full object-cover rounded-lg transition-all duration-300 transform group-hover:scale-110">
         </div>
-        <div class="mt-4 flex justify-between w-full px-4 py-2">
-          <div>
-            <h3 class="text-sm font-medium text-gray-900">Mini shoulder Bag</h3>
-            <p class="mt-1 text-sm text-gray-500">Black</p>
-          </div>
-          <p class="text-sm font-medium text-gray-900">P350</p>
+        <!-- Navigation Arrows -->
+        <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 rounded-full p-2 hover:bg-white z-10">
+          <i class="fas fa-chevron-left text-gray-800"></i>
+        </button>
+        <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full p-2 hover:bg-white z-10">
+          <i class="fas fa-chevron-right text-gray-800"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 gap-2">
+        <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+             data-image="./img/shoulderbag2.jfif">
+          <img src="./img/shoulderbag2.jfif" alt="Thumbnail 1" class="w-full h-24 object-cover rounded">
+        </div>
+        <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+             data-image="./img/shoulderbag-removebg-preview.png">
+          <img src="./img/shoulderbag-removebg-preview.png" alt="Thumbnail 2" class="w-full h-24 object-cover rounded">
+        </div>
+        <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+             data-image="./img/shoulderbag3 (1).jfif">
+          <img src="./img/shoulderbag3 (1).jfif" alt="Thumbnail 3" class="w-full h-24 object-cover rounded">
+        </div>
+        <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
+             data-image="./img/shoulderbag4.jfif">
+          <img src="./img/shoulderbag4.jfif" alt="Thumbnail 4" class="w-full h-24 object-cover rounded">
         </div>
       </div>
     </div>
-    </a>
+
+    <!-- Bag Info Section -->
+    <div class="py-10 px-10 bg-[#174e4f] rounded-xl shadow-lg text-white flex-1">
+      <h1 class="text-4xl font-semibold mb-4"> Shoulder Bag</h1>
+      <div class="mb-6">
+        <span class="font-semibold">COLOR:</span>
+        <span class="ml-2 bg-black py-1 px-3 rounded-full text-sm">Black</span>
+      </div>
+      <div class="border-t border-b border-gray-200 py-4 mb-6">
+        <h3 class="text-lg mb-2">Genuine Leather</h3>
+        <div class="mb-8">
+          <h3 class="text-sm mb-4">Select your size</h3>
+          <div class="grid grid-cols-3 gap-2 mb-4">
+            <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white">Mini</button>
+            <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white">Medium</button>
+            <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white">Large</button>
+            
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <button id="add-to-cart" class="w-full bg-white text-[#174e4f] font-bold py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+              Add to Cart - Select a Size
+            </button>
+            <button class="w-full border border-white text-white py-3 px-4 rounded-lg hover:bg-white hover:text-[#174e4f] transition-colors" disabled>
+              <i class="ri-heart-line px-2"></i>Favorite
+            </button>
+          </div>
+          <div class="py-10">
+            <p class="text-sm text-white mb-4">Want a custom design? Let’s talk about it!</p>
+            <button class="w-full border border-white text-white py-3 px-4 rounded-2xl hover:bg-gray-500 transition-colors" disabled>
+              Chat Now!
+            </button>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-white">Note: This is a sample bag for reference. Custom orders are available upon request.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="mx-auto px-4 py-8 sm:px-6 sm:py-24 lg:px-8 w-full ">
+    <h2 class="text-6xl font-bold tracking-tight text-[#0b163b] px-8 tracking-[0.1em]">You May Also Like.</h2>
+    <div class="flex justify-end mt-10 py-3">
+</div>
+<div class="swiper-container relative overflow-hidden">
+  <div class="swiper-wrapper pb-12">
+    <div class="swiper-slide px-1">
+        <div class="group relative w-full bg-[#F4F2EF]  ">
+    </div>
     <div class="swiper-slide px-1">
       <div class="group relative w-full border border-black-400 bg-[#F4F2EF]">
         <a href=""><div class="flex justify-end py-3 px-5"><i class="ri-heart-line text-xl text-sm hover:text-red-900"></i></div></a>
@@ -407,7 +399,7 @@
         </div>
       </div>
     </div>
-
+</div>
 
     <!-- Slide 3 -->
     <div class="swiper-slide px-1">
@@ -472,7 +464,6 @@
         </div>
       </div>
     </div>
-
     <!-- Slide 6 -->
     <div class="swiper-slide px-1">
       <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
@@ -496,380 +487,7 @@
     </div>
   </div>
 
-  <!-- Navigation buttons -->
-  <div class="swiper-button-next hidden sm:flex"></div>
-  <div class="swiper-button-prev hidden sm:flex"></div>
-  
-  <!-- Pagination -->
-  <div class="swiper-pagination mt-4 sm:hidden flex justify-center"></div>
-</div>
 
- <!-- Shop Categories - Enhanced Design -->
-  <div class="container mx-auto px-4 py-16 bg-white">
-    <div class="w-full">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">Discover Our Collections</h2>
-      <p class="typewriter text-lg text-gray-900 mb-12 text-center max-w-2xl mx-auto">
-        Find the perfect wear for your active lifestyle.
-      </p>
-      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-2">
-        <!-- Category 1 -->
-        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-50">
-          <div class="relative h-64 md:h-80 overflow-hidden">
-            <img src="./img/sports.jfif" alt="Sports Wear" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute inset-0 flex items-end p-6">
-              <div class="text-white">
-                <h3 class="text-2xl font-bold mb-1">Sports Wear</h3>
-                <p class="text-sm opacity-90 mb-3">Performance apparel for every activity</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <!-- Category 2 -->
-        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-900">
-          <div class="relative h-64 md:h-80 overflow-hidden">
-            <img src="./img/travel bags.jfif" alt="Bags" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute inset-0 flex items-end p-6">
-              <div class="text-white">
-                <h3 class="text-2xl font-bold mb-1">Bags & Backpacks</h3>
-                <p class="text-sm opacity-90 mb-3">Carry your essentials in style</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <!-- Category 3 -->
-        <a href="#" class="category-card group relative block overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-black-900">
-          <div class="relative h-64 md:h-80 overflow-hidden">
-            <img src="./img/arnisgear.jfif" alt="Sports Gears" class="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute inset-0 flex items-end p-6">
-              <div class="text-white">
-                <h3 class="text-2xl font-bold mb-1">Sports Gear</h3>
-                <p class="text-sm opacity-90 mb-3">Equipment for champions</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Design Mugs Section -->
-  <div class="bg-cream">
-  <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-    <div>
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Design Your Mugs to your taste!</h2>
-      <p class="mt-4 text-gray-500">The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder-coated steel divider separates active cards from new ones or can be used to archive important task lists.</p>
-      <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Origin</dt>
-          <dd class="mt-2 text-sm text-gray-500">MIGGABAGS Enterprises</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Material</dt>
-          <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and powder-coated steel card cover</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Dimensions</dt>
-          <dd class="mt-2 text-sm text-gray-500">6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Finish</dt>
-          <dd class="mt-2 text-sm text-gray-500">Hand sanded and finished with natural oil</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Includes</dt>
-          <dd class="mt-2 text-sm text-gray-500">Wood card tray and 3 refill packs</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Considerations</dt>
-          <dd class="mt-2 text-sm text-gray-500">Made from natural materials. Grain and color vary with each item.</dd>
-        </div>
-      </dl>
-    </div>
-    <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 max-h-full">
-      <!-- Apply the image-animation class here -->
-      <img src="./img/PNG bakery.jfif" alt="Walnut card tray with white powder-coated steel divider and 3 punchout holes." class="image-animation">
-      <img src="./img/bakery.jfif" alt="Top down view of walnut card tray with embedded magnets and card groove." class="image-animation">
-      <img src="./img/cups.jfif" alt="Side of walnut card tray with card groove and recessed card area." class="image-animation">
-      <img src="./img/Paper_Hot_Cups-removebg-preview.png" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="image-animation">
-    </div>
-  </div>
-</div>
-    <div class=" mx-auto px-4 py-8 max-w-7xl">
-    <div class="flex flex-col md:flex-row gap-8">
-        <!-- Image Gallery -->
-        <div class="md:w-1/2">
-            <div class="relative overflow-hidden rounded-lg  mb-4" style="height: 500px;">
-                <!-- Main Image Container -->
-                <div id="main-image-container" class="h-full w-full flex items-center justify-center relative group">
-                    <img id="main-image" src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
-                        alt="Main Product Image" class="w-full h-full object-cover rounded-lg transition-all duration-300 transform group-hover:scale-110">
-                </div>
-                <!-- Navigation Arrows -->
-                <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2  rounded-full p-2  hover:bg-white z-10">
-                    <i class="fas fa-chevron-left text-gray-800"></i>
-                </button>
-                <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2  rounded-full p-2  hover:bg-white z-10">
-                    <i class="fas fa-chevron-right text-gray-800"></i>
-                </button>
-            </div>
-
-            <!-- Thumbnail Gallery -->
-            <div class="grid grid-cols-4 gap-2">
-                <!-- Thumbnail 1 -->
-                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
-                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg">
-                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
-                         alt="Thumbnail 1" 
-                         class="w-full h-24 object-cover rounded">
-                </div>
-                <!-- Thumbnail 2 -->
-                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
-                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg">
-                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg" 
-                         alt="Thumbnail 2" 
-                         class="w-full h-24 object-cover rounded">
-                </div>
-                <!-- Thumbnail 3 -->
-                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
-                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg">
-                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" 
-                         alt="Thumbnail 3" 
-                         class="w-full h-24 object-cover rounded">
-                </div>
-                <!-- Thumbnail 4 -->
-                <div class="thumbnail cursor-pointer border border-[#174e4f] rounded transition-all transform hover:scale-105 hover:shadow-lg" 
-                     data-image="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-quick-preview-02-detail.jpg">
-                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-quick-preview-02-detail.jpg" 
-                         alt="Thumbnail 4" 
-                         class="w-full h-24 object-cover rounded">
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Info Section -->
-        <div class="py-10 px-10 bg-[#174e4f] rounded-xl shadow-lg ">
-            <h1 class="text-4xl font-sm mb-2 py-4 text-white ">Plain Shirt</h1>
-            <div class="mb-6">
-                <span class="font-semibold text-white">COLOR :</span>
-                <span  class="ml-2 text-white rounded-full bg-black py-2 px-2 text-sm">Black</span>
-            </div>
-            <div class="border-t border-b border-gray-200 py-4 mb-6">
-                <h3 class=" text-lg mb-2 text-white">Cotton Soft</h3>
-                <div class="mb-8">
-                    <h3 class="text-sm mb-4 text-white">Select your size</h3>
-                    <div class="grid grid-cols-3 gap-2 mb-4">
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Small</button>
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Medium</button>
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Large</button>
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">Xl</button>
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">XXl</button>
-                        <button class="size-btn border border-gray-300 py-2 px-4 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#174e4f] text-white">2Xl</button>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button id="add-to-cart" class="w-full bg-[#174e4f] text-white py-3 px-4 rounded-lg hover:border border-white transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
-                            Add to Cart - Select a Size
-                        </button>
-                        <button class="w-full bg-[#174e4f] text-white py-3 px-4 rounded-lg hover:border border-white transition-colors" disabled>
-                            <i class="ri-heart-line px-2"></i>Add to favorites
-                        </button>
-                    </div>
-                    <div class="py-10">
-                        <p class="text-sm text-gray-600 py-2 text-white">Chat with us if you want to Customize this item.</p>
-                        <button id="add-to-cart" class="w-full border border-white text-white py-3 px-4 rounded-2xl hover:bg-gray-500 transition-colors" disabled>
-                            Chat Now!
-                        </button>
-                    </div>
-                </div>
-                <div class="border-gray-200">
-                    <p class="text-sm text-gray-600 text-white">Note: This item is only a reference. If you want to customize it, you can reach us to cater to your needs.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Main Section -->
-<div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="relative isolate overflow-hidden bg-[#174e4f] px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-        <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-            <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-        </svg>
-        <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Everything You Need to Know: Create Your Perfect Look, One Custom Stitch at a Time.</h2>
-            <p class="mt-6 text-lg/8 text-pretty text-gray-300">With You in Mind, You Can Create, Design, and Wear Your Dream Piece.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <!-- Get Started Button -->
-                <button id="getStartedBtn" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</button>
-                <!-- Learn More Button -->
-                <button id="learnMoreBtn" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></button>
-            </div>
-        </div>
-
-        <!-- Images Section -->
-        <div class="relative mt-16 h-80 lg:mt-8">
-            <img class="absolute top-0 left-0 w-[30rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/poloside-removebg-preview.png" alt="App screenshot">
-            <img class="absolute top-0 left-0 w-[20rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/MAGCOMSEN_Men_s_Polo_Shirts_3_Buttons_Casual_Work_T_Shirts_Quick_Dry_Short_Sleeve_Golf_Shirt_Pique_Jersey_Outdoor_Performance-removebg-preview.png" alt="App screenshot" width="500" height="1080">
-            <img class="absolute top-0 left-0 w-[10rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="./img/polo-removebg-preview.png" alt="App screenshot" width="500" height="1080">
-        </div>
-    </div>
-</div>
-
-<!-- Modal for Get Started (Customization Form) -->
-<div id="getStartedModal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h3 class="text-2xl font-semibold mb-4">Request Product Customization</h3>
-        <form action="#" method="post">
-            <div class="mb-4">
-                <label for="name" class="block text-gray-700">Your Name</label>
-                <input type="text" id="name" name="name" class="w-full p-3 border border-black rounded-md" placeholder="Enter your name">
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700">Your Email</label>
-                <input type="email" id="email" name="email" class="w-full p-3 border border-black rounded-md" placeholder="Enter your email">
-            </div>
-            <div class="mb-4">
-                <label for="customizationRequest" class="block text-gray-700">Customization Request</label>
-                <textarea id="customizationRequest" name="customizationRequest" rows="4" class="w-full p-3 border border-black rounded-md" placeholder="Describe your customization request"></textarea>
-            </div>
-            <div class="flex justify-end gap-4">
-                <button type="button" id="closeGetStarted" class="px-6 py-2 border border-black rounded-md">Close</button>
-                <button type="submit" class="px-6 py-2 bg-[#174e4f] text-white rounded-md">Submit</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- Modal for Learn More (Description) -->
-<div id="learnMoreModal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-[500px]">
-        <h3 class="text-2xl font-semibold mb-4">How to Request Customization</h3>
-        <p class="text-gray-700 mb-4">When requesting a product customization, please provide as much detail as possible. Describe the design, color preferences, material choices, and any other relevant details for us to create the perfect custom product just for you.</p>
-        <div class="flex justify-end gap-4">
-            <button type="button" id="closeLearnMore" class="px-6 py-2 border border-black rounded-md">Close</button>
-        </div>
-    </div>
-</div>
-
-<!-- JavaScript to Control Modals -->
-<script>
-    // Get the modal elements
-    const getStartedModal = document.getElementById('getStartedModal');
-    const learnMoreModal = document.getElementById('learnMoreModal');
-
-    // Get the buttons
-    const getStartedBtn = document.getElementById('getStartedBtn');
-    const learnMoreBtn = document.getElementById('learnMoreBtn');
-
-    // Get the close buttons
-    const closeGetStarted = document.getElementById('closeGetStarted');
-    const closeLearnMore = document.getElementById('closeLearnMore');
-
-    // Show the "Get Started" modal
-    getStartedBtn.addEventListener('click', () => {
-        getStartedModal.classList.remove('hidden');
-    });
-
-    // Show the "Learn More" modal
-    learnMoreBtn.addEventListener('click', () => {
-        learnMoreModal.classList.remove('hidden');
-    });
-
-    // Close the "Get Started" modal
-    closeGetStarted.addEventListener('click', () => {
-        getStartedModal.classList.add('hidden');
-    });
-
-    // Close the "Learn More" modal
-    closeLearnMore.addEventListener('click', () => {
-        learnMoreModal.classList.add('hidden');
-    });
-</script>
-<div class="bg-white">
-  <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto w-full py-16 sm:py-24 lg:py-32">
-      <h2 class="text-3xl font-bold text-gray-900 text-center py-4">Accessories</h2>
-      <p class="text-center text-lg py-4">"Accessorize with pieces that reflect your personality and elevate your wardrobe. From subtle to bold, our collection has something to match every mood and occasion."</p>
-      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-          <h3 class="mt-6 text-sm text-gray-500">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              Desk and Office
-            </a>
-          </h3>
-          <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-          <h3 class="mt-6 text-sm text-gray-500">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              Self-Improvement
-            </a>
-          </h3>
-          <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-          <h3 class="mt-6 text-sm text-gray-500">
-            <a href="#">
-              <span class="absolute inset-0"></span>
-              Travel
-            </a>
-          </h3>
-          <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class=" p-6 h-[80vh]" id="reviews-container">
-    <!-- Header and Controls -->
-    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-        <h2 class="text-2xl font-semibold text-gray-800">Customer Reviews</h2>
-        
-        <div class="flex flex-col sm:flex-row gap-3 sm:w-auto">
-            <!-- Search Input -->
-            <div class="relative flex-grow">
-                <input 
-                    type="text" 
-                    id="search-reviews"
-                    placeholder="Search reviews..." 
-                    class="w-full pl-10 pr-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2"
-                >
-                <div class="absolute left-3 top-2.5 text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </div>
-            </div>
-            
-            <!-- Sort Dropdown -->
-            <select id="sort-reviews" class="px-2 py-2 rounded-lg focus:outline-none focus:ring-[#174e4f] text-gray-700 border border-black">
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="highest">Highest Rating</option>
-                <option value="lowest">Lowest Rating</option>
-            </select>
-        </div>
-    </div>
-    
-    <!-- Reviews List -->
-    <div class="space-y-6" id="reviews-list">
-        <!-- Reviews will be dynamically inserted here -->
-    </div>
-    
-    <!-- Pagination -->
-    <div class="mt-8 flex justify-center">
-        <nav class="flex items-center gap-1" id="pagination">
-            <!-- Pagination buttons will be dynamically inserted here -->
-        </nav>
-    </div>
-</div>
 <footer class="bg-white text-gray-300 ">
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between">
@@ -1053,336 +671,8 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
               }
             </script>
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                  // Enhanced reviews data with avatars
-                  let reviews = [
-                      {
-                          name: "Donafae Famulagan",
-                          role: "Ethics Maestra ba",
-                          company: "CPC",
-                          rating: 5,
-                          text: "Nindot si Jarvee oyy, angyan sya daan pag palit:))",
-                          date: "2025-04-25",
-                          avatar: "https://randomuser.me/api/portraits/women/44.jpg"
-                      },
-                      {
-                          name: "Jarvee",
-                          role: "Studyante",
-                          company: "CPC",
-                          rating: 4,
-                          text: "Wa koy masulti jud giatay nalay kuwang aning kompanyaha. YAWA!!!",
-                          date: "2025-04-25",
-                          avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-                      },
-                      {
-                          name: "Marka W Egg",
-                          role: "Tukmol",
-                          company: "CPC",
-                          rating: 5,
-                          text: "Kung akoy paestoryaon batiag sinina ninyu uy WA GABAE! inyung delivery rider baho!!!!!",
-                          date: "2025-04-25",
-                          avatar: "https://randomuser.me/api/portraits/women/68.jpg"
-                      },
-                      {
-                          name: "David Wilson",
-                          role: "CTO",
-                          company: "DataSystems",
-                          rating: 5,
-                          text: "The implementation was seamless and the results have exceeded our expectations. Our productivity has increased by 30%.",
-                          date: "2023-06-05",
-                          avatar: "https://randomuser.me/api/portraits/men/75.jpg"
-                      },
-                      {
-                          name: "Priya Patel",
-                          role: "Operations Lead",
-                          company: "Global Logistics",
-                          rating: 5,
-                          text: "Reliable, responsive, and results-driven. We've formed a long-term partnership based on this excellent experience.",
-                          date: "2023-02-18",
-                          avatar: "https://randomuser.me/api/portraits/women/63.jpg"
-                      }
-                  ];
-      
-                  // DOM elements
-                  const reviewsCarousel = document.getElementById('reviewsCarousel');
-                  const dotsContainer = document.getElementById('dotsContainer');
-                  const prevBtn = document.getElementById('prevBtn');
-                  const nextBtn = document.getElementById('nextBtn');
-                  const reviewForm = document.getElementById('reviewForm');
-                  const ratingStars = document.getElementById('ratingStars').querySelectorAll('i');
-                  const ratingInput = document.getElementById('rating');
-      
-                  // Current review index
-                  let currentReview = 0;
-                  let autoRotateInterval;
-      
-                  // Initialize the reviews
-                  function initReviews() {
-                      reviewsCarousel.innerHTML = '';
-                      dotsContainer.innerHTML = '';
-                      
-                      reviews.forEach((review, index) => {
-                          // Create review card
-                          const reviewCard = document.createElement('div');
-                          reviewCard.className = `flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-start`;
-                          reviewCard.innerHTML = `
-                              <div class="review-card bg-cream p-8 rounded-xl shadow-soft h-full flex flex-col animate-fade-in" style="animation-delay: ${index * 0.1}s">
-                                  <div class="flex items-center mb-6">
-                                      <img src="${review.avatar}" alt="${review.name}" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary-100">
-                                      <div>
-                                          <h4 class="font-semibold text-gray-900">${review.name}</h4>
-                                          <p class="text-sm text-gray-600">${review.role}, ${review.company}</p>
-                                      </div>
-                                  </div>
-                                  <div class="flex mb-4">
-                                      ${renderStars(review.rating)}
-                                  </div>
-                                  <blockquote class="text-gray-700 mb-6 flex-grow italic">"${review.text}"</blockquote>
-                                  <div class="text-sm text-gray-500 mt-auto">${formatDate(review.date)}</div>
-                              </div>
-                          `;
-                          reviewsCarousel.appendChild(reviewCard);
-                          
-                          // Create dot
-                          const dot = document.createElement('button');
-                          dot.className = `w-3 h-3 rounded-full nav-dot ${index === 0 ? 'bg-primary-600 w-6' : 'bg-gray-300'}`;
-                          dot.addEventListener('click', () => {
-                              showReview(index);
-                              resetAutoRotate();
-                          });
-                          dotsContainer.appendChild(dot);
-                      });
-                  }
-      
-                  // Show specific review
-                  function showReview(index) {
-                      const carouselWidth = reviewsCarousel.offsetWidth;
-                      reviewsCarousel.scrollTo({
-                          left: index * carouselWidth,
-                          behavior: 'smooth'
-                      });
-                      
-                      // Update dots
-                      document.querySelectorAll('#dotsContainer > button').forEach((dot, i) => {
-                          dot.classList.toggle('bg-primary-600', i === index);
-                          dot.classList.toggle('w-6', i === index);
-                          dot.classList.toggle('bg-gray-300', i !== index);
-                          dot.classList.toggle('w-3', i !== index);
-                      });
-                      
-                      currentReview = index;
-                  }
-      
-                  // Next review
-                  function nextReview() {
-                      const nextIndex = (currentReview + 1) % reviews.length;
-                      showReview(nextIndex);
-                  }
-      
-                  // Previous review
-                  function prevReview() {
-                      const prevIndex = (currentReview - 1 + reviews.length) % reviews.length;
-                      showReview(prevIndex);
-                  }
-                  // Render star rating
-                  function renderStars(rating) {
-                      let stars = '';
-                      for (let i = 1; i <= 5; i++) {
-                          if (i <= rating) {
-                              stars += '<i class="fas fa-star text-secondary-500 rating-star"></i>';
-                          } else {
-                              stars += '<i class="far fa-star text-secondary-500 rating-star"></i>';
-                          }
-                      }
-                      return stars;
-                  }
-                  // Format date
-                  function formatDate(dateString) {
-                      const options = { year: 'numeric', month: 'short', day: 'numeric' };
-                      return new Date(dateString).toLocaleDateString(undefined, options);
-                  }
-                  // Reset auto-rotate timer
-                  function resetAutoRotate() {
-                      clearInterval(autoRotateInterval);
-                      autoRotateInterval = setInterval(nextReview, 6000);
-                  }
-                  // Rating stars interaction
-                  ratingStars.forEach(star => {
-                      star.addEventListener('click', function() {
-                          const rating = parseInt(this.getAttribute('data-rating'));
-                          ratingInput.value = rating;
-                          
-                          // Update star display
-                          ratingStars.forEach((s, i) => {
-                              if (i < rating) {
-                                  s.classList.remove('far');
-                                  s.classList.add('fas');
-                              } else {
-                                  s.classList.remove('fas');
-                                  s.classList.add('far');
-                              }
-                          });
-                      });
-                  });
-                  // Form submission
-                  reviewForm.addEventListener('submit', function(e) {
-                      e.preventDefault();
-                      const name = document.getElementById('name').value;
-                      const rating = document.getElementById('rating').value;
-                      const text = document.getElementById('review').value;
-                      if (!name || !rating || !text) {
-                          alert('Please fill in all fields');
-                          return;
-                      }
-                      // Create new review
-                      const newReview = {
-                          name: name,
-                          role: "Customer",
-                          company: "",
-                          rating: parseInt(rating),
-                          text: text,
-                          date: new Date().toISOString().split('T')[0],
-                          avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0ea5e9&color=fff`
-                      };
-                      // Add to reviews array
-                      reviews.unshift(newReview);
-                      // Reset form
-                      reviewForm.reset();
-                      ratingStars.forEach(star => {
-                          star.classList.remove('fas');
-                          star.classList.add('far');
-                      });
-                      
-                      // Reinitialize reviews to include the new one
-                      initReviews();
-                      showReview(0);
-                      resetAutoRotate();
-                      
-                      // Show success message
-                      const successMsg = document.createElement('div');
-                      successMsg.className = 'fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center';
-                      successMsg.innerHTML = `
-                          <i class="fas fa-check-circle mr-2"></i>
-                          <span>Thank you for your review!</span>
-                      `;
-                      document.body.appendChild(successMsg);
-                      setTimeout(() => {
-                          successMsg.remove();
-                      }, 3000);
-                  });
-                  // Event listeners
-                  prevBtn.addEventListener('click', () => {
-                      prevReview();
-                      resetAutoRotate();
-                  });
-                  nextBtn.addEventListener('click', () => {
-                      nextReview();
-                      resetAutoRotate();
-                  });
-                  
-                  // Auto-rotate reviews
-                  autoRotateInterval = setInterval(nextReview, 6000);
-                  
-                  // Pause auto-rotate when hovering over carousel
-                  reviewsCarousel.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
-                  reviewsCarousel.addEventListener('mouseleave', resetAutoRotate);
-      
-                  // Initialize
-                  initReviews();
-      
-                  // Hide scrollbar but keep functionality
-                  document.querySelectorAll('.hide-scrollbar').forEach(el => {
-                      el.style.scrollbarWidth = 'none'; /* Firefox */
-                      el.style.msOverflowStyle = 'none';  /* IE 10+ */
-                      el.addEventListener('wheel', (e) => {
-                          if (e.deltaY === 0) return;
-                          e.preventDefault();
-                          el.scrollLeft += e.deltaY;
-                      });
-                  });
-              });
-          </script>
-          <script>
-            // Slider functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                const slides = document.querySelectorAll('.slide');
-                const dots = document.querySelectorAll('.dot');
-                const prevBtn = document.querySelector('.slider-prev');
-                const nextBtn = document.querySelector('.slider-next');
-                let currentIndex = 0;
-                let intervalId;
-                
-                // Show initial slide
-                showSlide(currentIndex);
-                
-                // Auto-rotate slides
-                function startSlider() {
-                    intervalId = setInterval(() => {
-                        nextSlide();
-                    }, 5000);
-                }
-                
-                startSlider();
-                
-                // Reset timer when user interacts
-                function resetInterval() {
-                    clearInterval(intervalId);
-                    startSlider();
-                }
-                
-                // Show specific slide
-                function showSlide(index) {
-                    slides.forEach(slide => slide.style.opacity = '0');
-                    dots.forEach(dot => dot.classList.remove('bg-opacity-100'));
-                    
-                    slides[index].style.opacity = '1';
-                    dots[index].classList.add('bg-opacity-100');
-                    currentIndex = index;
-                }
-                
-                // Next slide
-                function nextSlide() {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    showSlide(currentIndex);
-                }
-                
-                // Previous slide
-                function prevSlide() {
-                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                    showSlide(currentIndex);
-                }
-                
-                // Event listeners
-                nextBtn.addEventListener('click', () => {
-                    nextSlide();
-                    resetInterval();
-                });
-                
-                prevBtn.addEventListener('click', () => {
-                    prevSlide();
-                    resetInterval();
-                });
-                
-                dots.forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        const slideIndex = parseInt(dot.getAttribute('data-index'));
-                        showSlide(slideIndex);
-                        resetInterval();
-                    });
-                });
-                
-                // Pause on hover
-                const sliderContainer = document.querySelector('.slider-container');
-                sliderContainer.addEventListener('mouseenter', () => {
-                    clearInterval(intervalId);
-                });
-                
-                sliderContainer.addEventListener('mouseleave', () => {
-                    startSlider();
-                });
-            });
-          </script>
+            
+          
           <!-- JavaScript for Menu Toggle -->
           <script>
             const toggleBtn = document.getElementById('nav-toggle');
@@ -1777,25 +1067,213 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<!-- Add this right before your closing </body> tag -->
 <script>
-// Intersection Observer to trigger the animation when images come into view
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('.image-animation');
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all product cards from the HTML
+  const productCards = Array.from(document.querySelectorAll('.group.relative.w-full'));
+  
+  // Convert HTML elements to product objects
+  const products = productCards.map(card => {
+    return {
+      element: card,
+      name: card.querySelector('h3').textContent,
+      color: card.querySelector('p.mt-1').textContent,
+      price: parseInt(card.querySelector('p.text-sm.font-medium').textContent.replace('P', '')),
+      category: getCategoryFromCard(card),
+      featured: card.querySelector('i.ri-heart-line') !== null,
+      dateAdded: getDateAddedFromCard(card) // You'll need to add data attributes to your cards
+    };
+  });
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Stop observing once it's visible
+  // Helper functions to extract data from HTML
+  function getCategoryFromCard(card) {
+    // Add data-category attribute to your product cards in HTML
+    return card.getAttribute('data-category') || 'Shoulder Bags';
+  }
+
+  function getDateAddedFromCard(card) {
+    // Add data-date-added attribute to your product cards in HTML
+    return card.getAttribute('data-date-added') || '2023-01-01';
+  }
+
+  // DOM elements
+  const sortSelect = document.querySelector('select:nth-of-type(1)');
+  const categorySelect = document.querySelector('select:nth-of-type(2)');
+  const colorSelect = document.querySelector('select:nth-of-type(3)');
+  const productGrid = document.querySelector('.grid');
+  const paginationContainer = document.querySelector('.flex.justify-center nav');
+  
+  // Pagination variables
+  let currentPage = 1;
+  const itemsPerPage = 12;
+  let totalPages = Math.ceil(products.length / itemsPerPage);
+  
+  // Initialize
+  renderProducts();
+  renderPagination();
+  
+  // Event listeners
+  sortSelect.addEventListener('change', filterProducts);
+  categorySelect.addEventListener('change', filterProducts);
+  colorSelect.addEventListener('change', filterProducts);
+  
+  // Filter and sort products
+  function filterProducts() {
+    currentPage = 1; // Reset to first page when filters change
+    
+    let filteredProducts = [...products];
+    
+    // Category filter
+    const selectedCategory = categorySelect.value;
+    if (selectedCategory !== "All Categories") {
+      filteredProducts = filteredProducts.filter(product => product.category === selectedCategory);
+    }
+    
+    // Color filter
+    const selectedColor = colorSelect.value;
+    if (selectedColor !== "All Colors") {
+      filteredProducts = filteredProducts.filter(product => product.color === selectedColor);
+    }
+    
+    // Sort
+    const sortOption = sortSelect.value;
+    switch(sortOption) {
+      case "Price: Low to High":
+        filteredProducts.sort((a, b) => a.price - b.price);
+        break;
+      case "Price: High to Low":
+        filteredProducts.sort((a, b) => b.price - a.price);
+        break;
+      case "Newest Arrivals":
+        filteredProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+        break;
+      default: // "Featured" or default
+        filteredProducts.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    }
+    
+    // Update pagination
+    totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+    renderProducts(filteredProducts);
+    renderPagination();
+  }
+  
+  // Render products
+  function renderProducts(filteredProducts = products) {
+    // Hide all products first
+    productCards.forEach(card => card.style.display = 'none');
+    
+    // Calculate start and end index for current page
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
+    
+    // Show only the products for current page
+    productsToDisplay.forEach(product => {
+      product.element.style.display = 'block';
+    });
+  }
+  
+  // Render pagination
+  function renderPagination() {
+    paginationContainer.innerHTML = '';
+    
+    // Previous button
+    const prevButton = document.createElement('button');
+    prevButton.className = 'px-3 py-1 rounded border border-gray-300 text-gray-600 hover:bg-gray-100';
+    prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderProducts();
+        renderPagination();
       }
     });
-  }, {
-    threshold: 0.2 // Trigger animation when 20% of the image is visible
-  });
-
-  // Observe each image
-  images.forEach(image => {
-    observer.observe(image);
-  });
+    paginationContainer.appendChild(prevButton);
+    
+    // Page numbers
+    const maxVisiblePages = 5;
+    let startPage, endPage;
+    
+    if (totalPages <= maxVisiblePages) {
+      startPage = 1;
+      endPage = totalPages;
+    } else {
+      const maxPagesBeforeCurrent = Math.floor(maxVisiblePages / 2);
+      const maxPagesAfterCurrent = Math.ceil(maxVisiblePages / 2) - 1;
+      
+      if (currentPage <= maxPagesBeforeCurrent) {
+        startPage = 1;
+        endPage = maxVisiblePages;
+      } else if (currentPage + maxPagesAfterCurrent >= totalPages) {
+        startPage = totalPages - maxVisiblePages + 1;
+        endPage = totalPages;
+      } else {
+        startPage = currentPage - maxPagesBeforeCurrent;
+        endPage = currentPage + maxPagesAfterCurrent;
+      }
+    }
+    
+    for (let i = startPage; i <= endPage; i++) {
+      const pageButton = document.createElement('button');
+      pageButton.className = `px-3 py-1 rounded ${i === currentPage ? 'bg-black text-white' : 'border border-gray-300 text-gray-600 hover:bg-gray-100'}`;
+      pageButton.textContent = i;
+      pageButton.addEventListener('click', () => {
+        currentPage = i;
+        renderProducts();
+        renderPagination();
+      });
+      paginationContainer.appendChild(pageButton);
+    }
+    
+    // Next button
+    const nextButton = document.createElement('button');
+    nextButton.className = 'px-3 py-1 rounded border border-gray-300 text-gray-600 hover:bg-gray-100';
+    nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+    nextButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderProducts();
+        renderPagination();
+      }
+    });
+    paginationContainer.appendChild(nextButton);
+  }
 });
 </script>
+
+<script>
+  // Select all thumbnails and the main image
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const mainImage = document.getElementById('main-image');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const newImageSrc = thumbnail.getAttribute('data-image');
+      mainImage.src = newImageSrc;
+    });
+  });
+
+  // Optional: Add previous/next functionality
+  const images = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-image'));
+  let currentIndex = 0;
+
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  function updateMainImage(index) {
+    mainImage.src = images[index];
+    currentIndex = index;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    updateMainImage(newIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex + 1) % images.length;
+    updateMainImage(newIndex);
+  });
+</script>
+
