@@ -295,462 +295,244 @@
 </div>
   </div>
 </header>
-<section class="px-6 py-12">
-  <div class="max-w-screen-lg mx-auto text-center ">
-    <h2 class="text-3xl sm:text-4xl font-semibold text-[#0b163b]">Women's Bags</h2>
-    <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+<section class="px-4 md:px-6 py-8 md:py-12">
+  <div class="max-w-screen-lg mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0b163b]">Women's Bags</h2>
+    <p class="mt-3 md:mt-4 text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
       Effortless comfort meets on-trend style. Our women's bags are easy to wear and undeniably fashionable—plus, they're 100% machine washable.
     </p>
 
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
-      <!-- Clog 1 -->
-      <a href="/products/casual-clog" class="block group">
-        <div class="w-full h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
-          <img src="./img/bag1-removebg-preview.png" alt="The Casual Clog" class="h-full max-w-[200px] object-contain">
+    <div class="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 md:mt-10">
+      <!-- Bag 1 -->
+      <a href="/products/casual-clog" class="block group transition-transform duration-200 hover:scale-[1.02]">
+        <div class="w-full h-40 sm:h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
+          <img src="./img/bag1-removebg-preview.png" alt="Shoulder Bag" class="h-full max-w-[180px] sm:max-w-[200px] object-contain transition-transform duration-500 group-hover:scale-105">
         </div>
-        <h3 class="mt-4 text-lg font-medium text-gray-900">Shoulder Bag</h3>
-        <p class="text-gray-600 text-sm">Our iconic best seller, available in merino wool or a lightweight hemp.</p>
+        <h3 class="mt-3 sm:mt-4 text-base sm:text-lg font-sm text-gray-900">Shoulder Bag</h3>
+        
       </a>
 
-      <!-- Clog 2 -->
-      <a href="/products/buckle-clog" class="block group">
-        <div class="w-full h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
-          <img src="./img/cresentbag.jfif" alt="The Buckle Clog" class="h-full max-w-[200px] object-contain">
+      <!-- Bag 2 -->
+      <a href="/products/buckle-clog" class="block group transition-transform duration-200 hover:scale-[1.02]">
+        <div class="w-full h-40 sm:h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
+          <img src="./img/cresentbag.jfif" alt="Crescent Bag" class="h-full max-w-[180px] sm:max-w-[200px] object-contain transition-transform duration-500 group-hover:scale-105">
         </div>
-        <h3 class="mt-4 text-lg font-medium text-gray-900">The Crescent Bags</h3>
-        <p class="text-gray-600 text-sm">Merino-wool upper with a strap and signet buckle.</p>
+        <h3 class="mt-3 sm:mt-4 text-base sm:text-lg font-sm text-gray-900"> Crescent Bag</h3>
+       
       </a>
 
-      <!-- Clog 3 -->
-      <a href="/products/classic-clog" class="block group">
-        <div class="w-full h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
-          <img src="./img/totebag.jfif" alt="The Classic Clog" class="h-full max-w-[200px] object-contain">
+      <!-- Bag 3 -->
+      <a href="/products/classic-clog" class="block group transition-transform duration-200 hover:scale-[1.02]">
+        <div class="w-full h-40 sm:h-48 flex items-center justify-center overflow-hidden bg-white rounded shadow-md">
+          <img src="./img/totebag.jfif" alt="Tote Bag" class="h-full max-w-[180px] sm:max-w-[200px] object-contain transition-transform duration-500 group-hover:scale-105">
         </div>
-        <h3 class="mt-4 text-lg font-medium text-gray-900">The Classic Tote Bags</h3>
-        <p class="text-gray-600 text-sm">Softly knit upper and a lightweight EVA-Cork heel.</p>
+        <h3 class="mt-3 sm:mt-4 text-base sm:text-lg font-sm text-gray-900"> Tote Bag</h3>
+        
       </a>
     </div>
   </div>
 </section>
-
-
 <!-- Filters -->
 
         <div class="flex flex-wrap gap-2 py-6 px-4">
-                <select class=" rounded px-4 py-2 bg-white text-sm">
-                    <option>Sort by: Featured</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Newest Arrivals</option>
-                </select>
-                <select class=" rounded px-4 py-2 bg-white text-sm">
-                    <option>All Categories</option>
-                    <option>Shoulder Bags</option>
-                    <option>Tote Bags</option>
-                    <option>Clutches</option>
-                    <option>Backpacks</option>
-                </select>
-                <select class=" rounded px-4 py-2 bg-white text-sm">
-                    <option>All Colors</option>
-                    <option>Black</option>
-                    <option>White</option>
-                    <option>Brown</option>
-                    <option>Red</option>
-                    <option>Multicolor</option>
-                </select>
-            </div>
+  <select id="sortSelect" class="rounded px-4 py-2 bg-white text-sm">
+  <option>Sort by: Featured</option>
+  <option>Price: Low to High</option>
+  <option>Price: High to Low</option>
+  <option>Newest Arrivals</option>
+</select>
+
+  <select id="categorySelect" class="rounded px-4 py-2 bg-white text-sm">
+    <option>All Categories</option>
+    <option>Shoulder Bags</option>
+    <option>Tote Bags</option>
+    <option>Clutches</option>
+    <option>Backpacks</option>
+  </select>
+  <select id="colorSelect" class="rounded px-4 py-2 bg-white text-sm">
+    <option>All Colors</option>
+    <option>Black</option>
+    <option>White</option>
+    <option>Brown</option>
+    <option>Red</option>
+    <option>Multicolor</option>
+  </select>
+</div>
+
   <hr>
 
-  <!-- Product List Grid -->
-  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mt-10 px-3">
-    
-    <a href="bags-overview.html">
-        <!-- Product Card 1 -->
-    <div class="group relative w-full border border-black-400 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/shoulderbag-removebg-preview.png" alt="Mini shoulder Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/shoulderbag2.jfif" alt="Mini shoulder Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Mini shoulder Bag</h3>
-          <p class="mt-1 text-sm text-gray-500">Black</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P350</p>
-      </div>
+ <!-- Product List Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 py-12" id="productGrid">
+  
+  <!-- Product 1 - Shoulder Bag -->
+  <a href="./bags-overview.html" 
+   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   data-category="Tote Bags"
+   data-date-added="2025-05-20">
+     <div class="flex justify-end py-3 px-5">
+      <p class="absolute top-2 left-2 text-sm px-3 bg-red-200 text-white  blink-arrival z-10">New Arrival!</p>
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
-    </a>
-
-   <a href="">
-     <!-- Product Card 2 -->
-    <div class="group relative w-full border border-black-400 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/bag2-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/totebag.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Tote Bag</h3>
-          <p class="mt-1 text-sm text-gray-500">White</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P249</p>
-      </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/bagred__2_-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/bagred (3).jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
     </div>
-   </a>
-
-    <a href="">
-        <!-- Product Card 3 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Cuir Double Bag</h3>
+        <p class="mt-1 text-sm text-gray-500">Red</p>
       </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/The_Zoe___Nakedvice-removebg-preview.png" alt="Leader bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/minibag.jfif" alt="Leader Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Leader bag</h3>
-          <p class="mt-1 text-sm text-gray-500">Black</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900 px-6">P499</p>
-      </div>
-    </div>
-    </a>
-
-   <a href="">
-     <!-- Product Card 4 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/Mini_Solid_Color_Cloud___Crescent-Shaped_Folded_Women_Handbag-removebg-preview.png" alt="Designer bag" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/cresentbag.jfif" alt="Designer Bag Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Designer bag</h3>
-          <p class="mt-1 text-sm text-gray-500">Black</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P499</p>
-      </div>
-    </div>
-   </a>
-
-    <a href="">
-        <!-- Product Card 5 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/bag1-removebg-preview.png" alt="Evening Clutch" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/download (7).jfif" alt="Evening Clutch Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Evening Clutch</h3>
-          <p class="mt-1 text-sm text-gray-500">Gold</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P399</p>
-      </div>
-    </div>
-    </a>
-
-    <a href="">
-        <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    </a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
+      <p class="text-sm font-medium text-gray-900">P2,399</p>
     </div>
 </a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-</a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-</a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-</a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-</a>
-<a href="">
-    <!-- Product Card 6 -->
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-</a>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-    <div class="group relative w-full border border-black-900 bg-[#F4F2EF]">
-      <div class="flex justify-end py-3 px-5">
-        <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
-      </div>
-      <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
-        <img src="./img/sporotsbag-removebg-preview.png" alt="Beach Tote" class="max-h-full max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0">
-        <img src="./img/sports bag2.jfif" alt="Beach Tote Details" class="absolute inset-0 max-h-full w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      </div>
-      <div class="mt-4 flex justify-between w-full px-4 py-2">
-        <div>
-          <h3 class="text-sm font-medium text-gray-900">Travel Bags</h3>
-          <p class="mt-1 text-sm text-gray-500">Blue</p>
-        </div>
-        <p class="text-sm font-medium text-gray-900">P299</p>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
 
+  <!-- Product 2 - Tote Bag -->
+   <a href="./tote-bag-overview.html" 
+   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   data-category="Tote Bags"
+   data-date-added="2025-05-20">
+     <div class="flex justify-end py-3 px-5">
+      <p class="absolute top-2 left-2 text-sm px-3 bg-red-200 text-white  blink-arrival z-10">New Arrival!</p>
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/bag2-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/totebag.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Tote Bag</h3>
+        <p class="mt-1 text-sm text-gray-500">White</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P249</p>
+    </div>
+</a>
 
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+    <div class="flex justify-end py-3 px-5">
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/The_Zoe___Nakedvice-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/minibag.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Leather Bag</h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P699</p>
+    </div>
+  </a>
+  <a href="./bags-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+    <div class="flex justify-end py-3 px-5">
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/Mini_Solid_Color_Cloud___Crescent-Shaped_Folded_Women_Handbag-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/cresentbag.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Designer's Bag</h3>
+        <p class="mt-1 text-sm text-gray-500">White</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P349</p>
+    </div>
+  </a>
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+    <div class="flex justify-end py-3 px-5">
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/bag1-removebg-preview.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/download (7).jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Clutch Bag</h3>
+        <p class="mt-1 text-sm text-gray-500">Brown</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P239</p>
+    </div>
+  </a>
+   <!-- Product 6 -->
+    <a href="./tote-bag-overview.html" 
+   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   data-category="Tote Bags"
+   data-date-added="2025-05-20">
+     <div class="flex justify-end py-3 px-5">
+       <p class="absolute top-2 left-2 text-sm px-3 bg-red-200 text-white  blink-arrival z-10">New Arrival!</p>
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/brown1.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/brown2.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Clutches</h3>
+        <p class="mt-1 text-sm text-gray-500">Brown</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P269</p>
+    </div>
+</a>
+<a href="./tote-bag-overview.html" 
+   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   data-category="Tote Bags"
+   data-date-added="2025-05-20">
+     <div class="flex justify-end py-3 px-5">
+      <p class="absolute top-2 left-2 text-sm px-3 bg-red-200 text-white  blink-arrival z-10">New Arrival!</p>
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/bdbag1.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/bdbag1.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Birdin Bags</h3>
+        <p class="mt-1 text-sm text-gray-500">Multicolor</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P799</p>
+    </div>
+</a>
+<a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+    <div class="flex justify-end py-3 px-5">
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src=".//img/backpack.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/backpack.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Backpack</h3>
+        <p class="mt-1 text-sm text-gray-500">White</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P1,399</p>
+    </div>
+  </a>
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+    <div class="flex justify-end py-3 px-5">
+      <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
+    </div>
+    <div class="aspect-square w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <img src="./img/bbacck.png" alt="Tote Bag" class="max-h-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-0">
+      <img src="./img/bbacck.jfif" alt="Tote Bag Details" class="absolute inset-0 max-h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    </div>
+    <div class="mt-4 flex justify-between w-full px-4 py-2">
+      <div>
+        <h3 class="text-sm font-medium text-gray-900">Backpack</h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+      </div>
+      <p class="text-sm font-medium text-gray-900">P1,399</p>
+    </div>
+  </a>
 
-    <!-- Pagination -->
+  <!-- Continue with other products in the same pattern -->
+</div>
+<!-- Pagination -->
     <section class="container mx-auto px-4 py-8">
         <div class="flex justify-center">
             <nav class="flex items-center space-x-2">
@@ -768,19 +550,16 @@
             </nav>
         </div>
     </section>
-    <!-- Newsletter -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Join Our Newsletter</h3>
-            <p class="text-gray-600 mb-6">Subscribe to get updates on new arrivals, special offers and other discount information.</p>
-            <div class="max-w-md mx-auto flex">
-                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-l border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black">
-                <button class="bg-black text-white px-6 py-2 rounded-r hover:bg-gray-800 transition duration-300">
-                    Subscribe
-                </button>
-            </div>
-        </div>
-    </section>
+    <section class="bg-white py-24">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Timeless Style, Designed for You</h2>
+    <p class="text-lg text-gray-600">
+      Our women’s bags blend elegance and practicality, crafted with quality materials and attention to detail. Whether you're heading to work, a casual outing, or a special event, our collection offers the perfect companion for every moment. Carry confidence—carry style.
+    </p>
+  </div>
+</section>
+
+
 <footer class="bg-white text-gray-300 ">
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between">
@@ -1360,118 +1139,96 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-<!-- Add this right before your closing </body> tag -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all product cards from the HTML
+document.addEventListener('DOMContentLoaded', function () {
   const productCards = Array.from(document.querySelectorAll('.group.relative.w-full'));
-  
-  // Convert HTML elements to product objects
+
   const products = productCards.map(card => {
     return {
       element: card,
       name: card.querySelector('h3').textContent,
-      color: card.querySelector('p.mt-1').textContent,
-      price: parseInt(card.querySelector('p.text-sm.font-medium').textContent.replace('P', '')),
-      category: getCategoryFromCard(card),
+      color: card.querySelector('p.mt-1').textContent.trim(),
+      price: parseInt(card.querySelector('p.text-sm.font-medium').textContent.replace('P', '').replace(',', '')),
+      category: card.getAttribute('data-category') || 'Shoulder Bags',
       featured: card.querySelector('i.ri-heart-line') !== null,
-      dateAdded: getDateAddedFromCard(card) // You'll need to add data attributes to your cards
+      dateAdded: card.getAttribute('data-date-added') || '2023-01-01'
     };
   });
 
-  // Helper functions to extract data from HTML
-  function getCategoryFromCard(card) {
-    // Add data-category attribute to your product cards in HTML
-    return card.getAttribute('data-category') || 'Shoulder Bags';
-  }
-
-  function getDateAddedFromCard(card) {
-    // Add data-date-added attribute to your product cards in HTML
-    return card.getAttribute('data-date-added') || '2023-01-01';
-  }
-
-  // DOM elements
-  const sortSelect = document.querySelector('select:nth-of-type(1)');
-  const categorySelect = document.querySelector('select:nth-of-type(2)');
-  const colorSelect = document.querySelector('select:nth-of-type(3)');
-  const productGrid = document.querySelector('.grid');
+  const sortSelect = document.getElementById('sortSelect');
+  const categorySelect = document.getElementById('categorySelect');
+  const colorSelect = document.getElementById('colorSelect');
   const paginationContainer = document.querySelector('.flex.justify-center nav');
-  
-  // Pagination variables
+
   let currentPage = 1;
-  const itemsPerPage = 12;
-  let totalPages = Math.ceil(products.length / itemsPerPage);
-  
-  // Initialize
-  renderProducts();
-  renderPagination();
-  
-  // Event listeners
-  sortSelect.addEventListener('change', filterProducts);
-  categorySelect.addEventListener('change', filterProducts);
-  colorSelect.addEventListener('change', filterProducts);
-  
-  // Filter and sort products
-  function filterProducts() {
-    currentPage = 1; // Reset to first page when filters change
-    
-    let filteredProducts = [...products];
-    
-    // Category filter
+  const itemsPerPage = 8;
+  let filteredProducts = [...products];
+
+  function applyFilters() {
     const selectedCategory = categorySelect.value;
-    if (selectedCategory !== "All Categories") {
-      filteredProducts = filteredProducts.filter(product => product.category === selectedCategory);
-    }
-    
-    // Color filter
     const selectedColor = colorSelect.value;
-    if (selectedColor !== "All Colors") {
-      filteredProducts = filteredProducts.filter(product => product.color === selectedColor);
-    }
-    
-    // Sort
+
+    filteredProducts = products.filter(product => {
+      return (
+        (selectedCategory === 'All Categories' || product.category === selectedCategory) &&
+        (selectedColor === 'All Colors' || product.color === selectedColor)
+      );
+    });
+
+    applySort();
+  }
+
+  function applySort() {
     const sortOption = sortSelect.value;
-    switch(sortOption) {
-      case "Price: Low to High":
+
+    switch (sortOption) {
+      case 'Price: Low to High':
         filteredProducts.sort((a, b) => a.price - b.price);
         break;
-      case "Price: High to Low":
+      case 'Price: High to Low':
         filteredProducts.sort((a, b) => b.price - a.price);
         break;
-      case "Newest Arrivals":
+      case 'Newest Arrivals':
         filteredProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
         break;
-      default: // "Featured" or default
+      default: // Featured
         filteredProducts.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     }
-    
-    // Update pagination
-    totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-    renderProducts(filteredProducts);
+
+    currentPage = 1;
+    renderProducts();
     renderPagination();
   }
-  
-  // Render products
-  function renderProducts(filteredProducts = products) {
-    // Hide all products first
-    productCards.forEach(card => card.style.display = 'none');
-    
-    // Calculate start and end index for current page
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
-    
-    // Show only the products for current page
-    productsToDisplay.forEach(product => {
-      product.element.style.display = 'block';
-    });
-  }
-  
-  // Render pagination
+
+  function renderProducts() {
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = ''; // Clear the grid
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
+
+  const today = new Date();
+
+  productsToDisplay.forEach(product => {
+    const addedDate = new Date(product.dateAdded);
+    const isNew = (today - addedDate) / (1000 * 60 * 60 * 24) <= 30;
+
+    // Remove any existing "New Arrival!" tag
+    const existingLabel = product.element.querySelector('.blink-text');
+    if (existingLabel) existingLabel.remove();
+
+    grid.appendChild(product.element);
+  });
+}
+
+
+
   function renderPagination() {
     paginationContainer.innerHTML = '';
-    
-    // Previous button
+
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
     const prevButton = document.createElement('button');
     prevButton.className = 'px-3 py-1 rounded border border-gray-300 text-gray-600 hover:bg-gray-100';
     prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
@@ -1483,30 +1240,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     paginationContainer.appendChild(prevButton);
-    
-    // Page numbers
+
     const maxVisiblePages = 5;
-    let startPage, endPage;
-    
-    if (totalPages <= maxVisiblePages) {
-      startPage = 1;
-      endPage = totalPages;
-    } else {
-      const maxPagesBeforeCurrent = Math.floor(maxVisiblePages / 2);
-      const maxPagesAfterCurrent = Math.ceil(maxVisiblePages / 2) - 1;
-      
-      if (currentPage <= maxPagesBeforeCurrent) {
-        startPage = 1;
-        endPage = maxVisiblePages;
-      } else if (currentPage + maxPagesAfterCurrent >= totalPages) {
-        startPage = totalPages - maxVisiblePages + 1;
-        endPage = totalPages;
-      } else {
-        startPage = currentPage - maxPagesBeforeCurrent;
-        endPage = currentPage + maxPagesAfterCurrent;
-      }
-    }
-    
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
+
     for (let i = startPage; i <= endPage; i++) {
       const pageButton = document.createElement('button');
       pageButton.className = `px-3 py-1 rounded ${i === currentPage ? 'bg-black text-white' : 'border border-gray-300 text-gray-600 hover:bg-gray-100'}`;
@@ -1518,8 +1256,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       paginationContainer.appendChild(pageButton);
     }
-    
-    // Next button
+
     const nextButton = document.createElement('button');
     nextButton.className = 'px-3 py-1 rounded border border-gray-300 text-gray-600 hover:bg-gray-100';
     nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -1532,6 +1269,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     paginationContainer.appendChild(nextButton);
   }
+
+  // Initialize
+  applyFilters();
+  renderProducts();
+  renderPagination();
+
+  // Event listeners
+  sortSelect.addEventListener('change', applyFilters);
+  categorySelect.addEventListener('change', applyFilters);
+  colorSelect.addEventListener('change', applyFilters);
 });
 </script>
-
