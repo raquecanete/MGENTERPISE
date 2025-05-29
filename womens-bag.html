@@ -29,205 +29,130 @@
     </a>
   </div>
 </section>
-  <!-- Upper Header -->
-  <div class="bg-cream px-4 py-2">
-    <div class="flex items-center justify-between">
-      <!-- Left Spacer -->
-      <div class="w-200"></div>
-      <!-- Centered Logo -->
-      <div class="flex-1 flex justify-center">
-        <a href="index.html" class="flex items-center gap-0">
-          <img src="./img/logoimg-removebg-preview.png" alt="Logo" class="h-10">
-          <span class="logo-text text-1xl bold italic text-sm ">
-            MG ENTERPRISES
-          </span>
-        </a>
-      </div>
-      <!-- Chat Us Button -->
-      <div class="w-32 flex justify-end">
-        <button id="chatButton"
-           class="text-white shadow-lg border border-black-400 p-4  px-4 py-2 rounded hover:bg-gray-500 flex items-center gap-1 text-sm whitespace-nowrap bg-[#174e4f]">
-          <i class="ri-chat-1-line"></i> MG Support
+ <!-- Navigation Header -->
+<header class="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <!-- Top Bar - Mobile/Desktop -->
+    <div class="flex justify-between items-center py-3">
+      <!-- Logo + Mobile Menu Button -->
+      <div class="flex items-center gap-6">
+        
+        <!-- Mobile Toggle Button -->
+        <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-teal-700">
+          <i class="ri-menu-line"></i>
         </button>
       </div>
+
+        <!-- Logo -->
+     <a href="index.html" class="flex items-center gap-4">
+  <div class="flex items-center">
+    <!-- Logo Mark -->
+    <img src="./img/logoimg-removebg-preview.png" alt="MG Enterprises Logo" class="h-10 w-auto">
+    
+    <!-- Text Logo -->
+    <div class="ml-4">
+      <div class="text-xl font-md tracking-tight text-gray-900 dark:text-white">MIGGABAGS</div>
     </div>
   </div>
-  <!-- Navigation Header -->
-<header class="bg-white shadow-md border-b border-gray-200" id="main-header">
-  <nav class="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center">
-    <!-- Left Side: Logo + Menu -->
-    <div class="flex items-center gap-6">
-      <!-- Mobile Toggle -->
-      <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-blue-600 transition-colors duration-200">
-        <i class="ri-menu-line"></i>
-      </button>
+</a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex gap-12 text-sm items-center" id="home">
-        <a href="index.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">HOME</a>
-
-        <!-- Shop Dropdown -->
-        <div class="relative group">
-          <div id="shop-toggle" class="cursor-pointer flex items-center text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">
-            SHOP <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-teal-700 text-sm transition">HOME</a>
+        
+       <!-- Shop Dropdown -->
+<div class="relative group">
+  <button class="flex items-center text-gray-700 hover:text-teal-700 text-sm transition">
+    SHOP <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+  </button>
+  
+  <!-- Mega Menu - Centered Wide Dropdown -->
+  <div class="absolute left-40 transform -translate-x-1/2 mt-2 w-[95vw] max-w-[1600px] bg-white shadow-xl rounded-lg p-6 hidden group-hover:block border border-gray-100 z-50">
+    <div class="grid grid-cols-3 gap-8">
+      <!-- Bags Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Bags</h3>
+        <ul class="space-y-3">
+          <li><a href="womens-bag.html" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> All Women's Bags</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Duffle Bag</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Back Pack</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Tote Bag</a></li>
+        </ul>
+      </div>
+      
+      <!-- Sports Wear Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Sports Wear</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Basketball Wear</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Volleyball Wear</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Combat Sports Wear</a></li>
+        </ul>
+      </div>
+      
+      <!-- Customization Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Customization</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Sports Jerseys</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Promotional Shirts</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Featured Products -->
+    <div class="mt-6 pt-4 border-t border-gray-100">
+      <h3 class="font-semibold text-gray-900 mb-4">Featured Products</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/download (8).jfif" alt="Duffle Bag" class="w-full h-80 object-cover group-hover:scale-105 transition duration-300">
           </div>
-
-          <!-- Shop Mega Menu -->
-          <div id="shop-menu" class="absolute top-full left-0 bg-white shadow-xl p-6 hidden group-hover:block w-[1000px] z-50 border border-gray-200 rounded-lg">
-            <div class="grid grid-cols-2 gap-8">
-              <!-- Bags -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Bags</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="womens-bag.html" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i>All Women's Bags</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Duffle Bag</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Back Pack</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Tote Bag</a></li>
-                </ul>
-              </div>
-
-              <!-- Sports Wear -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Sports Wear</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Basketball Wear</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Volleyball Wear</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Combat Sports Wear</a></li>
-                </ul>
-              </div>
-
-              <!-- Customization -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Customization</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Sports Jerseys</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Promotional Shirts</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- View All Products -->
-            <div class="mt-6 pt-4 border-t border-gray-100">
-              <a href="#" class="text-sm font-medium text-gray-900 hover:text-blue-600 flex items-center gap-2 transition duration-150">
-                <i class="ri-arrow-right-line"></i> View all products
-              </a>
-            </div>
-
-            <!-- Featured Products -->
-            <div class="col-span-2 mt-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
-              <div class="grid grid-cols-3 gap-6">
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
-                </div>
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
-                </div>
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Classic Duffle Bag</p>
         </div>
-
-        <!-- Other Links -->
-        <a href="about-us.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">ABOUT US</a>
-        <a href="contact.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">CONTACT</a>
-        <a href="#" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">STORE</a>
-      </div>
-    </div>
-
-    <!-- Right Side Icons -->
-     <div class="flex items-center gap-6">
-  <!-- Contact Number -->
-  <div class="hidden md:flex flex-col text-right">
-    <span class="text-xs text-gray-500">Need Help?</span>
-    <a href="tel:+639123456789" class="text-sm font-semibold text-gray-700 hover:text-[#174e4f] transition-colors">
-      +63 912 345 6789
-    </a>
-  </div>
-    <div class="flex items-center gap-4">
-      <!-- Search -->
-      <label class="flex items-center border rounded-lg px-3 py-2 hover:border-blue-400 transition-colors duration-200 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-200 bg-gray-50">
-        <i class="ri-search-line text-gray-500 mr-2"></i>
-        <input 
-          type="text"
-          placeholder="Search products..."
-          class="w-full text-sm placeholder:text-gray-400 focus:outline-none bg-transparent"
-        />
-      </label>
-
-      <!-- Icons -->
-      <div class="flex gap-4 items-center">
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-shopping-cart-line text-2xl"></i>
-        </a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-heart-line text-2xl"></i>
-        </a>
-        <a href="log-in.html" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-user-line text-2xl"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
-</header>
-
-  <!-- Chat sidebar -->
-  <div id="chatSidebar" class="bg-white shadow-lg flex flex-col">
-    <!-- Chat header with fullscreen toggle -->
-    <div class="bg-gray-900 text-white p-4 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <i class="ri-chat-1-line"></i>
-        <h3 class="font-semibold">MG Support</h3>
-      </div>
-      <div class="flex gap-2">
-        <button id="toggleFullscreen" class="text-white hover:text-gray-300">
-          <i class="ri-fullscreen-line"></i>
-        </button>
-        <button id="closeChat" class="text-white hover:text-gray-300">
-          <i class="ri-close-line text-xl"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Chat messages container -->
-    <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-4">
-      <!-- Welcome message -->
-      <div class="flex justify-start">
-        <div class="bg-gray-100 rounded-lg p-3 max-w-[80%]">
-          <p class="text-sm">Hello! Welcome to MG Enterprises. How can we help you today?</p>
-          <p class="text-xs text-gray-500 mt-1">Support Team • Just now</p>
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Sports Jersey" class="w-full h-80 object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Combat Sports Jersey</p>
+        </div>
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Tote Bag" class="w-full h-80  object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Tote Bag</p>
         </div>
       </div>
     </div>
-    <!-- Chat input area -->
-    <div class="border-t border-gray-200 p-4 bg-gray-50">
-      <div class="flex gap-2">
-        <input
-          type="text"
-          id="messageInput"
-          placeholder="Type your message..."
-          class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        >
-        <button id="sendMessage" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-          <i class="ri-send-plane-line"></i>
+  </div>
+</div>
+        <a href="about-us.html" class="text-gray-700 hover:text-teal-700 text-sm transition">ABOUT US</a>
+        <a href="contact.html" class="text-gray-700 hover:text-teal-700 text-sm transition">CONTACT</a>
+        <a href="#" class="text-gray-700 hover:text-teal-700 text-sm transition">STORE</a>
+      </nav>
+
+      <!-- Right Side Icons -->
+      <div class="flex items-center gap-4">
+        <!-- Search Icon -->
+        <button id="search-toggle" class="text-gray-600 hover:text-teal-700 transition">
+          <i class="ri-search-line text-xl"></i>
         </button>
+        
+        <!-- Icons -->
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-shopping-cart-line text-xl"></i></a>
+          <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-heart-line text-xl"></i></a>
+          <a href="log-in.html" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-user-line text-xl"></i></a>
+        </div>
+        <!-- Phone - Hidden on mobile -->
+        <div class="hidden md:flex flex-col text-right px-12">
+          <span class="text-xs text-gray-500">Need Help?</span>
+          <a href="tel:+639669103841" class="text-sm font-semibold text-gray-700 hover:text-teal-700">+63 966 910 3841</a>
+        </div>
       </div>
-      <p class="text-xs text-gray-500 mt-2">Our team typically replies within a few minutes</p>
     </div>
   </div>
-  <!-- Overlay -->
-  <div id="chatOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
     <div class="space-y-1">
@@ -239,7 +164,6 @@
           <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
         </button>
         <div id="mobile-shop-menu" class="hidden pl-4 mt-1 space-y-1">
-          
           <div class="mb-3">
             <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
               Bags
@@ -253,7 +177,7 @@
           </div>
           <div class="mb-3">
             <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
-               Sports Wear
+              Sports Wear
             </div>
             <ul class="pl-6 space-y-1 mt-1">
               <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Basketball Wear</a></li>
@@ -273,28 +197,295 @@
         </div>
       </div>
       <a href="about-us.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">About</a>
-      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
+      <a href="contact.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
       <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Stores</a>
     </div>
     <div class="col-span-2 mt-6">
-  <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
-  <div class="grid grid-cols-3 gap-6">
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+        </div>
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+        </div>
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+        </div>
+      </div>
     </div>
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+  </div>
+</header>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="fixed inset-0 bg-white z-50 hidden flex items-center justify-center p-4">
+  <div class="w-full max-w-3xl">
+    <div class="relative">
+      <input 
+        type="text" 
+        id="search-input"
+        placeholder="Search products..." 
+        class="w-full py-4 px-5 text-lg border-b-2 border-gray-300 focus:outline-none focus:border-teal-500 transition-colors duration-200"
+        autofocus
+      >
+      <button id="search-close" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+        <i class="ri-close-line text-2xl"></i>
+      </button>
     </div>
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+    <div id="search-results" class="mt-6 max-h-[60vh] overflow-y-auto hidden">
+      <!-- Search results will be populated here -->
     </div>
   </div>
 </div>
+
+<!-- Chat Widget -->
+<div id="chat-widget" class="fixed bottom-4 right-4 z-50">
+  <!-- Chat Toggle Button -->
+  <button id="chat-toggle" class="bg-teal-700 hover:bg-teal-800 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition transform hover:scale-105 relative">
+    <i class="ri-chat-1-line text-2xl"></i>
+    <span id="unread-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+  </button>
+
+  <!-- Chat Container -->
+  <div id="chat-container" class="hidden bg-white rounded-lg shadow-xl w-[90vw] sm:w-80 h-[70vh] sm:h-[500px] flex flex-col absolute bottom-16 right-0 border border-gray-200">
+    
+    <!-- Header -->
+    <div class="bg-teal-700 text-white p-3 rounded-t-lg flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <i class="ri-chat-1-line text-lg"></i>
+        <h3 class="font-medium text-sm sm:text-base">MG Support</h3>
+      </div>
+      <div class="flex items-center gap-2">
+        <span id="chat-status" class="text-xs flex items-center">
+          <span class="w-2 h-2 rounded-full bg-green-300 mr-1"></span>
+          Online
+        </span>
+        <button id="chat-close" class="text-white hover:text-gray-200">
+          <i class="ri-close-line text-lg"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Messages -->
+    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm">
+      <div class="flex">
+        <div class="bg-gray-100 rounded-lg p-3 max-w-[80%]">
+          <p>Hello! Welcome to MG Enterprises. How can we help you today?</p>
+          <p class="text-xs text-gray-500 mt-1">Support Team • Just now</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Input -->
+    <div class="p-3 border-t border-gray-200">
+      <div class="flex gap-2">
+        <input 
+          type="text" 
+          id="chat-input"
+          placeholder="Type your message..." 
+          class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
+        >
+        <button id="send-button" class="bg-teal-700 hover:bg-teal-800 text-white px-3 py-2 rounded-lg">
+          <i class="ri-send-plane-line text-base"></i>
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Our team typically replies within a few minutes</p>
+    </div>
   </div>
-</header>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    navToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!mobileMenu.contains(event.target) && event.target !== navToggle) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+    
+    // Mobile shop menu toggle
+    const shopToggle = document.getElementById("mobile-shop-toggle");
+    const shopMenu = document.getElementById("mobile-shop-menu");
+    const shopArrow = shopToggle.querySelector("i");
+    
+    shopToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      shopMenu.classList.toggle("hidden");
+      shopArrow.classList.toggle("rotate-180");
+    });
+    
+    // Search functionality
+    const searchToggle = document.getElementById("search-toggle");
+    const searchOverlay = document.getElementById("search-overlay");
+    const searchClose = document.getElementById("search-close");
+    const searchInput = document.getElementById("search-input");
+    
+    searchToggle.addEventListener("click", function() {
+      searchOverlay.classList.remove("hidden");
+      searchInput.focus();
+    });
+    
+    searchClose.addEventListener("click", function() {
+      searchOverlay.classList.add("hidden");
+    });
+    
+    // Close search when clicking outside the search container
+    searchOverlay.addEventListener("click", function(e) {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.add("hidden");
+      }
+    });
+    
+    // Close search on Escape key
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && !searchOverlay.classList.contains("hidden")) {
+        searchOverlay.classList.add("hidden");
+      }
+    });
+    
+    // Chat widget functionality
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatContainer = document.getElementById("chat-container");
+    const chatClose = document.getElementById("chat-close");
+    const chatInput = document.getElementById("chat-input");
+    const sendButton = document.getElementById("send-button");
+    const chatMessages = document.getElementById("chat-messages");
+    const unreadCount = document.getElementById("unread-count");
+    
+    let unreadMessages = 0;
+    let isChatOpen = false;
+    
+    // Toggle chat from floating button
+    chatToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleChat();
+    });
+    
+    // Close chat
+    chatClose.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeChat();
+    });
+    
+    // Send message on button click
+    sendButton.addEventListener("click", sendMessage);
+    
+    // Send message on Enter key
+    chatInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        sendMessage();
+      }
+    });
+    
+    // Close chat when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!chatContainer.contains(event.target) && event.target !== chatToggle) {
+        closeChat();
+      }
+    });
+    
+    function toggleChat() {
+      isChatOpen = !isChatOpen;
+      chatContainer.classList.toggle("hidden");
+      
+      if (isChatOpen) {
+        // Reset unread count when opening chat
+        unreadMessages = 0;
+        updateUnreadCount();
+      }
+    }
+    
+    function closeChat() {
+      isChatOpen = false;
+      chatContainer.classList.add("hidden");
+    }
+    
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (message === "") return;
+      
+      // Add user message to chat
+      addMessage(message, "user");
+      
+      // Clear input
+      chatInput.value = "";
+      
+      // Simulate auto-reply after 1-3 seconds
+      setTimeout(() => {
+        const replies = [
+          "Thanks for your message! Our team will get back to you soon.",
+          "We appreciate your inquiry. How can we assist you further?",
+          "That's a great question! Let me check that for you.",
+          "I'll connect you with a support specialist right away.",
+          "Can you provide more details about your question?"
+        ];
+        const randomReply = replies[Math.floor(Math.random() * replies.length)];
+        addMessage(randomReply, "bot");
+        
+        // If chat is closed, increment unread count
+        if (!isChatOpen) {
+          unreadMessages++;
+          updateUnreadCount();
+        }
+      }, 1000 + Math.random() * 2000);
+    }
+    
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.className = `flex ${sender === "user" ? "justify-end" : "justify-start"}`;
+      
+      const messageContent = document.createElement("div");
+      messageContent.className = sender === "user" 
+        ? "bg-teal-600 text-white rounded-lg p-3 max-w-[80%]"
+        : "bg-gray-100 rounded-lg p-3 max-w-[80%]";
+      
+      const messageText = document.createElement("p");
+      messageText.className = "text-sm";
+      messageText.textContent = text;
+      
+      const messageTime = document.createElement("p");
+      messageTime.className = "text-xs mt-1 " + (sender === "user" ? "text-teal-100" : "text-gray-500");
+      
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      messageTime.textContent = sender === "user" ? `You • ${timeString}` : `Support Team • ${timeString}`;
+      
+      messageContent.appendChild(messageText);
+      messageContent.appendChild(messageTime);
+      messageDiv.appendChild(messageContent);
+      
+      chatMessages.appendChild(messageDiv);
+      
+      // Scroll to bottom
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function updateUnreadCount() {
+      if (unreadMessages > 0) {
+        unreadCount.textContent = unreadMessages;
+        unreadCount.classList.remove("hidden");
+        
+        // Make the button pulse to attract attention
+        chatToggle.classList.add("animate-pulse");
+      } else {
+        unreadCount.classList.add("hidden");
+        chatToggle.classList.remove("animate-pulse");
+      }
+    }
+  });
+</script>
 <section class="px-4 md:px-6 py-8 md:py-12">
   <div class="max-w-screen-lg mx-auto text-center">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0b163b]">Women's Bags</h2>
@@ -332,9 +523,10 @@
     </div>
   </div>
 </section>
+<hr>
 <!-- Filters -->
 
-        <div class="flex flex-wrap gap-2 py-6 px-4">
+        <div class="flex flex-wrap gap-2 py-3 px-4">
   <select id="sortSelect" class="rounded px-4 py-2 bg-white text-sm">
   <option>Sort by: Featured</option>
   <option>Price: Low to High</option>
@@ -362,11 +554,11 @@
   <hr>
 
  <!-- Product List Grid -->
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 py-12" id="productGrid">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-2  py-12" id="productGrid">
   
   <!-- Product 1 - Shoulder Bag -->
   <a href="./bags-overview.html" 
-   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   class="block group relative w-full border border-black-200 bg-[#F4F2EF]" 
    data-category="Tote Bags"
    data-date-added="2025-05-20">
      <div class="flex justify-end py-3 px-5">
@@ -388,7 +580,7 @@
 
   <!-- Product 2 - Tote Bag -->
    <a href="./tote-bag-overview.html" 
-   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   class="block group relative w-full border border-black-200 bg-[#F4F2EF]" 
    data-category="Tote Bags"
    data-date-added="2025-05-20">
      <div class="flex justify-end py-3 px-5">
@@ -408,7 +600,7 @@
     </div>
 </a>
 
-  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-200 bg-[#F4F2EF]">
     <div class="flex justify-end py-3 px-5">
       <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
@@ -424,7 +616,7 @@
       <p class="text-sm font-medium text-gray-900">P699</p>
     </div>
   </a>
-  <a href="./bags-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+  <a href="./bags-overview.html" class="block group relative w-full border border-black-200 bg-[#F4F2EF]">
     <div class="flex justify-end py-3 px-5">
       <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
@@ -440,7 +632,7 @@
       <p class="text-sm font-medium text-gray-900">P349</p>
     </div>
   </a>
-  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-200 bg-[#F4F2EF]">
     <div class="flex justify-end py-3 px-5">
       <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
@@ -458,7 +650,7 @@
   </a>
    <!-- Product 6 -->
     <a href="./tote-bag-overview.html" 
-   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   class="block group relative w-full border border-black-200 bg-[#F4F2EF]" 
    data-category="Tote Bags"
    data-date-added="2025-05-20">
      <div class="flex justify-end py-3 px-5">
@@ -478,7 +670,7 @@
     </div>
 </a>
 <a href="./tote-bag-overview.html" 
-   class="block group relative w-full border border-black-400 bg-[#F4F2EF]" 
+   class="block group relative w-full border border-black-200 bg-[#F4F2EF]" 
    data-category="Tote Bags"
    data-date-added="2025-05-20">
      <div class="flex justify-end py-3 px-5">
@@ -497,7 +689,7 @@
       <p class="text-sm font-medium text-gray-900">P799</p>
     </div>
 </a>
-<a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+<a href="./tote-bag-overview.html" class="block group relative w-full border border-black-200 bg-[#F4F2EF]">
     <div class="flex justify-end py-3 px-5">
       <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
@@ -513,7 +705,7 @@
       <p class="text-sm font-medium text-gray-900">P1,399</p>
     </div>
   </a>
-  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-400 bg-[#F4F2EF]">
+  <a href="./tote-bag-overview.html" class="block group relative w-full border border-black-200 bg-[#F4F2EF]">
     <div class="flex justify-end py-3 px-5">
       <i class="ri-heart-line text-xl text-sm hover:text-red-900"></i>
     </div>
@@ -621,7 +813,7 @@
     </div>
   </div>
 </footer>
-            </body>
+           </body>
             </html>
             <script>
                     tailwind.config = {
@@ -743,42 +935,337 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
               }
             </script>
-            
-          
-          <!-- JavaScript for Menu Toggle -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  // Enhanced reviews data with avatars
+                  let reviews = [
+                      {
+                          name: "Donafae Famulagan",
+                          role: "Ethics Maestra ba",
+                          company: "CPC",
+                          rating: 5,
+                          text: "Nindot si Jarvee oyy, angyan sya daan pag palit:))",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+                      },
+                      {
+                          name: "Jarvee",
+                          role: "Studyante",
+                          company: "CPC",
+                          rating: 4,
+                          text: "Wa koy masulti jud giatay nalay kuwang aning kompanyaha. YAWA!!!",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+                      },
+                      {
+                          name: "Marka W Egg",
+                          role: "Tukmol",
+                          company: "CPC",
+                          rating: 5,
+                          text: "Kung akoy paestoryaon batiag sinina ninyu uy WA GABAE! inyung delivery rider baho!!!!!",
+                          date: "2025-04-25",
+                          avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+                      },
+                      {
+                          name: "David Wilson",
+                          role: "CTO",
+                          company: "DataSystems",
+                          rating: 5,
+                          text: "The implementation was seamless and the results have exceeded our expectations. Our productivity has increased by 30%.",
+                          date: "2023-06-05",
+                          avatar: "https://randomuser.me/api/portraits/men/75.jpg"
+                      },
+                      {
+                          name: "Priya Patel",
+                          role: "Operations Lead",
+                          company: "Global Logistics",
+                          rating: 5,
+                          text: "Reliable, responsive, and results-driven. We've formed a long-term partnership based on this excellent experience.",
+                          date: "2023-02-18",
+                          avatar: "https://randomuser.me/api/portraits/women/63.jpg"
+                      }
+                  ];
+      
+                  // DOM elements
+                  const reviewsCarousel = document.getElementById('reviewsCarousel');
+                  const dotsContainer = document.getElementById('dotsContainer');
+                  const prevBtn = document.getElementById('prevBtn');
+                  const nextBtn = document.getElementById('nextBtn');
+                  const reviewForm = document.getElementById('reviewForm');
+                  const ratingStars = document.getElementById('ratingStars').querySelectorAll('i');
+                  const ratingInput = document.getElementById('rating');
+      
+                  // Current review index
+                  let currentReview = 0;
+                  let autoRotateInterval;
+      
+                  // Initialize the reviews
+                  function initReviews() {
+                      reviewsCarousel.innerHTML = '';
+                      dotsContainer.innerHTML = '';
+                      
+                      reviews.forEach((review, index) => {
+                          // Create review card
+                          const reviewCard = document.createElement('div');
+                          reviewCard.className = `flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-start`;
+                          reviewCard.innerHTML = `
+                              <div class="review-card bg-cream p-8 rounded-xl shadow-soft h-full flex flex-col animate-fade-in" style="animation-delay: ${index * 0.1}s">
+                                  <div class="flex items-center mb-6">
+                                      <img src="${review.avatar}" alt="${review.name}" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary-100">
+                                      <div>
+                                          <h4 class="font-semibold text-gray-900">${review.name}</h4>
+                                          <p class="text-sm text-gray-600">${review.role}, ${review.company}</p>
+                                      </div>
+                                  </div>
+                                  <div class="flex mb-4">
+                                      ${renderStars(review.rating)}
+                                  </div>
+                                  <blockquote class="text-gray-700 mb-6 flex-grow italic">"${review.text}"</blockquote>
+                                  <div class="text-sm text-gray-500 mt-auto">${formatDate(review.date)}</div>
+                              </div>
+                          `;
+                          reviewsCarousel.appendChild(reviewCard);
+                          
+                          // Create dot
+                          const dot = document.createElement('button');
+                          dot.className = `w-3 h-3 rounded-full nav-dot ${index === 0 ? 'bg-primary-600 w-6' : 'bg-gray-300'}`;
+                          dot.addEventListener('click', () => {
+                              showReview(index);
+                              resetAutoRotate();
+                          });
+                          dotsContainer.appendChild(dot);
+                      });
+                  }
+      
+                  // Show specific review
+                  function showReview(index) {
+                      const carouselWidth = reviewsCarousel.offsetWidth;
+                      reviewsCarousel.scrollTo({
+                          left: index * carouselWidth,
+                          behavior: 'smooth'
+                      });
+                      
+                      // Update dots
+                      document.querySelectorAll('#dotsContainer > button').forEach((dot, i) => {
+                          dot.classList.toggle('bg-primary-600', i === index);
+                          dot.classList.toggle('w-6', i === index);
+                          dot.classList.toggle('bg-gray-300', i !== index);
+                          dot.classList.toggle('w-3', i !== index);
+                      });
+                      
+                      currentReview = index;
+                  }
+      
+                  // Next review
+                  function nextReview() {
+                      const nextIndex = (currentReview + 1) % reviews.length;
+                      showReview(nextIndex);
+                  }
+      
+                  // Previous review
+                  function prevReview() {
+                      const prevIndex = (currentReview - 1 + reviews.length) % reviews.length;
+                      showReview(prevIndex);
+                  }
+                  // Render star rating
+                  function renderStars(rating) {
+                      let stars = '';
+                      for (let i = 1; i <= 5; i++) {
+                          if (i <= rating) {
+                              stars += '<i class="fas fa-star text-secondary-500 rating-star"></i>';
+                          } else {
+                              stars += '<i class="far fa-star text-secondary-500 rating-star"></i>';
+                          }
+                      }
+                      return stars;
+                  }
+                  // Format date
+                  function formatDate(dateString) {
+                      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                      return new Date(dateString).toLocaleDateString(undefined, options);
+                  }
+                  // Reset auto-rotate timer
+                  function resetAutoRotate() {
+                      clearInterval(autoRotateInterval);
+                      autoRotateInterval = setInterval(nextReview, 6000);
+                  }
+                  // Rating stars interaction
+                  ratingStars.forEach(star => {
+                      star.addEventListener('click', function() {
+                          const rating = parseInt(this.getAttribute('data-rating'));
+                          ratingInput.value = rating;
+                          
+                          // Update star display
+                          ratingStars.forEach((s, i) => {
+                              if (i < rating) {
+                                  s.classList.remove('far');
+                                  s.classList.add('fas');
+                              } else {
+                                  s.classList.remove('fas');
+                                  s.classList.add('far');
+                              }
+                          });
+                      });
+                  });
+                  // Form submission
+                  reviewForm.addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const name = document.getElementById('name').value;
+                      const rating = document.getElementById('rating').value;
+                      const text = document.getElementById('review').value;
+                      if (!name || !rating || !text) {
+                          alert('Please fill in all fields');
+                          return;
+                      }
+                      // Create new review
+                      const newReview = {
+                          name: name,
+                          role: "Customer",
+                          company: "",
+                          rating: parseInt(rating),
+                          text: text,
+                          date: new Date().toISOString().split('T')[0],
+                          avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0ea5e9&color=fff`
+                      };
+                      // Add to reviews array
+                      reviews.unshift(newReview);
+                      // Reset form
+                      reviewForm.reset();
+                      ratingStars.forEach(star => {
+                          star.classList.remove('fas');
+                          star.classList.add('far');
+                      });
+                      
+                      // Reinitialize reviews to include the new one
+                      initReviews();
+                      showReview(0);
+                      resetAutoRotate();
+                      
+                      // Show success message
+                      const successMsg = document.createElement('div');
+                      successMsg.className = 'fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center';
+                      successMsg.innerHTML = `
+                          <i class="fas fa-check-circle mr-2"></i>
+                          <span>Thank you for your review!</span>
+                      `;
+                      document.body.appendChild(successMsg);
+                      setTimeout(() => {
+                          successMsg.remove();
+                      }, 3000);
+                  });
+                  // Event listeners
+                  prevBtn.addEventListener('click', () => {
+                      prevReview();
+                      resetAutoRotate();
+                  });
+                  nextBtn.addEventListener('click', () => {
+                      nextReview();
+                      resetAutoRotate();
+                  });
+                  
+                  // Auto-rotate reviews
+                  autoRotateInterval = setInterval(nextReview, 6000);
+                  
+                  // Pause auto-rotate when hovering over carousel
+                  reviewsCarousel.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
+                  reviewsCarousel.addEventListener('mouseleave', resetAutoRotate);
+      
+                  // Initialize
+                  initReviews();
+      
+                  // Hide scrollbar but keep functionality
+                  document.querySelectorAll('.hide-scrollbar').forEach(el => {
+                      el.style.scrollbarWidth = 'none'; /* Firefox */
+                      el.style.msOverflowStyle = 'none';  /* IE 10+ */
+                      el.addEventListener('wheel', (e) => {
+                          if (e.deltaY === 0) return;
+                          e.preventDefault();
+                          el.scrollLeft += e.deltaY;
+                      });
+                  });
+              });
+          </script>
           <script>
-            const toggleBtn = document.getElementById('nav-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-          
-            toggleBtn.addEventListener('click', () => {
-              mobileMenu.classList.toggle('hidden');
-              toggleBtn.innerHTML = mobileMenu.classList.contains('hidden') 
-                ? '<i class="ri-menu-line"></i>' 
-                : '<i class="ri-close-line"></i>';
-            });
-          
-            // Shop Dropdown Toggle for Desktop
-            const shopToggle = document.getElementById('shop-toggle');
-            const shopMenu = document.getElementById('shop-menu');
-          
-            shopToggle.addEventListener('click', (e) => {
-              if (window.innerWidth < 768) {
-                e.preventDefault();
-                shopMenu.classList.toggle('hidden');
-              }
-            });
-          
-            // Mobile "Shop" toggle
-            const mobileShopToggle = document.getElementById('mobile-shop-toggle');
-            const mobileShopMenu = document.getElementById('mobile-shop-menu');
-            const mobileShopArrow = mobileShopToggle.querySelector('i');
-          
-            mobileShopToggle.addEventListener('click', (e) => {
-              e.preventDefault();
-              mobileShopMenu.classList.toggle('hidden');
-              mobileShopArrow.classList.toggle('rotate-180');
+            // Slider functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                const prevBtn = document.querySelector('.slider-prev');
+                const nextBtn = document.querySelector('.slider-next');
+                let currentIndex = 0;
+                let intervalId;
+                
+                // Show initial slide
+                showSlide(currentIndex);
+                
+                // Auto-rotate slides
+                function startSlider() {
+                    intervalId = setInterval(() => {
+                        nextSlide();
+                    }, 5000);
+                }
+                
+                startSlider();
+                
+                // Reset timer when user interacts
+                function resetInterval() {
+                    clearInterval(intervalId);
+                    startSlider();
+                }
+                
+                // Show specific slide
+                function showSlide(index) {
+                    slides.forEach(slide => slide.style.opacity = '0');
+                    dots.forEach(dot => dot.classList.remove('bg-opacity-100'));
+                    
+                    slides[index].style.opacity = '1';
+                    dots[index].classList.add('bg-opacity-100');
+                    currentIndex = index;
+                }
+                
+                // Next slide
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Previous slide
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+                
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const slideIndex = parseInt(dot.getAttribute('data-index'));
+                        showSlide(slideIndex);
+                        resetInterval();
+                    });
+                });
+                
+                // Pause on hover
+                const sliderContainer = document.querySelector('.slider-container');
+                sliderContainer.addEventListener('mouseenter', () => {
+                    clearInterval(intervalId);
+                });
+                
+                sliderContainer.addEventListener('mouseleave', () => {
+                    startSlider();
+                });
             });
           </script>
+         
           <script>
   document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper-container', {
@@ -1140,6 +1627,109 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script>
+// Intersection Observer to trigger the animation when images come into view
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.image-animation');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Stop observing once it's visible
+      }
+    });
+  }, {
+    threshold: 0.2 // Trigger animation when 20% of the image is visible
+  });
+
+  // Observe each image
+  images.forEach(image => {
+    observer.observe(image);
+  });
+});
+</script>
+
+ <script>
+            // Slider functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                const prevBtn = document.querySelector('.slider-prev');
+                const nextBtn = document.querySelector('.slider-next');
+                let currentIndex = 0;
+                let intervalId;
+                
+                // Show initial slide
+                showSlide(currentIndex);
+                
+                // Auto-rotate slides
+                function startSlider() {
+                    intervalId = setInterval(() => {
+                        nextSlide();
+                    }, 5000);
+                }
+                
+                startSlider();
+                
+                // Reset timer when user interacts
+                function resetInterval() {
+                    clearInterval(intervalId);
+                    startSlider();
+                }
+                
+                // Show specific slide
+                function showSlide(index) {
+                    slides.forEach(slide => slide.style.opacity = '0');
+                    dots.forEach(dot => dot.classList.remove('bg-opacity-100'));
+                    
+                    slides[index].style.opacity = '1';
+                    dots[index].classList.add('bg-opacity-100');
+                    currentIndex = index;
+                }
+                
+                // Next slide
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Previous slide
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+                
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const slideIndex = parseInt(dot.getAttribute('data-index'));
+                        showSlide(slideIndex);
+                        resetInterval();
+                    });
+                });
+                
+                // Pause on hover
+                const sliderContainer = document.querySelector('.slider-container');
+                sliderContainer.addEventListener('mouseenter', () => {
+                    clearInterval(intervalId);
+                });
+                
+                sliderContainer.addEventListener('mouseleave', () => {
+                    startSlider();
+                });
+            });
+          </script>
+          <script>
 document.addEventListener('DOMContentLoaded', function () {
   const productCards = Array.from(document.querySelectorAll('.group.relative.w-full'));
 

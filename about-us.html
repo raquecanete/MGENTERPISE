@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
@@ -29,205 +31,129 @@
     </a>
   </div>
 </section>
-  <!-- Upper Header -->
-  <div class="bg-cream px-4 py-2">
-    <div class="flex items-center justify-between">
-      <!-- Left Spacer -->
-      <div class="w-200"></div>
-      <!-- Centered Logo -->
-      <div class="flex-1 flex justify-center">
-        <a href="index.html" class="flex items-center gap-0">
-          <img src="./img/logoimg-removebg-preview.png" alt="Logo" class="h-10">
-          <span class="logo-text text-1xl bold italic text-sm ">
-            MG ENTERPRISES
-          </span>
-        </a>
-      </div>
-      <!-- Chat Us Button -->
-      <div class="w-32 flex justify-end">
-        <button id="chatButton"
-           class="text-white shadow-lg border border-black-400 p-4  px-4 py-2 rounded hover:bg-gray-500 flex items-center gap-1 text-sm whitespace-nowrap bg-[#174e4f]">
-          <i class="ri-chat-1-line"></i> MG Support
+<!-- Navigation Header -->
+<header class="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <!-- Top Bar - Mobile/Desktop -->
+    <div class="flex justify-between items-center py-3">
+      <!-- Logo + Mobile Menu Button -->
+      <div class="flex items-center gap-6">
+        
+        <!-- Mobile Toggle Button -->
+        <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-teal-700">
+          <i class="ri-menu-line"></i>
         </button>
       </div>
+
+        <!-- Logo -->
+     <a href="index.html" class="flex items-center gap-4">
+  <div class="flex items-center">
+    <!-- Logo Mark -->
+    <img src="./img/logoimg-removebg-preview.png" alt="MG Enterprises Logo" class="h-10 w-auto">
+    
+    <!-- Text Logo -->
+    <div class="ml-4">
+      <div class="text-xl font-md tracking-tight text-gray-900 dark:text-white">MIGGABAGS</div>
     </div>
   </div>
-  <!-- Navigation Header -->
-<header class="bg-white shadow-md border-b border-gray-200" id="main-header">
-  <nav class="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center">
-    <!-- Left Side: Logo + Menu -->
-    <div class="flex items-center gap-6">
-      <!-- Mobile Toggle -->
-      <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-blue-600 transition-colors duration-200">
-        <i class="ri-menu-line"></i>
-      </button>
+</a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex gap-12 text-sm items-center" id="home">
-        <a href="index.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">HOME</a>
-
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-teal-700 text-sm transition">HOME</a>
+        
         <!-- Shop Dropdown -->
         <div class="relative group">
-          <div id="shop-toggle" class="cursor-pointer flex items-center text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">
+          <button class="flex items-center text-gray-700 hover:text-teal-700 text-sm transition">
             SHOP <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+        <!-- Mega Menu - Centered Wide Dropdown -->
+  <div class="absolute left-40 transform -translate-x-1/2 mt-2 w-[95vw] max-w-[1600px] bg-white shadow-xl rounded-lg p-6 hidden group-hover:block border border-gray-100 z-50">
+    <div class="grid grid-cols-3 gap-8">
+      <!-- Bags Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Bags</h3>
+        <ul class="space-y-3">
+          <li><a href="womens-bag.html" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> All Women's Bags</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Duffle Bag</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Back Pack</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Tote Bag</a></li>
+        </ul>
+      </div>
+      
+      <!-- Sports Wear Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Sports Wear</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Basketball Wear</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Volleyball Wear</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Combat Sports Wear</a></li>
+        </ul>
+      </div>
+      
+      <!-- Customization Section -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-3 pb-2 border-b">Customization</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Sports Jerseys</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-teal-700 flex items-center gap-2"><i class="ri-arrow-right-line text-teal-500"></i> Promotional Shirts</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Featured Products -->
+    <div class="mt-6 pt-4 border-t border-gray-100">
+      <h3 class="font-semibold text-gray-900 mb-4">Featured Products</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/download (8).jfif" alt="Duffle Bag" class="w-full h-80 object-cover group-hover:scale-105 transition duration-300">
           </div>
-
-          <!-- Shop Mega Menu -->
-          <div id="shop-menu" class="absolute top-full left-0 bg-white shadow-xl p-6 hidden group-hover:block w-[1000px] z-50 border border-gray-200 rounded-lg">
-            <div class="grid grid-cols-2 gap-8">
-              <!-- Bags -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Bags</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="womens-bag.html" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i>All Women's Bags</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Duffle Bag</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Back Pack</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Tote Bag</a></li>
-                </ul>
-              </div>
-
-              <!-- Sports Wear -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Sports Wear</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Basketball Wear</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Volleyball Wear</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Combat Sports Wear</a></li>
-                </ul>
-              </div>
-
-              <!-- Customization -->
-              <div>
-                <div class="flex items-center gap-3 font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-100">
-                  <span>Customization</span>
-                </div>
-                <ul class="space-y-2.5">
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Sports Jerseys</a></li>
-                  <li><a href="#" class="text-sm text-gray-700 hover:text-[#174e4f] flex items-center gap-2 transition duration-150"><i class="ri-arrow-right-s-line text-blue-400"></i> Promotional Shirts</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- View All Products -->
-            <div class="mt-6 pt-4 border-t border-gray-100">
-              <a href="#" class="text-sm font-medium text-gray-900 hover:text-blue-600 flex items-center gap-2 transition duration-150">
-                <i class="ri-arrow-right-line"></i> View all products
-              </a>
-            </div>
-
-            <!-- Featured Products -->
-            <div class="col-span-2 mt-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
-              <div class="grid grid-cols-3 gap-6">
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
-                </div>
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
-                </div>
-                <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300">
-                  <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
-                  <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Classic Duffle Bag</p>
         </div>
-
-        <!-- Other Links -->
-        <a href="about-us.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">ABOUT US</a>
-        <a href="contact.html" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">CONTACT</a>
-        <a href="#" class="text-gray-700 hover:text-[#174e4f] font-medium transition duration-200">STORE</a>
-      </div>
-    </div>
-
-    <!-- Right Side Icons -->
-     <div class="flex items-center gap-6">
-  <!-- Contact Number -->
-  <div class="hidden md:flex flex-col text-right">
-    <span class="text-xs text-gray-500">Need Help?</span>
-    <a href="tel:+639123456789" class="text-sm font-semibold text-gray-700 hover:text-[#174e4f] transition-colors">
-      +63 912 345 6789
-    </a>
-  </div>
-    <div class="flex items-center gap-4">
-      <!-- Search -->
-      <label class="flex items-center border rounded-lg px-3 py-2 hover:border-blue-400 transition-colors duration-200 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-200 bg-gray-50">
-        <i class="ri-search-line text-gray-500 mr-2"></i>
-        <input 
-          type="text"
-          placeholder="Search products..."
-          class="w-full text-sm placeholder:text-gray-400 focus:outline-none bg-transparent"
-        />
-      </label>
-
-      <!-- Icons -->
-      <div class="flex gap-4 items-center">
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-shopping-cart-line text-2xl"></i>
-        </a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-heart-line text-2xl"></i>
-        </a>
-        <a href="log-in.html" class="text-gray-600 hover:text-blue-600 transition duration-200">
-          <i class="ri-user-line text-2xl"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
-</header>
-
-  <!-- Chat sidebar -->
-  <div id="chatSidebar" class="bg-white shadow-lg flex flex-col">
-    <!-- Chat header with fullscreen toggle -->
-    <div class="bg-gray-900 text-white p-4 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <i class="ri-chat-1-line"></i>
-        <h3 class="font-semibold">MG Support</h3>
-      </div>
-      <div class="flex gap-2">
-        <button id="toggleFullscreen" class="text-white hover:text-gray-300">
-          <i class="ri-fullscreen-line"></i>
-        </button>
-        <button id="closeChat" class="text-white hover:text-gray-300">
-          <i class="ri-close-line text-xl"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Chat messages container -->
-    <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-4">
-      <!-- Welcome message -->
-      <div class="flex justify-start">
-        <div class="bg-gray-100 rounded-lg p-3 max-w-[80%]">
-          <p class="text-sm">Hello! Welcome to MG Enterprises. How can we help you today?</p>
-          <p class="text-xs text-gray-500 mt-1">Support Team • Just now</p>
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Sports Jersey" class="w-full h-80 object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Combat Sports Jersey</p>
+        </div>
+        <div class="group">
+          <div class="overflow-hidden rounded-lg">
+            <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Tote Bag" class="w-full h-80  object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="mt-2 text-sm font-medium text-gray-800">Tote Bag</p>
         </div>
       </div>
     </div>
-    <!-- Chat input area -->
-    <div class="border-t border-gray-200 p-4 bg-gray-50">
-      <div class="flex gap-2">
-        <input
-          type="text"
-          id="messageInput"
-          placeholder="Type your message..."
-          class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        >
-        <button id="sendMessage" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-          <i class="ri-send-plane-line"></i>
+  </div>
+</div>
+        <a href="about-us.html" class="text-gray-700 hover:text-teal-700 text-sm transition">ABOUT US</a>
+        <a href="contact.html" class="text-gray-700 hover:text-teal-700 text-sm transition">CONTACT</a>
+        <a href="#" class="text-gray-700 hover:text-teal-700 text-sm transition">STORE</a>
+      </nav>
+
+      <!-- Right Side Icons -->
+      <div class="flex items-center gap-4">
+        <!-- Search Icon -->
+        <button id="search-toggle" class="text-gray-600 hover:text-teal-700 transition">
+          <i class="ri-search-line text-xl"></i>
         </button>
+        
+        <!-- Icons -->
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-shopping-cart-line text-xl"></i></a>
+          <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-heart-line text-xl"></i></a>
+          <a href="log-in.html" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-user-line text-xl"></i></a>
+        </div>
+        <!-- Phone - Hidden on mobile -->
+        <div class="hidden md:flex flex-col text-right px-12">
+          <span class="text-xs text-gray-500">Need Help?</span>
+          <a href="tel:+639669103841" class="text-sm font-semibold text-gray-700 hover:text-teal-700">+63 966 910 3841</a>
+        </div>
       </div>
-      <p class="text-xs text-gray-500 mt-2">Our team typically replies within a few minutes</p>
     </div>
   </div>
-  <!-- Overlay -->
-  <div id="chatOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
     <div class="space-y-1">
@@ -239,7 +165,6 @@
           <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
         </button>
         <div id="mobile-shop-menu" class="hidden pl-4 mt-1 space-y-1">
-          
           <div class="mb-3">
             <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
               Bags
@@ -253,7 +178,7 @@
           </div>
           <div class="mb-3">
             <div class="flex items-center gap-2 font-medium text-gray-700 py-1 px-3">
-               Sports Wear
+              Sports Wear
             </div>
             <ul class="pl-6 space-y-1 mt-1">
               <li><a href="#" class="block py-1.5 px-3 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Basketball Wear</a></li>
@@ -273,178 +198,769 @@
         </div>
       </div>
       <a href="about-us.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">About</a>
-      <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
+      <a href="contact.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
       <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Stores</a>
     </div>
     <div class="col-span-2 mt-6">
-  <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
-  <div class="grid grid-cols-3 gap-6">
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/download (8).jfif" alt="Featured Product 1" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Classic Duffle Bag</div>
+        </div>
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+        </div>
+        <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
+          <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
+          <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+        </div>
+      </div>
     </div>
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/adidas Dobok ADI-Club 3___ Zwart_Wit 210cm.jfif" alt="Featured Product 2" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Combat Sports Jersey</div>
+  </div>
+</header>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="fixed inset-0 bg-white z-50 hidden flex items-center justify-center p-4">
+  <div class="w-full max-w-3xl">
+    <div class="relative">
+      <input 
+        type="text" 
+        id="search-input"
+        placeholder="Search products..." 
+        class="w-full py-4 px-5 text-lg border-b-2 border-gray-300 focus:outline-none focus:border-teal-500 transition-colors duration-200"
+        autofocus
+      >
+      <button id="search-close" class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+        <i class="ri-close-line text-2xl"></i>
+      </button>
     </div>
-    <div class="bg-white border rounded-lg overflow-hidden shadow hover:shadow-md transition-shadow duration-300">
-      <img src="./img/TBF Basic Cotton Tote Bag - SO100.jfif" alt="Featured Product 3" class="w-full h-60 object-cover">
-      <div class="p-3 text-sm text-gray-800 font-medium">Tote Bag - Limited Edition</div>
+    <div id="search-results" class="mt-6 max-h-[60vh] overflow-y-auto hidden">
+      <!-- Search results will be populated here -->
     </div>
   </div>
 </div>
+
+<!-- Chat Widget -->
+<div id="chat-widget" class="fixed bottom-4 right-4 z-50">
+  <!-- Chat Toggle Button -->
+  <button id="chat-toggle" class="bg-teal-700 hover:bg-teal-800 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition transform hover:scale-105 relative">
+    <i class="ri-chat-1-line text-2xl"></i>
+    <span id="unread-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+  </button>
+
+  <!-- Chat Container -->
+  <div id="chat-container" class="hidden bg-white rounded-lg shadow-xl w-[90vw] sm:w-80 h-[70vh] sm:h-[500px] flex flex-col absolute bottom-16 right-0 border border-gray-200">
+    
+    <!-- Header -->
+    <div class="bg-teal-700 text-white p-3 rounded-t-lg flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <i class="ri-chat-1-line text-lg"></i>
+        <h3 class="font-medium text-sm sm:text-base">MG Support</h3>
+      </div>
+      <div class="flex items-center gap-2">
+        <span id="chat-status" class="text-xs flex items-center">
+          <span class="w-2 h-2 rounded-full bg-green-300 mr-1"></span>
+          Online
+        </span>
+        <button id="chat-close" class="text-white hover:text-gray-200">
+          <i class="ri-close-line text-lg"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Messages -->
+    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm">
+      <div class="flex">
+        <div class="bg-gray-100 rounded-lg p-3 max-w-[80%]">
+          <p>Hello! Welcome to MG Enterprises. How can we help you today?</p>
+          <p class="text-xs text-gray-500 mt-1">Support Team • Just now</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Input -->
+    <div class="p-3 border-t border-gray-200">
+      <div class="flex gap-2">
+        <input 
+          type="text" 
+          id="chat-input"
+          placeholder="Type your message..." 
+          class="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
+        >
+        <button id="send-button" class="bg-teal-700 hover:bg-teal-800 text-white px-3 py-2 rounded-lg">
+          <i class="ri-send-plane-line text-base"></i>
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Our team typically replies within a few minutes</p>
+    </div>
   </div>
-</header>
-<body class="font-sans antialiased text-gray-800 bg-white">
-  <!-- Hero Section -->
-  <section class="relative  py-20 md:py-28">
-    <div class="container mx-auto px-6 md:px-12 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">Our Story</h1>
-      <p class="text-2xl text-black opacity-90 max-w-6xl mx-auto">Our story began with a simple idea. What started as a humble vision quickly evolved into a journey fueled by passion, purpose, and people who believed in something bigger than themselves. </p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    navToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!mobileMenu.contains(event.target) && event.target !== navToggle) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+    
+    // Mobile shop menu toggle
+    const shopToggle = document.getElementById("mobile-shop-toggle");
+    const shopMenu = document.getElementById("mobile-shop-menu");
+    const shopArrow = shopToggle.querySelector("i");
+    
+    shopToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      shopMenu.classList.toggle("hidden");
+      shopArrow.classList.toggle("rotate-180");
+    });
+    
+    // Search functionality
+    const searchToggle = document.getElementById("search-toggle");
+    const searchOverlay = document.getElementById("search-overlay");
+    const searchClose = document.getElementById("search-close");
+    const searchInput = document.getElementById("search-input");
+    
+    searchToggle.addEventListener("click", function() {
+      searchOverlay.classList.remove("hidden");
+      searchInput.focus();
+    });
+    
+    searchClose.addEventListener("click", function() {
+      searchOverlay.classList.add("hidden");
+    });
+    
+    // Close search when clicking outside the search container
+    searchOverlay.addEventListener("click", function(e) {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.add("hidden");
+      }
+    });
+    
+    // Close search on Escape key
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && !searchOverlay.classList.contains("hidden")) {
+        searchOverlay.classList.add("hidden");
+      }
+    });
+    
+    // Chat widget functionality
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatContainer = document.getElementById("chat-container");
+    const chatClose = document.getElementById("chat-close");
+    const chatInput = document.getElementById("chat-input");
+    const sendButton = document.getElementById("send-button");
+    const chatMessages = document.getElementById("chat-messages");
+    const unreadCount = document.getElementById("unread-count");
+    
+    let unreadMessages = 0;
+    let isChatOpen = false;
+    
+    // Toggle chat from floating button
+    chatToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleChat();
+    });
+    
+    // Close chat
+    chatClose.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeChat();
+    });
+    
+    // Send message on button click
+    sendButton.addEventListener("click", sendMessage);
+    
+    // Send message on Enter key
+    chatInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        sendMessage();
+      }
+    });
+    
+    // Close chat when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!chatContainer.contains(event.target) && event.target !== chatToggle) {
+        closeChat();
+      }
+    });
+    
+    function toggleChat() {
+      isChatOpen = !isChatOpen;
+      chatContainer.classList.toggle("hidden");
+      
+      if (isChatOpen) {
+        // Reset unread count when opening chat
+        unreadMessages = 0;
+        updateUnreadCount();
+      }
+    }
+    
+    function closeChat() {
+      isChatOpen = false;
+      chatContainer.classList.add("hidden");
+    }
+    
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (message === "") return;
+      
+      // Add user message to chat
+      addMessage(message, "user");
+      
+      // Clear input
+      chatInput.value = "";
+      
+      // Simulate auto-reply after 1-3 seconds
+      setTimeout(() => {
+        const replies = [
+          "Thanks for your message! Our team will get back to you soon.",
+          "We appreciate your inquiry. How can we assist you further?",
+          "That's a great question! Let me check that for you.",
+          "I'll connect you with a support specialist right away.",
+          "Can you provide more details about your question?"
+        ];
+        const randomReply = replies[Math.floor(Math.random() * replies.length)];
+        addMessage(randomReply, "bot");
+        
+        // If chat is closed, increment unread count
+        if (!isChatOpen) {
+          unreadMessages++;
+          updateUnreadCount();
+        }
+      }, 1000 + Math.random() * 2000);
+    }
+    
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.className = `flex ${sender === "user" ? "justify-end" : "justify-start"}`;
+      
+      const messageContent = document.createElement("div");
+      messageContent.className = sender === "user" 
+        ? "bg-teal-600 text-white rounded-lg p-3 max-w-[80%]"
+        : "bg-gray-100 rounded-lg p-3 max-w-[80%]";
+      
+      const messageText = document.createElement("p");
+      messageText.className = "text-sm";
+      messageText.textContent = text;
+      
+      const messageTime = document.createElement("p");
+      messageTime.className = "text-xs mt-1 " + (sender === "user" ? "text-teal-100" : "text-gray-500");
+      
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      messageTime.textContent = sender === "user" ? `You • ${timeString}` : `Support Team • ${timeString}`;
+      
+      messageContent.appendChild(messageText);
+      messageContent.appendChild(messageTime);
+      messageDiv.appendChild(messageContent);
+      
+      chatMessages.appendChild(messageDiv);
+      
+      // Scroll to bottom
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function updateUnreadCount() {
+      if (unreadMessages > 0) {
+        unreadCount.textContent = unreadMessages;
+        unreadCount.classList.remove("hidden");
+        
+        // Make the button pulse to attract attention
+        chatToggle.classList.add("animate-pulse");
+      } else {
+        unreadCount.classList.add("hidden");
+        chatToggle.classList.remove("animate-pulse");
+      }
+    }
+  });
+</script>
+<body class="font-sans antialiased">
+<!-- Content Section with Background Image -->
+<section class="relative bg-cover bg-center bg-no-repeat " style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f'); ">
+  <div class="relative z-10 container mx-auto px-6 md:px-12 text-center py-24 bg-white/50 backdrop-blur-sm">
+    <h1 class="text-5xl md:text-7xl font-sm text-gray-800 tracking-tight animate-fade-in-down drop-shadow-lg">
+      ABOUT US
+    </h1>
+    <p class="mt-6 text-xl md:text-2xl text-gray-900 max-w-3xl mx-auto animate-fade-in-up delay-100 leading-relaxed">
+      Since 2015, <span class="text-red-700 font-semibold">MG EXCLUSIVE</span> has redefined luxury—fusing innovation, sustainability, and unmatched quality into everything we do.
+    </p>
+  </div>
+</section>
+
+
+
+  <!-- Brand Story with Parallax Effect -->
+  <section class="py-16 md:py-24 bg-[#F4F2EF] relative overflow-hidden ">
+    <div class="absolute -right-20 -top-20 w-64 h-64 bg-purple-100 rounded-full opacity-20"></div>
+    <div class="absolute -left-20 bottom-0 w-80 h-80 bg-pink-100 rounded-full opacity-20"></div>
+    
+    <div class="container mx-auto px-6 md:px-12 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 relative group">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Our team working together" 
+                 class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+          <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-xl shadow-lg">
+            <div class="flex items-center">
+              <div class="w-3 h-3 bg-green-800 rounded-full mr-2 animate-pulse"></div>
+              <span class="text-sm font-medium">Since 2015</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <div class="inline-block px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full mb-6 font-medium">
+            Our Genesis
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">Redefining Luxury with Purpose</h2>
+          <div class="space-y-6">
+            <p class="text-lg text-gray-600 leading-relaxed">
+              MG EXCLUSIVE emerged from a simple yet powerful vision: to create luxury that matters. Founded in 2015 by Marco Gianni, we set out to challenge industry norms by combining exquisite craftsmanship with sustainable practices.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              We recognized that true luxury shouldn't come at the expense of our planet or people. Frustrated by the industry's wastefulness, we pioneered a closed-loop production system that has since become our signature.
+            </p>
+          </div>
+          
+          <div class="mt-10 bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center text-white font-bold">MG</div>
+              </div>
+              <div>
+                <blockquote class="italic text-gray-700 text-lg">
+                  "Luxury isn't about excess—it's about excellence with intention. Every piece we create carries this philosophy forward."
+                </blockquote>
+                <div class="mt-4">
+                  <p class="font-semibold text-gray-900">Marco Gianni</p>
+                  <p class="text-sm text-gray-500">Founder & Creative Director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Brand Story Section -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-6 md:px-12">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Our team working together" class="rounded-xl shadow-lg w-full h-auto object-cover">
+<style>
+    /* Custom animations */
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient 8s ease infinite;
+    }
+    
+    .animate-fade-in-down {
+      animation: fadeInDown 0.8s ease-out forwards;
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* 3D flip card styles */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+    
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+    
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+  </style>
+  <!-- Mission with Animated Cards -->
+  <section class="py-16 md:py-24 bg-gray-50" id="guiding-principles">
+  <div class="container mx-auto px-6 md:px-12 text-center">
+    <div class="max-w-3xl mx-auto mb-16">
+      <div class="inline-block px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full mb-4 font-medium opacity-0 transform -translate-y-6 transition-all duration-500 ease-out" data-animate="fadeIn">
+        Our Compass
+      </div>
+      <h2 class="text-4xl font-bold text-gray-900 mb-6 opacity-0 transform -translate-y-6 transition-all duration-500 ease-out delay-100" data-animate="fadeIn">
+        Guiding Principles
+      </h2>
+      <p class="text-xl text-gray-600 leading-relaxed opacity-0 transform -translate-y-6 transition-all duration-500 ease-out delay-200" data-animate="fadeIn">
+        We don't just create products—we cultivate experiences that elevate everyday moments into something extraordinary.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <!-- Card 1 -->
+      <div class="group perspective-1000 opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-animate="card" data-delay="300">
+        <div class="relative preserve-3d group-hover:rotate-y-180 transition-all duration-700 h-full">
+          <!-- Front Content -->
+          <div class="backface-hidden bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Radical Innovation</h3>
+            <p class="text-gray-600 text-center">We challenge conventions with forward-thinking designs and cutting-edge sustainable materials.</p>
+          </div>
+          <!-- Back Content -->
+          <div class="absolute top-0 backface-hidden rotate-y-180 bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-2xl shadow-lg h-full w-full flex flex-col items-center justify-center">
+            <h3 class="text-xl font-semibold mb-3 text-white">2023 Innovation Award</h3>
+            <p class="text-indigo-100 text-center">Recognized by the Luxury Design Council for our biodegradable silk alternative.</p>
+          </div>
         </div>
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Humble Beginnings</h2>
-          <p class="text-lg text-gray-600 mb-6">[Your Brand Name] was founded in [Year] with a vision: [Your Vision]. It started as [small beginning] and grew into [present status].</p>
-          <p class="text-lg text-gray-600 mb-6">We recognized that [the problem]. Frustrated by [pain points], we created [solution] to [benefits].</p>
-          <div class="bg-gray-100 p-6 rounded-lg border-l-4 border-gray-900">
-            <p class="italic text-gray-700">"Our journey hasn't always been easy, but our commitment to [core value] has never wavered."</p>
-            <p class="font-medium mt-2">— [Founder's Name], Founder & CEO</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="group perspective-1000 opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-animate="card" data-delay="400">
+        <div class="relative preserve-3d group-hover:rotate-y-180 transition-all duration-700 h-full">
+          <!-- Front Content -->
+          <div class="backface-hidden bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Circular Sustainability</h3>
+            <p class="text-gray-600 text-center">Our zero-waste production ensures every material finds purpose, today and tomorrow.</p>
+          </div>
+          <!-- Back Content -->
+          <div class="absolute top-0 backface-hidden rotate-y-180 bg-gradient-to-br from-green-500 to-teal-600 p-8 rounded-2xl shadow-lg h-full w-full flex flex-col items-center justify-center">
+            <h3 class="text-xl font-semibold mb-3 text-white">92% Less Waste</h3>
+            <p class="text-green-100 text-center">Compared to industry averages through our circular production model.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="group perspective-1000 opacity-0 transform translate-y-10 transition-all duration-700 ease-out" data-animate="card" data-delay="500">
+        <div class="relative preserve-3d group-hover:rotate-y-180 transition-all duration-700 h-full">
+          <!-- Front Content -->
+          <div class="backface-hidden bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Artisan Partnerships</h3>
+            <p class="text-gray-600 text-center">We collaborate with master craftspeople worldwide, preserving heritage techniques.</p>
+          </div>
+          <!-- Back Content -->
+          <div class="absolute top-0 backface-hidden rotate-y-180 bg-gradient-to-br from-pink-500 to-rose-600 p-8 rounded-2xl shadow-lg h-full w-full flex flex-col items-center justify-center">
+            <h3 class="text-xl font-semibold mb-3 text-white">142 Artisans</h3>
+            <p class="text-pink-100 text-center">Across 12 countries benefiting from our fair-trade initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intersection Observer Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('[data-animate]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const animationType = element.getAttribute('data-animate');
+          const delay = element.getAttribute('data-delay') || 0;
+          
+          setTimeout(() => {
+            element.classList.remove('opacity-0');
+            
+            if (animationType === 'fadeIn') {
+              element.classList.remove('-translate-y-6');
+            } else if (animationType === 'card') {
+              element.classList.remove('translate-y-10');
+            }
+          }, delay);
+          
+          observer.unobserve(element);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    animateElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>
+
+  <!-- Unique Value Proposition with Stats -->
+  <section class="py-16 md:py-24  bg-[#F4F2EF]">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-20">
+        <div class="inline-block px-4 py-2 bg-indigo-100 text-gray-900 rounded-full mb-4 font-medium">
+          The MG Difference
+        </div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Why <span class="  text-red-700">MG EXCLUSIVE</span> Stands Apart</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Where exceptional quality meets conscious creation—every detail matters.
+        </p>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-indigo-300 transition-all hover:shadow-lg">
+              <div class="text-4xl font-bold text-indigo-600 mb-3">100%</div>
+              <h3 class="text-lg font-semibold mb-2">Traceable Materials</h3>
+              <p class="text-gray-600 text-sm">Full transparency from source to final product</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-pink-300 transition-all hover:shadow-lg">
+              <div class="text-4xl font-bold text-pink-600 mb-3">24/7</div>
+              <h3 class="text-lg font-semibold mb-2">Concierge Service</h3>
+              <p class="text-gray-600 text-sm">Dedicated support for all your needs</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-purple-300 transition-all hover:shadow-lg">
+              <div class="text-4xl font-bold text-purple-600 mb-3">10-Year</div>
+              <h3 class="text-lg font-semibold mb-2">Craftsmanship Guarantee</h3>
+              <p class="text-gray-600 text-sm">Unparalleled commitment to quality</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-green-300 transition-all hover:shadow-lg">
+              <div class="text-4xl font-bold text-green-600 mb-3">1:1</div>
+              <h3 class="text-lg font-semibold mb-2">Custom Design</h3>
+              <p class="text-gray-600 text-sm">Personalized creations just for you</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2 relative">
+          <div class="relative group">
+            <div class="absolute -inset-2 bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl opacity-75 blur-md group-hover:opacity-100 transition-all duration-300"></div>
+            <div class="relative overflow-hidden rounded-2xl shadow-xl">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="MG Exclusive product" 
+                   class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8">
+                <div>
+                  <h3 class="text-white text-2xl font-bold mb-2">The Atelier Collection</h3>
+                  <p class="text-gray-200">Handcrafted limited editions celebrating master artisans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg border border-gray-200 hidden lg:block">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="text-sm font-medium text-gray-500">Certified</div>
+                <div class="text-lg font-semibold">B Corp</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mission Section -->
-  <section class="py-16 md:py-24 bg-gray-100">
+
+<!-- Testimonials Carousel -->
+<section class="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-5">
+    <div class="absolute inset-0 bg-[url('https://assets.website-files.com/5f6bc60e665f54545a1e52a5/5f6bc60e665f5455f11e52d7_noise.png')]"></div>
+  </div>
+  
+  <div class="container mx-auto px-6 relative">
+    <div class="text-center mb-16">
+      <div class="inline-block px-4 py-2 bg-white/10 rounded-full mb-4 font-medium backdrop-blur-sm">
+        Voices
+      </div>
+      <h2 class="text-4xl font-bold mb-6">Client Experiences</h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Don't just take our word for it—hear from those who've experienced the MG difference.
+      </p>
+    </div>
+    
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <!-- Testimonial 1 -->
+          <li class="glide__slide">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-indigo-400 transition-all h-full">
+              <div class="flex items-start mb-6">
+                <div class="text-5xl font-serif text-indigo-400 mr-4">"</div>
+                <p class="text-lg text-gray-300 mt-2">
+                  MG EXCLUSIVE transformed my entire wardrobe. The craftsmanship is unparalleled, and knowing each piece is ethically made makes wearing them even more special. Their personal styling service understood my aesthetic perfectly.
+                </p>
+              </div>
+              <div class="flex items-center">
+                <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophia Chen">
+                <div>
+                  <p class="font-semibold">Sophia Chen</p>
+                  <p class="text-sm text-gray-400">Fashion Editor, Vogue</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Testimonial 2 -->
+          <li class="glide__slide">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-pink-400 transition-all h-full">
+              <div class="flex items-start mb-6">
+                <div class="text-5xl font-serif text-pink-400 mr-4">"</div>
+                <p class="text-lg text-gray-300 mt-2">
+                  As a sustainability consultant, I'm extremely selective about brands I recommend. MG EXCLUSIVE's transparent supply chain and innovative materials set a new standard for responsible luxury in the industry.
+                </p>
+              </div>
+              <div class="flex items-center">
+                <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Rodriguez">
+                <div>
+                  <p class="font-semibold">James Rodriguez</p>
+                  <p class="text-sm text-gray-400">Sustainability Director, BCG</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Testimonial 3 -->
+          <li class="glide__slide">
+            <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-purple-400 transition-all h-full">
+              <div class="flex items-start mb-6">
+                <div class="text-5xl font-serif text-purple-400 mr-4">"</div>
+                <p class="text-lg text-gray-300 mt-2">
+                  The custom suit MG created for my wedding was absolute perfection. Their attention to detail and willingness to incorporate personal touches made it so much more than clothing—it was a work of art with deep personal meaning.
+                </p>
+              </div>
+              <div class="flex items-center">
+                <img class="w-14 h-14 rounded-full mr-4 object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Aisha Johnson">
+                <div>
+                  <p class="font-semibold">Aisha Johnson</p>
+                  <p class="text-sm text-gray-400">CEO, TechStart</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="glide__bullets mt-12 flex justify-center gap-2" data-glide-el="controls[nav]">
+        <button class="glide__bullet w-3 h-3 rounded-full bg-gray-600 hover:bg-white transition-all" data-glide-dir="=0"></button>
+        <button class="glide__bullet w-3 h-3 rounded-full bg-gray-600 hover:bg-white transition-all" data-glide-dir="=1"></button>
+        <button class="glide__bullet w-3 h-3 rounded-full bg-gray-600 hover:bg-white transition-all" data-glide-dir="=2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CTA with Newsletter -->
+  <section class="py-16 md:py-24 bg-white-200  text-white">
     <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
       <div class="max-w-4xl mx-auto">
-        <p class="text-2xl text-gray-700 mb-8 leading-relaxed">To [primary mission] while [secondary aspect] through [unique approach].</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          <div class="bg-white p-8 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-3">Innovation</h3>
-            <p class="text-gray-600">We constantly push boundaries to deliver cutting-edge solutions that make a difference.</p>
-          </div>
-          <div class="bg-white p-8 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-3">Sustainability</h3>
-            <p class="text-gray-600">Our commitment to ethical practices ensures a better future for people and the planet.</p>
-          </div>
-          <div class="bg-white p-8 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-3">Community</h3>
-            <p class="text-gray-600">We believe in building meaningful relationships with our customers and partners.</p>
-          </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Join Our Journey</h2>
+        <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+          Be the first to discover new collections, artisan stories, and exclusive offers.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto sm:max-w-xl">
+          <input type="email" placeholder="Your email address" 
+                 class="flex-grow px-6 py-4 rounded-full bg-white/20 backdrop-blur-sm border border-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-500 text-gray-600">
+          <button class="px-8 py-4 bg-white text-gray-800 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">
+            Subscribe
+          </button>
+        </div>
+        
+        <div class="mt-8 flex justify-center gap-6">
+          <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+            <span class="sr-only">Instagram</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+            <span class="sr-only">Twitter</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+            <span class="sr-only">Pinterest</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What Makes Us Unique -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-6 md:px-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose <span class="text-red-900">MG EXCLUSIVE?</span></h2>
-      <div class="flex flex-col md:flex-row gap-12 items-center">
-        <div class="md:w-1/2 order-2 md:order-1">
-          <div class="space-y-8">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold mb-2">Premium Quality</h3>
-                <p class="text-gray-600">We source only the finest materials and subject every product to rigorous quality checks.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold mb-2">Ethical Sourcing</h3>
-                <p class="text-gray-600">All our partners adhere to fair trade practices and sustainable production methods.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold mb-2">Customer-Centric</h3>
-                <p class="text-gray-600">Your satisfaction is our top priority, backed by our 100% happiness guarantee.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-1/2 order-1 md:order-2">
-          <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Our product" class="w-full h-auto object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="bg-gray-900 py-16 text-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
-      <div class="flex flex-wrap -mx-4">
-        <div class="w-full md:w-1/3 px-4 mb-8">
-          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
-            <p class="text-gray-300 italic">"This company exceeded my expectations. Highly recommended!"</p>
-            <div class="mt-6 flex items-center">
-              <img class="w-12 h-12 rounded-full mr-4" src="customer1.jpg" alt="Customer 1">
-              <div>
-                <p class="text-white font-semibold">Jane Doe</p>
-                <p class="text-gray-400 text-sm">CEO, Company A</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full md:w-1/3 px-4 mb-8">
-          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
-            <p class="text-gray-300 italic">"Efficient service and top-notch support every time."</p>
-            <div class="mt-6 flex items-center">
-              <img class="w-12 h-12 rounded-full mr-4" src="customer2.jpg" alt="Customer 2">
-              <div>
-                <p class="text-white font-semibold">John Smith</p>
-                <p class="text-gray-400 text-sm">Freelancer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full md:w-1/3 px-4 mb-8">
-          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg h-full flex flex-col justify-between">
-            <p class="text-gray-300 italic">"Reliable, professional, and always delivers on time."</p>
-            <div class="mt-6 flex items-center">
-              <img class="w-12 h-12 rounded-full mr-4" src="customer3.jpg" alt="Customer 3">
-              <div>
-                <p class="text-white font-semibold">Emily Davis</p>
-                <p class="text-gray-400 text-sm">Marketing Lead, Startup Co.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
-
+<!-- Add this before closing body tag -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+  new Glide('.glide', {
+    type: 'carousel',
+    perView: 1,
+    gap: 32,
+    autoplay: 5000,
+    breakpoints: {
+      768: {
+        perView: 1
+      }
+    }
+  }).mount()
+</script>
 <footer class="bg-white text-gray-300 ">
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between">
@@ -541,158 +1057,112 @@
                         }
                     }
                 </script>
-            <script>
-              // Chat toggle
-              const chatButton = document.getElementById('chatButton');
-              const chatSidebar = document.getElementById('chatSidebar');
-              const closeChat = document.getElementById('closeChat');
-              const chatOverlay = document.getElementById('chatOverlay');
-              const toggleFullscreen = document.getElementById('toggleFullscreen');
-              
-              // Toggle chat visibility
-              chatButton.addEventListener('click', () => {
-                chatSidebar.classList.add('open');
-                chatOverlay.classList.remove('hidden');
-              });
-              
-              closeChat.addEventListener('click', () => {
-                chatSidebar.classList.remove('open', 'fullscreen');
-                chatOverlay.classList.add('hidden');
-              });
-              
-              chatOverlay.addEventListener('click', () => {
-                chatSidebar.classList.remove('open', 'fullscreen');
-                chatOverlay.classList.add('hidden');
-              });
-              
-              // Toggle fullscreen
-              toggleFullscreen.addEventListener('click', () => {
-                chatSidebar.classList.toggle('fullscreen');
-                const icon = toggleFullscreen.querySelector('i');
-                if (chatSidebar.classList.contains('fullscreen')) {
-                  icon.classList.replace('ri-fullscreen-line', 'ri-fullscreen-exit-line');
-                } else {
-                  icon.classList.replace('ri-fullscreen-exit-line', 'ri-fullscreen-line');
-                }
-              });
-              
-             // Simple chat functionality
-             const messageInput = document.getElementById('messageInput');
-              const sendMessage = document.getElementById('sendMessage');
-              const chatMessages = document.getElementById('chatMessages');
-              
-              sendMessage.addEventListener('click', () => {
-                const message = messageInput.value.trim();
-                if (message) {
-                  // Add user message
-                  addMessage(message, 'user');
-                  messageInput.value = '';
-                  
-                  // Simulate reply after 1 second
-                  setTimeout(() => {
-                    const replies = [
-                      "Thanks for your message! Our team will get back to you soon.",
-                      "We've received your inquiry and will respond shortly.",
-                      "For faster service, you can call us at (123) 456-7890.",
-                      "Would you like assistance with any specific product?"
-                    ];
-                    const randomReply = replies[Math.floor(Math.random() * replies.length)];
-                    addMessage(randomReply, 'bot');
-                  }, 1000);
-                }
-              });
-              
-              
-              // Allow sending with Enter key
-              messageInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                  sendMessage.click();
-                }
-              });
-              
-              function addMessage(text, sender) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
-                
-                const messageContent = `
-                  <div class="${sender === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-100'} rounded-lg p-3 max-w-[80%]">
-                    <p class="text-sm">${text}</p>
-                    <p class="text-xs ${sender === 'user' ? 'text-blue-100' : 'text-gray-500'} mt-1">
-                      ${sender === 'user' ? 'You' : 'Support Team'} • Just now
-                    </p>
-                  </div>
-                `;
-                
-                messageDiv.innerHTML = messageContent;
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-              }
-            </script>
-            
-          
-          <!-- JavaScript for Menu Toggle -->
           <script>
-            const toggleBtn = document.getElementById('nav-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-          
-            toggleBtn.addEventListener('click', () => {
-              mobileMenu.classList.toggle('hidden');
-              toggleBtn.innerHTML = mobileMenu.classList.contains('hidden') 
-                ? '<i class="ri-menu-line"></i>' 
-                : '<i class="ri-close-line"></i>';
-            });
-          
-            // Shop Dropdown Toggle for Desktop
-            const shopToggle = document.getElementById('shop-toggle');
-            const shopMenu = document.getElementById('shop-menu');
-          
-            shopToggle.addEventListener('click', (e) => {
-              if (window.innerWidth < 768) {
-                e.preventDefault();
-                shopMenu.classList.toggle('hidden');
-              }
-            });
-          
-            // Mobile "Shop" toggle
-            const mobileShopToggle = document.getElementById('mobile-shop-toggle');
-            const mobileShopMenu = document.getElementById('mobile-shop-menu');
-            const mobileShopArrow = mobileShopToggle.querySelector('i');
-          
-            mobileShopToggle.addEventListener('click', (e) => {
-              e.preventDefault();
-              mobileShopMenu.classList.toggle('hidden');
-              mobileShopArrow.classList.toggle('rotate-180');
-            });
-          </script>
-          <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      centeredSlides: false,
-      loop: false,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        }
-      }
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  // =========================
+  // Chat Functionality
+  // =========================
+  const chatButton = document.getElementById('chatButton');
+  const chatSidebar = document.getElementById('chatSidebar');
+  const closeChat = document.getElementById('closeChat');
+  const chatOverlay = document.getElementById('chatOverlay');
+  const toggleFullscreen = document.getElementById('toggleFullscreen');
+  const messageInput = document.getElementById('messageInput');
+  const sendMessage = document.getElementById('sendMessage');
+  const chatMessages = document.getElementById('chatMessages');
+
+  // Open chat
+  chatButton.addEventListener('click', () => {
+    chatSidebar.classList.add('open');
+    chatOverlay.classList.remove('hidden');
   });
+
+  // Close chat
+  const closeChatSidebar = () => {
+    chatSidebar.classList.remove('open', 'fullscreen');
+    chatOverlay.classList.add('hidden');
+  };
+
+  closeChat.addEventListener('click', closeChatSidebar);
+  chatOverlay.addEventListener('click', closeChatSidebar);
+
+  // Toggle fullscreen
+  toggleFullscreen.addEventListener('click', () => {
+    chatSidebar.classList.toggle('fullscreen');
+    const icon = toggleFullscreen.querySelector('i');
+    icon.classList.toggle('ri-fullscreen-line');
+    icon.classList.toggle('ri-fullscreen-exit-line');
+  });
+
+  // Send chat message
+  sendMessage.addEventListener('click', () => {
+    const message = messageInput.value.trim();
+    if (message) {
+      addMessage(message, 'user');
+      messageInput.value = '';
+
+      // Simulated reply
+      setTimeout(() => {
+        const replies = [
+          "Thanks for your message! Our team will get back to you soon.",
+          "We've received your inquiry and will respond shortly.",
+          "For faster service, you can call us at (123) 456-7890.",
+          "Would you like assistance with any specific product?"
+        ];
+        const reply = replies[Math.floor(Math.random() * replies.length)];
+        addMessage(reply, 'bot');
+      }, 1000);
+    }
+  });
+
+  messageInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage.click();
+  });
+
+  function addMessage(text, sender) {
+    const wrapper = document.createElement('div');
+    wrapper.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+    wrapper.innerHTML = `
+      <div class="${sender === 'user' ? 'bg-blue-600 text-white' : 'bg-gray-100'} rounded-lg p-3 max-w-[80%]">
+        <p class="text-sm">${text}</p>
+        <p class="text-xs ${sender === 'user' ? 'text-blue-100' : 'text-gray-500'} mt-1">
+          ${sender === 'user' ? 'You' : 'Support Team'} • Just now
+        </p>
+      </div>
+    `;
+    chatMessages.appendChild(wrapper);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // =========================
+  // Mobile Menu Toggle
+  // =========================
+  const toggleBtn = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    toggleBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+      ? '<i class="ri-menu-line"></i>' 
+      : '<i class="ri-close-line"></i>';
+  });
+
+  // =========================
+  // Mobile Shop Menu Toggle
+  // =========================
+  const mobileShopToggle = document.getElementById('mobile-shop-toggle');
+  const mobileShopMenu = document.getElementById('mobile-shop-menu');
+  const mobileShopArrow = mobileShopToggle.querySelector('i');
+
+  mobileShopToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    mobileShopMenu.classList.toggle('hidden');
+    mobileShopArrow.classList.toggle('rotate-180');
+  });
+
+});
 </script>
+
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Image slider functionality
@@ -1233,4 +1703,5 @@ document.addEventListener('DOMContentLoaded', function() {
     updateMainImage(newIndex);
   });
 </script>
+
 
