@@ -35,30 +35,35 @@
   <div class="container mx-auto px-4">
     <!-- Top Bar - Mobile/Desktop -->
     <div class="flex justify-between items-center py-3">
-      <!-- Logo + Mobile Menu Button -->
-      <div class="flex items-center gap-6">
-        
+      <!-- Left Side - Mobile Menu Button + Search (Mobile only) -->
+      <div class="flex items-center gap-4 md:hidden">
         <!-- Mobile Toggle Button -->
-        <button id="nav-toggle" class="text-2xl md:hidden text-gray-600 hover:text-teal-700">
+        <button id="nav-toggle" class="text-2xl text-gray-600 hover:text-teal-700">
           <i class="ri-menu-line"></i>
         </button>
+        
+        <!-- Search Icon (Mobile only) -->
+        <button id="search-toggle" class="text-gray-600 hover:text-teal-700 transition">
+          <i class="ri-search-line text-xl"></i>
+        </button>
+      </div>
+<!-- Logo - Centered on mobile -->
+      <div class="flex-1 flex justify-center md:justify-start">
+        <a href="index.html" class="flex items-center gap-4">
+          <div class="flex items-center">
+            <!-- Logo Mark -->
+            <img src="./img/logoimg-removebg-preview.png" alt="MG Enterprises Logo" class="h-10 w-auto">
+            
+            <!-- Text Logo -->
+            <div class="ml-1">
+              <div class="text-xl font-md tracking-tight text-gray-900 dark:text-white">MIGGABAGS</div>
+            </div>
+          </div>
+        </a>
       </div>
 
-        <!-- Logo -->
-     <a href="index.html" class="flex items-center gap-4">
-  <div class="flex items-center">
-    <!-- Logo Mark -->
-    <img src="./img/logoimg-removebg-preview.png" alt="MG Enterprises Logo" class="h-10 w-auto">
-    
-    <!-- Text Logo -->
-    <div class="ml-1">
-      <div class="text-xl font-md tracking-tight text-gray-900 dark:text-white">MIGGABAGS</div>
-    </div>
-  </div>
-</a>
-
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8">
+      <nav class="hidden md:flex md:w-1/2 justify-center space-x-8">
         <a href="index.html" class="text-gray-700 hover:text-teal-700 text-sm transition">HOME</a>
         
        <!-- Shop Dropdown -->
@@ -132,19 +137,24 @@
         <a href="#" class="text-gray-700 hover:text-teal-700 text-sm transition">STORE</a>
       </nav>
 
-      <!-- Right Side Icons -->
+        <!-- Right Side Icons - Mobile (Cart + User) / Desktop (Full Icons) -->
       <div class="flex items-center gap-4">
-        <!-- Search Icon -->
-        <button id="search-toggle" class="text-gray-600 hover:text-teal-700 transition">
-          <i class="ri-search-line text-xl"></i>
-        </button>
-        
-        <!-- Icons -->
-        <div class="flex items-center gap-4">
+        <!-- Desktop Icons (Search, Cart, Wishlist, User) -->
+        <div class="hidden md:flex items-center gap-4">
+          <button id="search-toggle" class="text-gray-600 hover:text-teal-700 transition">
+            <i class="ri-search-line text-xl"></i>
+          </button>
           <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-shopping-cart-line text-xl"></i></a>
           <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-heart-line text-xl"></i></a>
           <a href="log-in.html" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-user-line text-xl"></i></a>
         </div>
+        
+        <!-- Mobile Icons (Only Cart + User) -->
+        <div class="flex items-center gap-4 md:hidden">
+          <a href="#" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-shopping-cart-line text-xl"></i></a>
+          <a href="log-in.html" class="text-gray-600 hover:text-teal-700 transition"><i class="ri-user-line text-xl"></i></a>
+        </div>
+        
         <!-- Phone - Hidden on mobile -->
         <div class="hidden md:flex flex-col text-right px-12">
           <span class="text-xs text-gray-500">Need Help?</span>
@@ -153,7 +163,6 @@
       </div>
     </div>
   </div>
-
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
     <div class="space-y-1">
@@ -201,6 +210,9 @@
       <a href="contact.html" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
       <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">Stores</a>
     </div>
+    <a href="#" class="block py-2 px-3 rounded-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 flex items-center gap-2">
+        <i class="ri-heart-line"></i>Wishlist
+      </a>
     <div class="col-span-2 mt-6">
       <h3 class="text-lg font-semibold text-gray-900 mb-4">Featured Products</h3>
       <div class="grid grid-cols-3 gap-6">
