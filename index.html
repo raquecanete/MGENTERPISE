@@ -1237,40 +1237,40 @@
   });
 </script>
     <!-- Product Customization Section -->
-   <section id="videoSection" class="py-16 h-[90vh]">
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-            <!-- Video Container (Left) -->
-            <div class="w-full lg:w-1/2">
-                <div class="relative aspect-w-16 aspect-h-9overflow-hidden">
-                    <!-- Video placeholder - replace with your actual video -->
-                    <video id="customizationVideo" class="w-full h-auto" poster="https://via.placeholder.com/800x450" muted playsinline>
-                        <source src="./img/videoplayback.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <!-- Play button overlay -->
-                    <div id="playButton" class="absolute inset-0 flex items-center justify-center cursor-pointer bg-black bg-opacity-30 transition-opacity">
-                        <div class="bg-white bg-opacity-80 rounded-full p-4 hover:bg-opacity-100 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
+<section id="videoSection" class="py-8 md:py-16 h-auto md:h-[90vh]">
+    <div class="flex flex-col lg:flex-row gap-4 md:gap-8 items-center">
+        <!-- Video Container (Left) -->
+        <div class="w-full lg:w-1/2 px-4 md:px-0">
+            <div class="relative aspect-w-16 aspect-h-9 overflow-hidden">
+                <!-- Video placeholder - replace with your actual video -->
+                <video id="customizationVideo" class="w-full h-auto" poster="https://via.placeholder.com/800x450" muted playsinline>
+                    <source src="./img/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Play button overlay -->
+                <div id="playButton" class="absolute inset-0 flex items-center justify-center cursor-pointer bg-black bg-opacity-30 transition-opacity">
+                    <div class="bg-white bg-opacity-80 rounded-full p-2 md:p-4 hover:bg-opacity-100 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        </svg>
                     </div>
                 </div>
             </div>
-            
-            <!-- Text Content (Right) -->
-            <div class="w-full lg:w-1/2">
-                <div class="space-y-6 text-left px-12">
-                    <h3 class="text-4xl font-semibold text-[#333029] font-[serif]">Tailored</h3>
-                    <hr>
-                    <p class="font-[sans] text-xl tracking-wide text-[#333029]">Tailored experiences are designed to meet the unique needs and preferences of each individual. Whether it's a product, service, or solution, being tailored ensures a perfect fit every time. It's all about delivering personalization that feels seamless, intentional, and effective.</p>
-                    <button id="customizeNowBtn" class="mt-8 px-8 py-5 bg-white border border-[#333029] text-[#333029] font-medium rounded-md hover:bg-gray-10 transition duration-300 hover:shadow-lg hover:bg-[#333029] hover:text-white">
-                       Chat with Our Designers
-                    </button>
-                </div>
+        </div>
+        
+        <!-- Text Content (Right) -->
+        <div class="w-full lg:w-1/2">
+            <div class="space-y-4 md:space-y-6 text-left px-4 md:px-12">
+                <h3 class="text-2xl md:text-4xl font-semibold text-[#333029] font-[serif]">Tailored</h3>
+                <hr>
+                <p class="font-[sans] text-base md:text-xl tracking-wide text-[#333029]">Tailored experiences are designed to meet the unique needs and preferences of each individual. Whether it's a product, service, or solution, being tailored ensures a perfect fit every time. It's all about delivering personalization that feels seamless, intentional, and effective.</p>
+                <button id="customizeNowBtn" class="mt-4 md:mt-8 px-6 py-3 md:px-8 md:py-5 bg-white border border-[#333029] text-[#333029] font-medium rounded-md hover:bg-gray-10 transition duration-300 hover:shadow-lg hover:bg-[#333029] hover:text-white">
+                   Chat with Our Designers
+                </button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.getElementById('customizationVideo');
@@ -1333,31 +1333,31 @@
         });
     </script>
 
- <div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
-  <div class="mx-auto w-full py-16 sm:py-24 lg:py-32">
+<div class="mx-auto w-full px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto w-full py-8 sm:py-16 lg:py-24">
     <!-- Title with scroll animation -->
-    <h2 class="text-4xl sm:text-5xl font-bold text-[#333029] text-center py-4 font-[sans] opacity-0 translate-y-10 transition-all duration-500 ease-out [.in-view&]:opacity-100 [.in-view&]:translate-y-0">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#333029] text-center py-2 md:py-4 font-[sans] opacity-0 translate-y-10 transition-all duration-500 ease-out [.in-view&]:opacity-100 [.in-view&]:translate-y-0">
       Accessories
     </h2>
     
     <!-- Description with scroll animation -->
-    <p class="text-center text-lg sm:text-xl py-4 font-[sans] text-[#333029] opacity-0 translate-y-10 transition-all duration-500 ease-out delay-100 [.in-view&]:opacity-100 [.in-view&]:translate-y-0 max-w-3xl mx-auto px-4">
+    <p class="text-center text-base sm:text-lg md:text-xl py-2 md:py-4 font-[sans] text-[#333029] opacity-0 translate-y-10 transition-all duration-500 ease-out delay-100 [.in-view&]:opacity-100 [.in-view&]:translate-y-0 max-w-3xl mx-auto px-4">
       "Accessorize with pieces that reflect your personality and elevate your wardrobe. From subtle to bold, our collection has something to match every mood and occasion."
     </p>
     
     <!-- Grid with staggered animations -->
-    <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+    <div class="mt-4 md:mt-6 space-y-8 md:space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
       <!-- Item 1 -->
       <div class="group relative opacity-0 translate-y-20 transition-all duration-700 ease-out delay-200 [.in-view&]:opacity-100 [.in-view&]:translate-y-0">
         <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <img 
             src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg" 
             alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 h-60 sm:h-80 md:aspect-2/1 lg:aspect-square"
           >
         </div>
-        <div class="mt-6 px-2">
-          <h3 class="text-sm text-gray-500 mb-1">
+        <div class="mt-4 md:mt-6 px-2">
+          <h3 class="text-xs sm:text-sm text-gray-500 mb-1">
             <a href="#" class="relative group">
               <span class="absolute inset-0"></span>
               <span class="relative inline-block">
@@ -1366,7 +1366,7 @@
               </span>
             </a>
           </h3>
-          <p class="text-lg font-semibold text-gray-900 font-[sans]">Work from home accessories</p>
+          <p class="text-base md:text-lg font-semibold text-gray-900 font-[sans]">Work from home accessories</p>
         </div>
       </div>
       
@@ -1376,11 +1376,11 @@
           <img 
             src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg" 
             alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 h-60 sm:h-80 md:aspect-2/1 lg:aspect-square"
           >
         </div>
-        <div class="mt-6 px-2">
-          <h3 class="text-sm text-gray-500 mb-1">
+        <div class="mt-4 md:mt-6 px-2">
+          <h3 class="text-xs sm:text-sm text-gray-500 mb-1">
             <a href="#" class="relative group">
               <span class="absolute inset-0"></span>
               <span class="relative inline-block">
@@ -1389,7 +1389,7 @@
               </span>
             </a>
           </h3>
-          <p class="text-lg font-semibold text-gray-900 font-[sans]">Journals and note-taking</p>
+          <p class="text-base md:text-lg font-semibold text-gray-900 font-[sans]">Journals and note-taking</p>
         </div>
       </div>
       
@@ -1399,11 +1399,11 @@
           <img 
             src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg" 
             alt="Collection of four insulated travel bottles on wooden shelf." 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 h-60 sm:h-80 md:aspect-2/1 lg:aspect-square"
           >
         </div>
-        <div class="mt-6 px-2">
-          <h3 class="text-sm text-gray-500 mb-1">
+        <div class="mt-4 md:mt-6 px-2">
+          <h3 class="text-xs sm:text-sm text-gray-500 mb-1">
             <a href="#" class="relative group">
               <span class="absolute inset-0"></span>
               <span class="relative inline-block">
@@ -1412,7 +1412,7 @@
               </span>
             </a>
           </h3>
-          <p class="text-lg font-semibold text-gray-900 font-[sans]">Daily commute essentials</p>
+          <p class="text-base md:text-lg font-semibold text-gray-900 font-[sans]">Daily commute essentials</p>
         </div>
       </div>
     </div>
