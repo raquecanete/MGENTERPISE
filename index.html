@@ -645,26 +645,6 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  /* Underline animation for category titles */
-  .category-card h3 {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .category-card h3::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transition: width 0.3s ease;
-  }
-  
-  .category-card:hover h3::after {
-    width: 100%;
-  }
 </style>
   <!-- Voucher Popup Container - Centered -->
 <div id="voucherPopup" class="hidden fixed inset-0 flex items-center justify-center p-4 z-50">
@@ -723,7 +703,7 @@
         
         // Start countdown timer (5 minutes)
         startCountdown(5, countdown);
-    }, 3000);
+    }, 2000);
     
     // Close popup
     closePopup.addEventListener('click', () => {
