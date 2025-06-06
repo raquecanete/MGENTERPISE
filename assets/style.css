@@ -140,9 +140,9 @@
 }
 
 .swiper-pagination-bullet {
-  width: 40px;
-  height: 8px;
-  border-radius: 0; /* ← makes it a box */
+  width: 35px;
+  height: 5px;
+  border-radius: 1; /* ← makes it a box */
   background-color: #c67066; /* optional: base color */
 }
 
