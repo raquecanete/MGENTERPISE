@@ -135,19 +135,21 @@
     font-weight: bold;
   }
   .swiper-pagination {
-    position: relative;
-    bottom: 0;
-  }
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    margin: 0 4px;
-  }
-  .swiper-pagination-bullet-active {
-    background: #000;
-    width: 10px;
-    height: 10px;
-  }
+  position: relative;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 8px;
+  border-radius: 0; /* ← makes it a box */
+  background-color: #c67066; /* optional: base color */
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+
 
   @keyframes typing {
   from { width: 0 }
