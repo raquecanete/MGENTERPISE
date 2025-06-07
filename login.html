@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .brand-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        }
+        .form-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-[#fdfbfa] min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <!-- Brand Logo/Header -->
+        <div class="text-center mb-8">
+            <div class="mx-auto w-20 h-20  flex items-center justify-center mb-2">
+               <img src="./img/logoimg-removebg-preview.png" alt="">
+            </div>
+            <h1 class="text-3xl font-bold text-[#333029] font-[sans]">MIGGABAGS</h1>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-white rounded-xl form-shadow overflow-hidden">
+            <div class="p-8">
+                <!-- Tabs -->
+                <div class="flex justify-between mb-8 border-b border-gray-200">
+                    <button id="loginTab" class="pb-3 px-1 font-medium text-[#333029] text-lg border-b-2 border-[#c67066] focus:outline-none transition-colors duration-200 font-[sans]">
+                        Login
+                    </button>
+                    <button id="signupTab" class="pb-3 px-1 font-medium text-[#333029] text-lg border-b-2 border-[#c67066] focus:outline-none transition-colors duration-200 font-[sans]">
+                        Sign Up
+                    </button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="space-y-5">
+                    <div>
+                        <label for="loginEmail" class="block text-lg font-medium text-[#333029] font-[sans] mb-1">Email</label>
+                        <input type="email" id="loginEmail" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="loginPassword" class="block text-lg font-medium text-[#333029] font-[sans] mb-1">Password</label>
+                        <input type="password" id="loginPassword" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="••••••••">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="rememberMe" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-200 border-gray-300 rounded">
+                            <label for="rememberMe" class="ml-2 block text-md text-[#333029] font-[sans]">Remember me</label>
+                        </div>
+                        <a href="#" class="text-md font-medium text-blue-600 hover:text-blue-500 transition-colors duration-200 font-[sans]">Forgot password?</a>
+                    </div>
+                    <button id="loginBtn" class="w-full mt-4 py-3 px-4  font-[sans] text-lg rounded-lg shadow-sm  font-medium text-white bg-[#c67066]  focus:outline-none focus:ring-1 focus:ring-offset-2  transition-colors duration-200">
+                        Login
+                    </button>
+                    <div class="relative my-4">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0110 4.844c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.933.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.14 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Signup Form -->
+                <div id="signupForm" class="hidden space-y-5">
+                    <div>
+                        <label for="signupName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="signupName" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="signupEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="signupEmail" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="signupPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" id="signupPassword" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="••••••••">
+                        <p class="mt-1 text-xs text-gray-500">Must be at least 6 characters</p>
+                    </div>
+                    <div>
+                        <label for="signupConfirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                        <input type="password" id="signupConfirmPassword" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-200 focus:border-blue-500 outline-none transition duration-200" placeholder="••••••••">
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="termsAgreement" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-200 border-gray-300 rounded">
+                        </div>
+                        <label for="termsAgreement" class="ml-2 block text-sm text-gray-700">
+                            I agree to the <a href="#" class="font-medium text-blue-600 hover:text-blue-500 transition-colors duration-200">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    <button id="signupBtn" class="w-full mt-2 py-3 px-4 rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                        Create Account
+                    </button>
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        Already have an account? 
+                        <button id="switchToLogin" class="font-medium text-blue-600 hover:text-blue-500 transition-colors duration-200">Sign in</button>
+                    </p>
+                </div>
+                
+                <!-- Message Display -->
+                <div id="message" class="mt-6 hidden">
+                    <div id="messageText" class="text-sm p-3 rounded-lg flex items-start">
+                        <svg id="messageIcon" class="h-5 w-5 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span id="messageContent"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const loginTab = document.getElementById('loginTab');
+            const signupTab = document.getElementById('signupTab');
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const switchToLogin = document.getElementById('switchToLogin');
+            const message = document.getElementById('message');
+            const messageContent = document.getElementById('messageContent');
+            const messageIcon = document.getElementById('messageIcon');
+
+            // User data storage (in a real app, use a backend)
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Switch between login and signup forms
+            function showLoginForm() {
+                loginTab.classList.add('border-blue-500', 'text-gray-800');
+                loginTab.classList.remove('text-gray-500');
+                signupTab.classList.add('text-gray-500');
+                signupTab.classList.remove('border-blue-500', 'text-gray-800');
+                loginForm.classList.remove('hidden');
+                signupForm.classList.add('hidden');
+                hideMessage();
+            }
+
+            function showSignupForm() {
+                signupTab.classList.add('border-blue-500', 'text-gray-800');
+                signupTab.classList.remove('text-gray-500');
+                loginTab.classList.add('text-gray-500');
+                loginTab.classList.remove('border-blue-500', 'text-gray-800');
+                signupForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+                hideMessage();
+            }
+
+            loginTab.addEventListener('click', showLoginForm);
+            signupTab.addEventListener('click', showSignupForm);
+            switchToLogin.addEventListener('click', showLoginForm);
+
+            // Login functionality
+            loginBtn.addEventListener('click', function() {
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                if (!email || !password) {
+                    showMessage('Please fill in all fields', 'error');
+                    return;
+                }
+                
+                const user = users.find(u => u.email === email && u.password === password);
+                
+                if (user) {
+                    // Store logged in user in localStorage
+                    localStorage.setItem('loggedInUser', JSON.stringify(user));
+                    
+                    // Redirect to dashboard
+                    showMessage('Login successful! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'customize.html';
+                    }, 1500);
+                } else {
+                    showMessage('Invalid email or password', 'error');
+                }
+            });
+
+            // Signup functionality
+            signupBtn.addEventListener('click', function() {
+                const name = document.getElementById('signupName').value;
+                const email = document.getElementById('signupEmail').value;
+                const password = document.getElementById('signupPassword').value;
+                const confirmPassword = document.getElementById('signupConfirmPassword').value;
+                const termsAgreed = document.getElementById('termsAgreement').checked;
+                
+                // Validation
+                if (!name || !email || !password || !confirmPassword) {
+                    showMessage('Please fill in all fields', 'error');
+                    return;
+                }
+                
+                if (password !== confirmPassword) {
+                    showMessage('Passwords do not match', 'error');
+                    return;
+                }
+                
+                if (password.length < 6) {
+                    showMessage('Password must be at least 6 characters', 'error');
+                    return;
+                }
+                
+                if (!termsAgreed) {
+                    showMessage('You must agree to the terms and conditions', 'error');
+                    return;
+                }
+                
+                // Check if user already exists
+                const userExists = users.some(u => u.email === email);
+                if (userExists) {
+                    showMessage('Email already registered', 'error');
+                    return;
+                }
+                
+                // Create new user
+                const newUser = { name, email, password };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+                
+                showMessage('Account created successfully! You can now login.', 'success');
+                
+                // Clear form
+                document.getElementById('signupName').value = '';
+                document.getElementById('signupEmail').value = '';
+                document.getElementById('signupPassword').value = '';
+                document.getElementById('signupConfirmPassword').value = '';
+                document.getElementById('termsAgreement').checked = false;
+                
+                // Switch to login tab after delay
+                setTimeout(showLoginForm, 2000);
+            });
+
+            // Helper functions
+            function showMessage(text, type) {
+                messageContent.textContent = text;
+                message.classList.remove('hidden');
+                
+                // Set color and icon based on message type
+                if (type === 'success') {
+                    messageContent.parentElement.classList.add('bg-green-50', 'text-green-700');
+                    messageContent.parentElement.classList.remove('bg-red-50', 'text-red-700');
+                    messageIcon.classList.add('text-green-500');
+                    messageIcon.classList.remove('text-red-500');
+                } else {
+                    messageContent.parentElement.classList.add('bg-red-50', 'text-red-700');
+                    messageContent.parentElement.classList.remove('bg-green-50', 'text-green-700');
+                    messageIcon.classList.add('text-red-500');
+                    messageIcon.classList.remove('text-green-500');
+                }
+            }
+
+            function hideMessage() {
+                message.classList.add('hidden');
+            }
+        }); 
+    </script>
+</body>
+</html>
