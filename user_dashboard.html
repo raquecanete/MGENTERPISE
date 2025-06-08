@@ -6,58 +6,88 @@
     <title>My Account Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50">
     <div class="container mx-auto px-4 py-8">
+        <!-- Mobile Header -->
+        <div class="md:hidden flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-primary-700">My Account</h1>
+            <button id="mobile-menu-button" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
         <div class="flex flex-col md:flex-row gap-6">
-            <!-- Sidebar -->
-            <div class="w-full md:w-64 bg-white rounded-lg shadow-md p-4 h-fit">
-                <div class="flex flex-col items-center py-4 border-b">
+            <!-- Sidebar - Mobile Hidden by default -->
+            <div id="sidebar" class="hidden md:block w-full md:w-64  p-6 h-fit transition-all duration-300">
+                <div class="flex flex-col items-center py-8 border-b">
                     <div class="relative mb-4">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Profile" class="w-24 h-24 rounded-full object-cover border-4 border-purple-200">
-                        <button class="absolute bottom-0 right-0 bg-purple-600 text-white p-2 rounded-full hover:bg-purple-700 transition">
+                        <img src="./img/james.jpg" alt="Profile" class="w-24 h-24 rounded-full object-cover border border-[#333029]">
+                        <button class="absolute bottom-0 right-0 bg-[#c67066] text-white p-2 rounded-full hover:bg-primary-700 transition transform hover:scale-110">
                             <i class="fas fa-camera"></i>
                         </button>
                     </div>
-                    <h3 class="font-semibold text-lg">Sarah Johnson</h3>
-                    <p class="text-gray-500 text-sm">sarah@example.com</p>
+                    <h3 class="font-semibold text-xl ">James Ryan W Egg</h3>
+                    <p class="text-gray-500 text-md ">jameluso@yahoo.com</p>
                 </div>
                 
                 <nav class="mt-4">
                     <ul class="space-y-2">
                         <li>
-                            <a href="#" id="profile-tab" class="flex items-center px-4 py-3 rounded-lg bg-purple-100 text-purple-700 font-medium">
+                            <a href="#" id="profile-tab" class="flex items-center px-4 py-3 rounded-lg  text-[#333029] font-medium transition hover:bg-[#c67066]">
                                 <i class="fas fa-user mr-3"></i>
                                 My Profile
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="address-tab" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700">
+                            <a href="#" id="address-tab" class="flex items-center px-4 py-3 rounded-lg text-gray-700 transition hover:bg-primary-50">
                                 <i class="fas fa-map-marker-alt mr-3"></i>
                                 My Address
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="orders-tab" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700">
+                            <a href="#" id="orders-tab" class="flex items-center px-4 py-3 rounded-lg text-gray-700 transition hover:bg-primary-50">
                                 <i class="fas fa-shopping-bag mr-3"></i>
                                 My Orders
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="password-tab" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700">
+                            <a href="#" id="password-tab" class="flex items-center px-4 py-3 rounded-lg text-gray-700 transition hover:bg-primary-50">
                                 <i class="fas fa-lock mr-3"></i>
                                 Manage Password
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="notification-tab" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700">
+                            <a href="#" id="notification-tab" class="flex items-center px-4 py-3 rounded-lg text-gray-700 transition hover:bg-primary-50">
                                 <i class="fas fa-bell mr-3"></i>
                                 Notifications
-                                <span class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">3</span>
+                                <span id="notification-count" class="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">3</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700">
+                            <a href="index.html" class="flex items-center px-4 py-3 rounded-lg text-gray-700 transition hover:bg-primary-50">
                                 <i class="fas fa-sign-out-alt mr-3"></i>
                                 Logout
                             </a>
@@ -70,54 +100,67 @@
             <div class="flex-1">
                 <!-- Profile Section -->
                 <div id="profile-content" class="dashboard-content bg-white rounded-lg shadow-md p-6">
-                    <h2 class="text-2xl font-bold mb-6">My Profile</h2>
+                    <div class="flex justify-between items-center py-12">
+                        <h2 class="text-2xl font-bold text-gray-800">My Profile</h2>
+                        <div class="flex items-center space-x-2">
+                            <span class="h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
+                            <span class="text-sm text-gray-500">Active</span>
+                        </div>
+                    </div>
                     
-                    <form>
+                    <form id="profile-form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <label class="block text-gray-700 mb-2">First Name</label>
-                                <input type="text" value="Sarah" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <label class="block text-gray-700 mb-2 font-medium">First Name</label>
+                                <input type="text" id="first-name" value="Sarah" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <p class="text-red-500 text-xs mt-1 hidden" id="first-name-error">Please enter your first name</p>
                             </div>
                             <div>
-                                <label class="block text-gray-700 mb-2">Last Name</label>
-                                <input type="text" value="Johnson" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <label class="block text-gray-700 mb-2 font-medium">Last Name</label>
+                                <input type="text" id="last-name" value="Johnson" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <p class="text-red-500 text-xs mt-1 hidden" id="last-name-error">Please enter your last name</p>
                             </div>
                             <div>
-                                <label class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" value="sarah@example.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                                <input type="email" id="email" value="sarah@example.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Please enter a valid email</p>
                             </div>
                             <div>
-                                <label class="block text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" value="+1 (555) 123-4567" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <label class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 (555) 123-4567" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <p class="text-red-500 text-xs mt-1 hidden" id="phone-error">Please enter a valid phone number</p>
                             </div>
                         </div>
                         
                         <div class="mb-6">
-                            <label class="block text-gray-700 mb-2">About Me</label>
-                            <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" rows="3">I love shopping for unique items and supporting small businesses.</textarea>
+                            <label class="block text-gray-700 mb-2 font-medium">About Me</label>
+                            <textarea id="about" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" rows="3">I love shopping for unique items and supporting small businesses.</textarea>
                         </div>
                         
-                        <div class="flex justify-end">
-                            <button type="button" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg mr-3 hover:bg-gray-300 transition">Cancel</button>
-                            <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Save Changes</button>
+                        <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3">
+                            <button type="button" id="cancel-profile" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium flex items-center justify-center">
+                                <span id="profile-submit-text">Save Changes</span>
+                                <i id="profile-spinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
                 
                 <!-- Address Section -->
                 <div id="address-content" class="dashboard-content bg-white rounded-lg shadow-md p-6 hidden">
-                    <div class="flex justify-between items-center mb-6">
-                        <h2 class="text-2xl font-bold">My Addresses</h2>
-                        <button id="add-address-btn" class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-3 sm:mb-0">My Addresses</h2>
+                        <button id="add-address-btn" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium flex items-center">
                             <i class="fas fa-plus mr-2"></i>Add New Address
                         </button>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Address Card 1 -->
-                        <div class="border rounded-lg p-4 relative">
+                        <div class="border rounded-lg p-4 relative hover:shadow-md transition">
                             <div class="flex items-center mb-3">
-                                <h3 class="font-semibold">Home</h3>
+                                <h3 class="font-semibold text-gray-800">Home</h3>
                                 <span class="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Default</span>
                             </div>
                             <p class="text-gray-600">123 Main Street</p>
@@ -127,18 +170,18 @@
                             <p class="text-gray-600 mt-2">Phone: +1 (555) 123-4567</p>
                             
                             <div class="flex mt-4 pt-3 border-t">
-                                <button class="text-purple-600 hover:text-purple-800 mr-4">
+                                <button class="edit-address text-primary-600 hover:text-primary-800 mr-4 font-medium">
                                     <i class="fas fa-edit mr-1"></i>Edit
                                 </button>
-                                <button class="text-red-600 hover:text-red-800">
+                                <button class="delete-address text-red-600 hover:text-red-800 font-medium">
                                     <i class="fas fa-trash-alt mr-1"></i>Delete
                                 </button>
                             </div>
                         </div>
                         
                         <!-- Address Card 2 -->
-                        <div class="border rounded-lg p-4 relative">
-                            <h3 class="font-semibold mb-3">Work</h3>
+                        <div class="border rounded-lg p-4 relative hover:shadow-md transition">
+                            <h3 class="font-semibold mb-3 text-gray-800">Work</h3>
                             <p class="text-gray-600">456 Business Ave</p>
                             <p class="text-gray-600">Floor 12</p>
                             <p class="text-gray-600">New York, NY 10005</p>
@@ -146,77 +189,96 @@
                             <p class="text-gray-600 mt-2">Phone: +1 (555) 987-6543</p>
                             
                             <div class="flex mt-4 pt-3 border-t">
-                                <button class="text-purple-600 hover:text-purple-800 mr-4">
+                                <button class="edit-address text-primary-600 hover:text-primary-800 mr-4 font-medium">
                                     <i class="fas fa-edit mr-1"></i>Edit
                                 </button>
-                                <button class="text-red-600 hover:text-red-800">
+                                <button class="delete-address text-red-600 hover:text-red-800 font-medium">
                                     <i class="fas fa-trash-alt mr-1"></i>Delete
                                 </button>
                             </div>
                         </div>
                     </div>
+                    
+                    <p class="text-gray-500 text-center mt-8" id="no-address-message" style="display: none;">You haven't added any addresses yet.</p>
                 </div>
                 
                 <!-- Orders Section -->
                 <div id="orders-content" class="dashboard-content bg-white rounded-lg shadow-md p-6 hidden">
-                    <h2 class="text-2xl font-bold mb-6">My Orders</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">My Orders</h2>
+                    
+                    <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                        <div class="relative mb-3 sm:mb-0 w-full sm:w-64">
+                            <input type="text" placeholder="Search orders..." class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <label class="text-gray-700">Filter:</label>
+                            <select class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                <option>All Orders</option>
+                                <option>Pending</option>
+                                <option>Shipped</option>
+                                <option>Delivered</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
                     
                     <div class="overflow-x-auto">
                         <table class="min-w-full bg-white">
                             <thead>
-                                <tr class="bg-gray-100">
-                                    <th class="py-3 px-4 text-left">Order ID</th>
-                                    <th class="py-3 px-4 text-left">Date</th>
-                                    <th class="py-3 px-4 text-left">Status</th>
-                                    <th class="py-3 px-4 text-left">Total</th>
-                                    <th class="py-3 px-4 text-left">Actions</th>
+                                <tr class="bg-gray-100 text-left">
+                                    <th class="py-3 px-4 font-medium text-gray-700">Order ID</th>
+                                    <th class="py-3 px-4 font-medium text-gray-700">Date</th>
+                                    <th class="py-3 px-4 font-medium text-gray-700">Status</th>
+                                    <th class="py-3 px-4 font-medium text-gray-700">Total</th>
+                                    <th class="py-3 px-4 font-medium text-gray-700">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4">#ORD-78945</td>
-                                    <td class="py-3 px-4">June 12, 2023</td>
-                                    <td class="py-3 px-4">
-                                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Delivered</span>
+                                <tr class="border-b hover:bg-gray-50 transition">
+                                    <td class="py-4 px-4">#ORD-78945</td>
+                                    <td class="py-4 px-4">June 12, 2023</td>
+                                    <td class="py-4 px-4">
+                                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Delivered</span>
                                     </td>
-                                    <td class="py-3 px-4">$125.99</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-purple-600 hover:text-purple-800 mr-2">
+                                    <td class="py-4 px-4 font-medium">$125.99</td>
+                                    <td class="py-4 px-4">
+                                        <button class="view-order text-primary-600 hover:text-primary-800 mr-3">
                                             <i class="fas fa-eye"></i>
                                         </button>
-                                        <button class="text-purple-600 hover:text-purple-800">
+                                        <button class="text-primary-600 hover:text-primary-800">
                                             <i class="fas fa-print"></i>
                                         </button>
                                     </td>
                                 </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4">#ORD-78123</td>
-                                    <td class="py-3 px-4">June 5, 2023</td>
-                                    <td class="py-3 px-4">
-                                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Shipped</span>
+                                <tr class="border-b hover:bg-gray-50 transition">
+                                    <td class="py-4 px-4">#ORD-78123</td>
+                                    <td class="py-4 px-4">June 5, 2023</td>
+                                    <td class="py-4 px-4">
+                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Shipped</span>
                                     </td>
-                                    <td class="py-3 px-4">$89.50</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-purple-600 hover:text-purple-800 mr-2">
+                                    <td class="py-4 px-4 font-medium">$89.50</td>
+                                    <td class="py-4 px-4">
+                                        <button class="view-order text-primary-600 hover:text-primary-800 mr-3">
                                             <i class="fas fa-eye"></i>
                                         </button>
-                                        <button class="text-purple-600 hover:text-purple-800">
+                                        <button class="text-primary-600 hover:text-primary-800">
                                             <i class="fas fa-print"></i>
                                         </button>
                                     </td>
                                 </tr>
-                                <tr class="border-b">
-                                    <td class="py-3 px-4">#ORD-77654</td>
-                                    <td class="py-3 px-4">May 28, 2023</td>
-                                    <td class="py-3 px-4">
-                                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Processing</span>
+                                <tr class="border-b hover:bg-gray-50 transition">
+                                    <td class="py-4 px-4">#ORD-77654</td>
+                                    <td class="py-4 px-4">May 28, 2023</td>
+                                    <td class="py-4 px-4">
+                                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">Processing</span>
                                     </td>
-                                    <td class="py-3 px-4">$245.75</td>
-                                    <td class="py-3 px-4">
-                                        <button class="text-purple-600 hover:text-purple-800 mr-2">
+                                    <td class="py-4 px-4 font-medium">$245.75</td>
+                                    <td class="py-4 px-4">
+                                        <button class="view-order text-primary-600 hover:text-primary-800 mr-3">
                                             <i class="fas fa-eye"></i>
                                         </button>
-                                        <button class="text-purple-600 hover:text-purple-800">
+                                        <button class="text-primary-600 hover:text-primary-800">
                                             <i class="fas fa-print"></i>
                                         </button>
                                     </td>
@@ -225,309 +287,740 @@
                         </table>
                     </div>
                     
-                    <div class="flex justify-between items-center mt-6">
-                        <div class="text-gray-600">
-                            Showing 1 to 3 of 3 entries
+                    <div class="flex flex-col sm:flex-row justify-between items-center mt-6">
+                        <div class="text-gray-600 mb-3 sm:mb-0">
+                            Showing <span class="font-medium">1</span> to <span class="font-medium">3</span> of <span class="font-medium">3</span> entries
                         </div>
                         <div class="flex space-x-2">
-                            <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded disabled:opacity-50" disabled>Previous</button>
-                            <button class="px-3 py-1 bg-purple-600 text-white rounded">1</button>
-                            <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded disabled:opacity-50" disabled>Next</button>
+                            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg disabled:opacity-50" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="px-4 py-2 bg-primary-600 text-white rounded-lg">1</button>
+                            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg disabled:opacity-50" disabled>
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
+                    
+                    <p class="text-gray-500 text-center mt-8" id="no-orders-message" style="display: none;">You haven't placed any orders yet.</p>
                 </div>
                 
                 <!-- Password Section -->
                 <div id="password-content" class="dashboard-content bg-white rounded-lg shadow-md p-6 hidden">
-                    <h2 class="text-2xl font-bold mb-6">Change Password</h2>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Change Password</h2>
                     
-                    <form>
+                    <form id="password-form">
                         <div class="mb-6">
-                            <label class="block text-gray-700 mb-2">Current Password</label>
+                            <label class="block text-gray-700 mb-2 font-medium">Current Password</label>
                             <div class="relative">
-                                <input type="password" id="current-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                <button type="button" class="absolute right-3 top-3 text-gray-500 toggle-password" data-target="current-password">
+                                <input type="password" id="current-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 toggle-password" data-target="current-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="current-password-error">Please enter your current password</p>
                         </div>
                         
                         <div class="mb-6">
-                            <label class="block text-gray-700 mb-2">New Password</label>
+                            <label class="block text-gray-700 mb-2 font-medium">New Password</label>
                             <div class="relative">
-                                <input type="password" id="new-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                <button type="button" class="absolute right-3 top-3 text-gray-500 toggle-password" data-target="new-password">
+                                <input type="password" id="new-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 toggle-password" data-target="new-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
                             <div class="text-xs text-gray-500 mt-1">
-                                Password must be at least 8 characters long
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li id="length-requirement" class="text-gray-400">At least 8 characters</li>
+                                    <li id="number-requirement" class="text-gray-400">Contains a number</li>
+                                    <li id="special-requirement" class="text-gray-400">Contains a special character</li>
+                                </ul>
                             </div>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="new-password-error">Please enter a valid new password</p>
                         </div>
                         
                         <div class="mb-6">
-                            <label class="block text-gray-700 mb-2">Confirm New Password</label>
+                            <label class="block text-gray-700 mb-2 font-medium">Confirm New Password</label>
                             <div class="relative">
-                                <input type="password" id="confirm-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                <button type="button" class="absolute right-3 top-3 text-gray-500 toggle-password" data-target="confirm-password">
+                                <input type="password" id="confirm-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" required>
+                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 toggle-password" data-target="confirm-password">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="confirm-password-error">Passwords do not match</p>
                         </div>
                         
-                        <div class="flex justify-end">
-                            <button type="button" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg mr-3 hover:bg-gray-300 transition">Cancel</button>
-                            <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Update Password</button>
+                        <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3">
+                            <button type="button" id="cancel-password" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium flex items-center justify-center">
+                                <span id="password-submit-text">Update Password</span>
+                                <i id="password-spinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
                 
                 <!-- Notifications Section -->
                 <div id="notification-content" class="dashboard-content bg-white rounded-lg shadow-md p-6 hidden">
-                    <div class="flex justify-between items-center mb-6">
-                        <h2 class="text-2xl font-bold">Notifications</h2>
-                        <button id="mark-all-read" class="text-purple-600 hover:text-purple-800">
-                            <i class="fas fa-check-circle mr-1"></i>Mark all as read
-                        </button>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-3 sm:mb-0">Notifications</h2>
+                        <div class="flex items-center space-x-4">
+                            <button id="mark-all-read" class="text-primary-600 hover:text-primary-800 font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>Mark all as read
+                            </button>
+                            <button id="clear-notifications" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-trash-alt mr-1"></i>Clear All
+                            </button>
+                        </div>
                     </div>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-4" id="notifications-container">
                         <!-- Unread Notification -->
-                        <div class="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-600">
+                        <div class="p-4 bg-primary-50 rounded-lg border-l-4 border-primary-600 notification-item" data-id="1" data-read="false">
                             <div class="flex justify-between">
                                 <div class="flex items-start">
-                                    <div class="bg-purple-100 p-2 rounded-full mr-3">
-                                        <i class="fas fa-truck text-purple-600"></i>
+                                    <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-truck text-primary-600"></i>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold">Order Shipped</h3>
+                                        <h3 class="font-semibold text-gray-800">Order Shipped</h3>
                                         <p class="text-gray-600 text-sm">Your order #ORD-78123 has been shipped and will arrive soon.</p>
                                         <p class="text-gray-400 text-xs mt-1">2 hours ago</p>
                                     </div>
                                 </div>
-                                <button class="text-gray-400 hover:text-gray-600">
+                                <button class="delete-notification text-gray-400 hover:text-gray-600">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                         </div>
                         
                         <!-- Unread Notification -->
-                        <div class="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-600">
+                        <div class="p-4 bg-primary-50 rounded-lg border-l-4 border-primary-600 notification-item" data-id="2" data-read="false">
                             <div class="flex justify-between">
                                 <div class="flex items-start">
-                                    <div class="bg-purple-100 p-2 rounded-full mr-3">
-                                        <i class="fas fa-tag text-purple-600"></i>
+                                    <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-tag text-primary-600"></i>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold">Special Offer</h3>
+                                        <h3 class="font-semibold text-gray-800">Special Offer</h3>
                                         <p class="text-gray-600 text-sm">Get 20% off on your next purchase with code SUMMER20.</p>
                                         <p class="text-gray-400 text-xs mt-1">1 day ago</p>
                                     </div>
                                 </div>
-                                <button class="text-gray-400 hover:text-gray-600">
+                                <button class="delete-notification text-gray-400 hover:text-gray-600">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                         </div>
                         
                         <!-- Read Notification -->
-                        <div class="p-4 rounded-lg border-l-4 border-transparent">
+                        <div class="p-4 rounded-lg border-l-4 border-transparent notification-item" data-id="3" data-read="true">
                             <div class="flex justify-between">
                                 <div class="flex items-start">
                                     <div class="bg-gray-100 p-2 rounded-full mr-3">
                                         <i class="fas fa-check-circle text-gray-600"></i>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold">Order Delivered</h3>
+                                        <h3 class="font-semibold text-gray-800">Order Delivered</h3>
                                         <p class="text-gray-600 text-sm">Your order #ORD-78945 has been successfully delivered.</p>
                                         <p class="text-gray-400 text-xs mt-1">3 days ago</p>
                                     </div>
                                 </div>
-                                <button class="text-gray-400 hover:text-gray-600">
+                                <button class="delete-notification text-gray-400 hover:text-gray-600">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                         </div>
                         
                         <!-- Read Notification -->
-                        <div class="p-4 rounded-lg border-l-4 border-transparent">
+                        <div class="p-4 rounded-lg border-l-4 border-transparent notification-item" data-id="4" data-read="true">
                             <div class="flex justify-between">
                                 <div class="flex items-start">
                                     <div class="bg-gray-100 p-2 rounded-full mr-3">
                                         <i class="fas fa-comment text-gray-600"></i>
                                     </div>
                                     <div>
-                                        <h3 class="font-semibold">New Review Request</h3>
+                                        <h3 class="font-semibold text-gray-800">New Review Request</h3>
                                         <p class="text-gray-600 text-sm">How was your recent purchase? Share your experience with us.</p>
                                         <p class="text-gray-400 text-xs mt-1">1 week ago</p>
                                     </div>
                                 </div>
-                                <button class="text-gray-400 hover:text-gray-600">
+                                <button class="delete-notification text-gray-400 hover:text-gray-600">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
                     
-                    <button class="w-full mt-6 py-2 border rounded-lg text-purple-600 hover:bg-purple-50">
+                    <button id="load-more-notifications" class="w-full mt-6 py-2 border rounded-lg text-primary-600 hover:bg-primary-50 transition font-medium">
                         Load More Notifications
                     </button>
+                    
+                    <p class="text-gray-500 text-center mt-8" id="no-notifications-message" style="display: none;">You don't have any notifications yet.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Add Address Modal -->
-    <div id="address-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg p-6 w-full max-w-md">
+    <!-- Add/Edit Address Modal -->
+    <div id="address-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-6 w-full max-w-md mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold">Add New Address</h3>
+                <h3 id="modal-title" class="text-xl font-bold text-gray-800">Add New Address</h3>
                 <button id="close-modal" class="text-gray-500 hover:text-gray-700">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
-            <form>
+            <form id="address-form">
+                <input type="hidden" id="address-id">
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Address Title</label>
-                    <input type="text" placeholder="e.g. Home, Work" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <label class="block text-gray-700 mb-2 font-medium">Address Title</label>
+                    <input type="text" id="address-title" placeholder="e.g. Home, Work" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" required>
+                    <p class="text-red-500 text-xs mt-1 hidden" id="title-error">Please enter an address title</p>
                 </div>
                 
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Full Address</label>
-                    <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" rows="3" placeholder="Street address, apartment, suite, etc."></textarea>
+                    <label class="block text-gray-700 mb-2 font-medium">Full Address</label>
+                    <textarea id="full-address" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" rows="3" placeholder="Street address, apartment, suite, etc." required></textarea>
+                    <p class="text-red-500 text-xs mt-1 hidden" id="address-error">Please enter your full address</p>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     <div>
-                        <label class="block text-gray-700 mb-2">City</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <label class="block text-gray-700 mb-2 font-medium">City</label>
+                        <input type="text" id="city" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="city-error">Please enter your city</p>
                     </div>
                     <div>
-                        <label class="block text-gray-700 mb-2">Postal Code</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <label class="block text-gray-700 mb-2 font-medium">Postal Code</label>
+                        <input type="text" id="postal-code" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="postal-error">Please enter your postal code</p>
                     </div>
                 </div>
                 
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Country</label>
-                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>United Kingdom</option>
-                        <option>Australia</option>
-                        <option>Other</option>
+                    <label class="block text-gray-700 mb-2 font-medium">Country</label>
+                    <select id="country" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" required>
+                        <option value="">Select Country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="Other">Other</option>
                     </select>
+                    <p class="text-red-500 text-xs mt-1 hidden" id="country-error">Please select your country</p>
                 </div>
                 
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Phone Number</label>
-                    <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <label class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                    <input type="tel" id="address-phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" required>
+                    <p class="text-red-500 text-xs mt-1 hidden" id="phone-error">Please enter a valid phone number</p>
                 </div>
                 
                 <div class="flex items-center mb-6">
-                    <input type="checkbox" id="default-address" class="mr-2">
+                    <input type="checkbox" id="default-address" class="mr-2 h-5 w-5 text-primary-600 rounded focus:ring-primary-500">
                     <label for="default-address" class="text-gray-700">Set as default address</label>
                 </div>
                 
-                <div class="flex justify-end">
-                    <button type="button" id="cancel-modal" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg mr-3 hover:bg-gray-300 transition">Cancel</button>
-                    <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Save Address</button>
+                <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3">
+                    <button type="button" id="cancel-modal" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium flex items-center justify-center">
+                        <span id="address-submit-text">Save Address</span>
+                        <i id="address-spinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tab switching functionality
-            const tabs = {
-                'profile-tab': 'profile-content',
-                'address-tab': 'address-content',
-                'orders-tab': 'orders-content',
-                'password-tab': 'password-content',
-                'notification-tab': 'notification-content'
-            };
+    <!-- Order Details Modal -->
+    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-6 w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Order Details</h3>
+                <button id="close-order-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             
-            // Set default tab
-            document.getElementById('profile-tab').classList.add('bg-purple-100', 'text-purple-700');
-            document.getElementById('profile-content').classList.remove('hidden');
+            <div class="mb-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <div>
+                        <h4 class="font-medium text-gray-700">Order #<span id="order-id">ORD-78945</span></h4>
+                        <p class="text-gray-500 text-sm">Placed on <span id="order-date">June 12, 2023</span></p>
+                    </div>
+                    <div class="mt-2 sm:mt-0">
+                        <span id="order-status" class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Delivered</span>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <h4 class="font-medium text-gray-800 mb-2">Shipping Address</h4>
+                    <p id="shipping-address" class="text-gray-600">123 Main Street, Apt 4B, New York, NY 10001, United States</p>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-medium text-gray-800 mb-2">Payment Method</h4>
+                    <div class="flex items-center">
+                        <div class="bg-white p-2 rounded-md shadow-sm mr-3">
+                            <i class="fab fa-cc-visa text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">Visa ending in 4242</p>
+                            <p class="text-gray-500 text-sm">Expires 05/2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            // Add click event listeners to all tabs
-            Object.keys(tabs).forEach(tabId => {
-                document.getElementById(tabId).addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Hide all content sections
-                    document.querySelectorAll('.dashboard-content').forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    
-                    // Remove active styles from all tabs
-                    document.querySelectorAll('nav a').forEach(tab => {
-                        tab.classList.remove('bg-purple-100', 'text-purple-700');
-                        tab.classList.add('text-gray-700', 'hover:bg-gray-100');
-                    });
-                    
-                    // Show selected content and style active tab
-                    document.getElementById(tabs[tabId]).classList.remove('hidden');
-                    this.classList.remove('text-gray-700', 'hover:bg-gray-100');
-                    this.classList.add('bg-purple-100', 'text-purple-700');
-                });
+            <div class="border-t pt-4">
+                <h4 class="font-medium text-gray-800 mb-4">Order Items</h4>
+                
+                <div class="space-y-4">
+                    <!-- Order Item 1 -->
+                    <div class="flex flex-col sm:flex-row sm:items-center border-b pb-4">
+                        <div class="flex-shrink-0 mb-3 sm:mb-0 sm:mr-4">
+                            <img src="https://via.placeholder.com/80" alt="Product" class="w-20 h-20 object-cover rounded">
+                        </div>
+                        <div class="flex-grow">
+                            <h5 class="font-medium text-gray-800">Wireless Headphones</h5>
+                            <p class="text-gray-500 text-sm">Color: Black</p>
+                            <p class="text-gray-500 text-sm">Qty: 1</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0 sm:text-right">
+                            <p class="text-gray-800 font-medium">$89.99</p>
+<p class="text-green-600 text-sm">Delivered on June 15, 2023</p>
+</div>
+</div>
+                <!-- Order Item 2 -->
+                <div class="flex flex-col sm:flex-row sm:items-center border-b pb-4">
+                    <div class="flex-shrink-0 mb-3 sm:mb-0 sm:mr-4">
+                        <img src="https://via.placeholder.com/80" alt="Product" class="w-20 h-20 object-cover rounded">
+                    </div>
+                    <div class="flex-grow">
+                        <h5 class="font-medium text-gray-800">Phone Case</h5>
+                        <p class="text-gray-500 text-sm">Color: Blue</p>
+                        <p class="text-gray-500 text-sm">Qty: 2</p>
+                    </div>
+                    <div class="mt-2 sm:mt-0 sm:text-right">
+                        <p class="text-gray-800 font-medium">$18.00</p>
+                        <p class="text-green-600 text-sm">Delivered on June 15, 2023</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t">
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Subtotal</span>
+                    <span class="text-gray-800">$125.99</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Shipping</span>
+                    <span class="text-gray-800">$0.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Tax</span>
+                    <span class="text-gray-800">$10.48</span>
+                </div>
+                <div class="flex justify-between font-medium text-lg mt-3 pt-3 border-t">
+                    <span>Total</span>
+                    <span>$136.47</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3">
+            <button class="px-6 py-2 border border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition font-medium">
+                <i class="fas fa-print mr-2"></i>Print Receipt
+            </button>
+            <button class="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-medium">
+                <i class="fas fa-redo mr-2"></i>Reorder
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('hidden');
+    });
+
+    // Tab switching functionality
+    const tabs = ['profile', 'address', 'orders', 'password', 'notification'];
+    const tabElements = tabs.map(tab => document.getElementById(`${tab}-tab`));
+    const contentElements = tabs.map(tab => document.getElementById(`${tab}-content`));
+
+    tabElements.forEach((tab, index) => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Update active tab styling
+            tabElements.forEach(t => {
+                t.classList.remove('bg-primary-100', 'text-primary-700');
+                t.classList.add('text-gray-700');
             });
+            this.classList.remove('text-gray-700');
+            this.classList.add('bg-primary-100', 'text-primary-700');
             
-            // Password visibility toggle
-            document.querySelectorAll('.toggle-password').forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const passwordInput = document.getElementById(targetId);
-                    const icon = this.querySelector('i');
-                    
-                    if (passwordInput.type === 'password') {
-                        passwordInput.type = 'text';
-                        icon.classList.remove('fa-eye');
-                        icon.classList.add('fa-eye-slash');
-                    } else {
-                        passwordInput.type = 'password';
-                        icon.classList.remove('fa-eye-slash');
-                        icon.classList.add('fa-eye');
-                    }
-                });
-            });
+            // Show corresponding content
+            contentElements.forEach(content => content.classList.add('hidden'));
+            contentElements[index].classList.remove('hidden');
             
-            // Address modal functionality
-            const addressModal = document.getElementById('address-modal');
-            const addAddressBtn = document.getElementById('add-address-btn');
-            const closeModalBtn = document.getElementById('close-modal');
-            const cancelModalBtn = document.getElementById('cancel-modal');
+            // Close mobile menu if open
+            if (!document.getElementById('sidebar').classList.contains('hidden') && window.innerWidth < 768) {
+                document.getElementById('sidebar').classList.add('hidden');
+            }
+        });
+    });
+
+    // Password visibility toggle
+    document.querySelectorAll('.toggle-password').forEach(button => {
+        button.addEventListener('click', function() {
+            const target = document.getElementById(this.getAttribute('data-target'));
+            const icon = this.querySelector('i');
             
-            addAddressBtn.addEventListener('click', function(e) {
-                e.preventDefault();
+            if (target.type === 'password') {
+                target.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                target.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
+
+    // Password strength validation
+    const newPassword = document.getElementById('new-password');
+    if (newPassword) {
+        newPassword.addEventListener('input', function() {
+            const password = this.value;
+            const lengthReq = document.getElementById('length-requirement');
+            const numberReq = document.getElementById('number-requirement');
+            const specialReq = document.getElementById('special-requirement');
+            
+            // Check length
+            if (password.length >= 8) {
+                lengthReq.classList.remove('text-gray-400');
+                lengthReq.classList.add('text-green-500');
+            } else {
+                lengthReq.classList.remove('text-green-500');
+                lengthReq.classList.add('text-gray-400');
+            }
+            
+            // Check for number
+            if (/\d/.test(password)) {
+                numberReq.classList.remove('text-gray-400');
+                numberReq.classList.add('text-green-500');
+            } else {
+                numberReq.classList.remove('text-green-500');
+                numberReq.classList.add('text-gray-400');
+            }
+            
+            // Check for special character
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                specialReq.classList.remove('text-gray-400');
+                specialReq.classList.add('text-green-500');
+            } else {
+                specialReq.classList.remove('text-green-500');
+                specialReq.classList.add('text-gray-400');
+            }
+        });
+    }
+
+    // Address modal functionality
+    const addressModal = document.getElementById('address-modal');
+    const addAddressBtn = document.getElementById('add-address-btn');
+    const editAddressBtns = document.querySelectorAll('.edit-address');
+    const closeModalBtn = document.getElementById('close-modal');
+    const cancelModalBtn = document.getElementById('cancel-modal');
+    
+    if (addAddressBtn) {
+        addAddressBtn.addEventListener('click', function() {
+            document.getElementById('modal-title').textContent = 'Add New Address';
+            document.getElementById('address-form').reset();
+            addressModal.classList.remove('hidden');
+        });
+    }
+    
+    if (editAddressBtns.length) {
+        editAddressBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.getElementById('modal-title').textContent = 'Edit Address';
+                // In a real app, you would populate the form with the address data
                 addressModal.classList.remove('hidden');
             });
-            
-            closeModalBtn.addEventListener('click', function() {
-                addressModal.classList.add('hidden');
-            });
-            
-            cancelModalBtn.addEventListener('click', function() {
-                addressModal.classList.add('hidden');
-            });
-            
-            // Mark all notifications as read
-            const markAllReadBtn = document.getElementById('mark-all-read');
-            
-            markAllReadBtn.addEventListener('click', function() {
-                document.querySelectorAll('#notification-content .bg-purple-50').forEach(notification => {
-                    notification.classList.remove('bg-purple-50', 'border-purple-600');
-                    notification.querySelector('.bg-purple-100').classList.remove('bg-purple-100', 'text-purple-600');
-                    notification.querySelector('.bg-purple-100').classList.add('bg-gray-100', 'text-gray-600');
-                });
-                
-                // Update notification count in sidebar
-                document.querySelector('#notification-tab span').classList.add('hidden');
+        });
+    }
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+            addressModal.classList.add('hidden');
+        });
+    }
+    
+    if (cancelModalBtn) {
+        cancelModalBtn.addEventListener('click', function() {
+            addressModal.classList.add('hidden');
+        });
+    }
+
+    // Order modal functionality
+    const orderModal = document.getElementById('order-modal');
+    const viewOrderBtns = document.querySelectorAll('.view-order');
+    const closeOrderModalBtn = document.getElementById('close-order-modal');
+    
+    if (viewOrderBtns.length) {
+        viewOrderBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                orderModal.classList.remove('hidden');
             });
         });
-    </script>
-</body>
-</html>
+    }
+    
+    if (closeOrderModalBtn) {
+        closeOrderModalBtn.addEventListener('click', function() {
+            orderModal.classList.add('hidden');
+        });
+    }
+
+    // Notification functionality
+    const notificationItems = document.querySelectorAll('.notification-item');
+    const markAllReadBtn = document.getElementById('mark-all-read');
+    const clearNotificationsBtn = document.getElementById('clear-notifications');
+    const deleteNotificationBtns = document.querySelectorAll('.delete-notification');
+    
+    if (notificationItems.length) {
+        notificationItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Don't mark as read if the delete button was clicked
+                if (e.target.closest('.delete-notification')) return;
+                
+                this.setAttribute('data-read', 'true');
+                this.classList.remove('bg-primary-50', 'border-primary-600');
+                this.querySelector('i').classList.remove('text-primary-600');
+                this.querySelector('i').classList.add('text-gray-600');
+                
+                updateNotificationCount();
+            });
+        });
+    }
+    
+    if (markAllReadBtn) {
+        markAllReadBtn.addEventListener('click', function() {
+            document.querySelectorAll('.notification-item[data-read="false"]').forEach(item => {
+                item.setAttribute('data-read', 'true');
+                item.classList.remove('bg-primary-50', 'border-primary-600');
+                item.querySelector('i').classList.remove('text-primary-600');
+                item.querySelector('i').classList.add('text-gray-600');
+            });
+            
+            updateNotificationCount();
+        });
+    }
+    
+    if (clearNotificationsBtn) {
+        clearNotificationsBtn.addEventListener('click', function() {
+            document.getElementById('notifications-container').innerHTML = '';
+            document.getElementById('no-notifications-message').style.display = 'block';
+            updateNotificationCount();
+        });
+    }
+    
+    if (deleteNotificationBtns.length) {
+        deleteNotificationBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const notificationItem = this.closest('.notification-item');
+                notificationItem.remove();
+                
+                if (document.querySelectorAll('.notification-item').length === 0) {
+                    document.getElementById('no-notifications-message').style.display = 'block';
+                }
+                
+                updateNotificationCount();
+            });
+        });
+    }
+    
+    function updateNotificationCount() {
+        const unreadCount = document.querySelectorAll('.notification-item[data-read="false"]').length;
+        const notificationCount = document.getElementById('notification-count');
+        
+        if (unreadCount > 0) {
+            notificationCount.textContent = unreadCount;
+            notificationCount.classList.remove('hidden');
+        } else {
+            notificationCount.classList.add('hidden');
+        }
+    }
+
+    // Form submission handling (simulated)
+    document.getElementById('profile-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const spinner = document.getElementById('profile-spinner');
+        const submitText = document.getElementById('profile-submit-text');
+        
+        spinner.classList.remove('hidden');
+        submitText.textContent = 'Saving...';
+        
+        // Simulate API call
+        setTimeout(() => {
+            spinner.classList.add('hidden');
+            submitText.textContent = 'Saved!';
+            
+            // Reset button text after 2 seconds
+            setTimeout(() => {
+                submitText.textContent = 'Save Changes';
+            }, 2000);
+        }, 1500);
+    });
+    
+    document.getElementById('password-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const currentPassword = document.getElementById('current-password').value;
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        
+        let isValid = true;
+        
+        // Validate current password
+        if (!currentPassword) {
+            document.getElementById('current-password-error').classList.remove('hidden');
+            isValid = false;
+        } else {
+            document.getElementById('current-password-error').classList.add('hidden');
+        }
+        
+        // Validate new password
+        if (newPassword.length < 8 || !/\d/.test(newPassword) || !/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
+            document.getElementById('new-password-error').classList.remove('hidden');
+            isValid = false;
+        } else {
+            document.getElementById('new-password-error').classList.add('hidden');
+        }
+        
+        // Validate password match
+        if (newPassword !== confirmPassword) {
+            document.getElementById('confirm-password-error').classList.remove('hidden');
+            isValid = false;
+        } else {
+            document.getElementById('confirm-password-error').classList.add('hidden');
+        }
+        
+        if (isValid) {
+            const spinner = document.getElementById('password-spinner');
+            const submitText = document.getElementById('password-submit-text');
+            
+            spinner.classList.remove('hidden');
+            submitText.textContent = 'Updating...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                spinner.classList.add('hidden');
+                submitText.textContent = 'Updated!';
+                
+                // Reset form and button text after 2 seconds
+                setTimeout(() => {
+                    this.reset();
+                    submitText.textContent = 'Update Password';
+                }, 2000);
+            }, 1500);
+        }
+    });
+    
+    document.getElementById('address-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const spinner = document.getElementById('address-spinner');
+        const submitText = document.getElementById('address-submit-text');
+        
+        spinner.classList.remove('hidden');
+        submitText.textContent = 'Saving...';
+        
+        // Simulate API call
+        setTimeout(() => {
+            spinner.classList.add('hidden');
+            submitText.textContent = 'Saved!';
+            addressModal.classList.add('hidden');
+            
+            // Reset button text after modal closes
+            setTimeout(() => {
+                submitText.textContent = 'Save Address';
+            }, 300);
+        }, 1500);
+    });
+
+    // Cancel buttons
+    document.getElementById('cancel-profile')?.addEventListener('click', function() {
+        document.getElementById('profile-form').reset();
+    });
+    
+    document.getElementById('cancel-password')?.addEventListener('click', function() {
+        document.getElementById('password-form').reset();
+    });
+
+    // Load more notifications
+    document.getElementById('load-more-notifications')?.addEventListener('click', function() {
+        // In a real app, this would fetch more notifications from the server
+        const notificationsContainer = document.getElementById('notifications-container');
+        const loadingText = this.querySelector('span') || document.createElement('span');
+        
+        this.disabled = true;
+        loadingText.textContent = 'Loading...';
+        this.innerHTML = '';
+        this.appendChild(loadingText);
+        
+        setTimeout(() => {
+            // Simulate adding new notifications
+            const newNotification = document.createElement('div');
+            newNotification.className = 'p-4 rounded-lg border-l-4 border-transparent notification-item';
+            newNotification.setAttribute('data-id', '5');
+            newNotification.setAttribute('data-read', 'true');
+            newNotification.innerHTML = `
+                <div class="flex justify-between">
+                    <div class="flex items-start">
+                        <div class="bg-gray-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-gift text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Special Birthday Offer</h3>
+                            <p class="text-gray-600 text-sm">Happy Birthday! Enjoy 25% off your next order with code BDAY25.</p>
+                            <p class="text-gray-400 text-xs mt-1">2 weeks ago</p>
+                        </div>
+                    </div>
+                    <button class="delete-notification text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+            
+            notificationsContainer.appendChild(newNotification);
+            this.disabled = false;
+            this.innerHTML = 'Load More Notifications';
+            
+            // Add event listener to the new delete button
+            newNotification.querySelector('.delete-notification').addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.closest('.notification-item').remove();
+                
+                if (document.querySelectorAll('.notification-item').length === 0) {
+                    document.getElementById('no-notifications-message').style.display = 'block';
+                }
+                
+                updateNotificationCount();
+            });
+        }, 1000);
+    });
+
+    // Initialize notification count
+    updateNotificationCount();
+</script>
+
+
